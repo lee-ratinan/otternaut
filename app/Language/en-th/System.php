@@ -2,7 +2,6 @@
 return [
     'site-name'         => 'Otternaut',
     'author'            => 'Otternaut Team',
-    'change-locale'     => 'Change Country',
     'copyright-message' => '© 2025-{0} <b>Otternaut</b>. All Rights Reserved.',
     'slogan'            => 'Business solutions that you can trust.',
     'footer'            => [

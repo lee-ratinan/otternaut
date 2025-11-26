@@ -28,6 +28,10 @@ class Home extends BaseController
         ];
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // PAGES
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     /**
      * Home page
      * @return string
@@ -45,4 +49,77 @@ class Home extends BaseController
         ];
         return view('home', $data);
     }
+
+    /**
+     * Pricing page
+     * @return string
+     */
+    public function pricing(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug'  => 'pricing',
+            'url_part'   => 'pricing',
+            'locale'     => $locale,
+            'language'   => $locale_data['language'],
+            'country'    => $locale_data['country'],
+        ];
+        return view('pricing', $data);
+    }
+
+    /**
+     * Contact page
+     * @return string
+     */
+    public function contact(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug'  => 'contact',
+            'url_part'   => 'contact',
+            'locale'     => $locale,
+            'language'   => $locale_data['language'],
+            'country'    => $locale_data['country'],
+        ];
+        return view('contact', $data);
+    }
+
+    /**
+     * Terms and Conditions page
+     * @return string
+     */
+    public function termsAndConditions(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug'  => 'terms-and-conditions',
+            'url_part'   => 'terms-and-conditions',
+            'locale'     => $locale,
+            'language'   => $locale_data['language'],
+            'country'    => $locale_data['country'],
+        ];
+        return view('terms-and-conditions', $data);
+    }
+
+    /**
+     * Privacy Policy page
+     * @return string
+     */
+    public function privacyPolicy(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug'  => 'privacy-policy',
+            'url_part'   => 'privacy-policy',
+            'locale'     => $locale,
+            'language'   => $locale_data['language'],
+            'country'    => $locale_data['country'],
+        ];
+        return view('privacy-policy', $data);
+    }
+
 }
