@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="<?= $locale ?>">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title><?= lang('System.pages.' . $page_slug . '.title') . ' | ' . lang('System.site-name') ?></title>
+    <meta name="description" content="<?= lang('System.pages.' . $page_slug . '.meta.description') ?>">
+    <meta name="keywords" content="<?= lang('System.pages.' . $page_slug . '.meta.keywords') ?>">
+    <meta name="author" content="<?= lang('System.author') ?>">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="<?= lang('System.pages.' . $page_slug . '.title') . ' | ' . lang('System.site-name') ?>">
+    <meta property="og:description" content="<?= lang('System.pages.' . $page_slug . '.meta.description') ?>">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="<?= current_url() ?>">
+    <meta property="og:type" content="website" />
+    <!-- Favicons -->
+    <link href="<?= base_url('assets/img/favicon.png') ?>" rel="icon">
+    <link href="<?= base_url('assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/aos/aos.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/glightbox/css/glightbox.min.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/flag-icons-main/css/flag-icons.min.css') ?>" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="<?= base_url('assets/css/main.css') ?>" rel="stylesheet">
+    <!-- Link Languages -->
+    <link rel="alternate" hreflang="en-th" href="<?= base_url('en-th/' . $url_part) ?>">
+    <link rel="alternate" hreflang="th-th" href="<?= base_url('th-th/' . $url_part) ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= base_url($url_part) ?>">
+    <link rel="canonical" href="<?= current_url() ?>">
+    <!-- =======================================================
+    * Template Name: Aventro
+    * Template URL: https://bootstrapmade.com/aventro-bootstrap-template/
+    * Updated: Oct 31 2025 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body class="index-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="<?= base_url($locale) ?>" class="logo d-flex align-items-center me-auto me-xl-0">
+            <img src="<?= base_url('assets/img/logo-dark.png') ?>" alt="<?= lang('System.site-name') ?>">
+            <h1 class="sitename"><?= lang('System.site-name') ?></h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="<?= base_url($locale) ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
+                <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
+                <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
+                <li><a href="#footer"><i class="bi bi-globe me-2"></i> <?= lang('System.locales.'. $locale) ?></a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="header-social-links">
+            <a href="<?= getenv('SOCIAL_FACEBOOK') ?>" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>" class="instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</header>
+<?= $this->renderSection('content') ?>
+<footer id="footer" class="footer light-background">
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a href="<?= base_url($locale) ?>" class="logo d-flex align-items-center">
+                    <span class="sitename"><?= lang('System.site-name') ?></span>
+                </a>
+                <div class="footer-contact">
+                    <p><?= lang('System.slogan') ?></p>
+                    <p class="mt-3"><i class="bi bi-telephone"></i> <?= format_phone_number(getenv('CONTACT_PHONE')) ?></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
+                </div>
+                <div class="social-links d-flex mt-4">
+                    <a href="<?= getenv('SOCIAL_FACEBOOK') ?>"><i class="bi bi-facebook"></i></a>
+                    <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 footer-links">
+                <h4><?= lang('System.footer.useful-links') ?></h4>
+                <ul>
+                    <li><a href="<?= base_url($locale) ?>"><?= lang('System.pages.home.title') ?></a></li>
+                    <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
+                    <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 footer-links">
+                <h4><?= lang('System.locales.title') ?></h4>
+                <ul>
+                    <li><a href="<?= base_url('en-th/' . $url_part) ?>"><span class="fi fi-th"></span> <?= lang('System.locales.en-th') ?></a></li>
+                    <li><a href="<?= base_url('th-th/' . $url_part) ?>"><span class="fi fi-th"></span> <?= lang('System.locales.th-th') ?></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+        <p>
+            <?= lang('System.copyright-message', [date('Y')]) ?>
+            | <a href="<?= base_url($locale . '/terms-and-conditions') ?>"><?= lang('System.pages.terms-and-conditions.title') ?></a>
+            | <a href="<?= base_url($locale . '/privacy-policy') ?>"><?= lang('System.pages.privacy-policy.title') ?></a>
+        </p>
+    </div>
+</footer>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader"></div>
+<!-- Vendor JS Files -->
+<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/php-email-form/validate.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/aos/aos.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
+<!-- Main JS File -->
+<script src="<?= base_url('assets/js/main.js') ?>"></script>
+</body>
+</html>

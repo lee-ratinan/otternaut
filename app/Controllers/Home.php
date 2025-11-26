@@ -34,10 +34,14 @@ class Home extends BaseController
      */
     public function index(): string
     {
-        $locale_data = $this->splitLocale($this->request->getLocale());
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
         $data        = [
-            'language' => $locale_data['language'],
-            'country'  => $locale_data['country'],
+            'page_slug'  => 'home',
+            'url_part'   => '',
+            'locale'     => $locale,
+            'language'   => $locale_data['language'],
+            'country'    => $locale_data['country'],
         ];
         return view('home', $data);
     }
