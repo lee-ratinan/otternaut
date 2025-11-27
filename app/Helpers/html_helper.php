@@ -1,31 +1,90 @@
 <?php
 /**
- * Format telephone number form E.162 format to national format for viewing.
+ * Format telephone number form E.164 format to national format for viewing.
  * Return FALSE if the number is invalid
- * @param $number
+ * Current support:
+ * - Thailand +66
+ * - Singapore +65
+ * @param string $phone_number The phone number in E.164 format
  * @return string|bool
  */
-function format_phone_number($number): string|bool
+function format_phone_number(string $phone_number): string|bool
 {
-    $length = strlen($number);
+    $length = strlen($phone_number);
     $pieces = [];
-    if (str_starts_with($number, '+66')) {
+    if (str_starts_with($phone_number, '+66')) {
         // Thai number
-        $pieces[] = '+66 (0)';
         if (11 == $length) {
-            // HOME +6629299876 > +66 (0) 2 929 9876
-            $pieces[] = substr($number, 3, 1);
-            $pieces[] = substr($number, 4, 3);
-            $pieces[] = substr($number, 7, 4);
+            // HOME +6629299876 > +66 2 929 9876
+            $pieces[] = '+66';
+            $pieces[] = substr($phone_number, 3, 1);
+            $pieces[] = substr($phone_number, 4, 3);
+            $pieces[] = substr($phone_number, 7, 4);
             return implode(' ', $pieces);
         } else if (12 == $length) {
-            // CELL +66897828331 > +66 (0) 8 9782 8331
-            $pieces[] = substr($number, 3, 1);
-            $pieces[] = substr($number, 4, 4);
-            $pieces[] = substr($number, 8, 4);
+            // CELL +66897828331 > +66 89 782 8331
+            $pieces[] = '+66';
+            $pieces[] = substr($phone_number, 3, 2);
+            $pieces[] = substr($phone_number, 4, 3);
+            $pieces[] = substr($phone_number, 8, 4);
             return implode(' ', $pieces);
         }
         return FALSE;
     }
-    return $number;
+    return $phone_number;
+}
+
+/**
+ * Format the price by currency.
+ * Return the default format with the same currency code if not supported
+ * Current support:
+ * - THB
+ * - SGD
+ * - IDR
+ * - MYR
+ * @param float $price The price to be formatted
+ * @param string $currency The currency to be formatted in
+ * @param int $decimal_override (optional) Use this decimal point if the value is not negative
+ * @return string
+ */
+function format_price(float $price, string $currency, int $decimal_override = -1): string
+{
+    $negative = (0 > $price ? '-' : '');
+    $price    = abs($price);
+    $decimals = [
+        'THB' => 2,
+        'SGD' => 2,
+        'IDR' => 0,
+        'MYR' => 2,
+        'JPY' => 0
+    ];
+    $use_decimal = $decimals[$currency];
+    if (0 <= $decimal_override) {
+        $use_decimal = $decimal_override;
+    }
+    if ('THB' == $currency) {
+        return $negative . '฿' . number_format($price, $use_decimal);
+    } else if ('SGD' == $currency) {
+        return $negative . 'S$' . number_format($price, $use_decimal);
+    } else if ('IDR' == $currency) {
+        return $negative . 'Rp ' . number_format($price, $use_decimal, ',', '.');
+    } else if ('MYR' == $currency) {
+        return $negative . 'RM' . number_format($price, $use_decimal);
+    } else if ('JPY' == $currency) {
+        return $negative . number_format($price, $use_decimal) . '円';
+    }
+    return $negative . $currency . ' ' . number_format($price, 2);
+}
+
+/**
+ * Get currency symbol
+ * @param string $country Country code
+ * @return string Symbol of the currency
+ */
+function get_currency_symbol (string $country): string
+{
+    if ('th' == $country) {
+        return '฿';
+    }
+    return '';
 }

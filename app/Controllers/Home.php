@@ -58,12 +58,64 @@ class Home extends BaseController
     {
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
+        $packages = [
+            [
+                'popular'      => false,
+                'name'         => lang('Pricing.plans.basic.title'),
+                'desc'         => lang('Pricing.plans.basic.desc'),
+                'max_users'    => 10,
+                'max_services' => 10,
+                'max_products' => 10,
+                'features'     => [
+                    lang('Pricing.features.email-support'),
+                    lang('Pricing.features.basic-booking'),
+                    lang('Pricing.features.sell-product'),
+                ],
+                'prices' => [
+                    'th' => [400, 4200]
+                ]
+            ],
+            [
+                'popular'      => true,
+                'name'         => lang('Pricing.plans.standard.title'),
+                'desc'         => lang('Pricing.plans.standard.desc'),
+                'max_users'    => 20,
+                'max_services' => 30,
+                'max_products' => 30,
+                'features'     => [
+                    lang('Pricing.features.email-support'),
+                    lang('Pricing.features.basic-and-advanced-booking'),
+                    lang('Pricing.features.sell-product'),
+                ],
+                'prices' => [
+                    'th' => [750, 7800]
+                ]
+            ],
+            [
+                'popular'      => false,
+                'name'         => lang('Pricing.plans.premium.title'),
+                'desc'         => lang('Pricing.plans.premium.desc'),
+                'max_users'    => 50,
+                'max_services' => 100,
+                'max_products' => 100,
+                'features'     => [
+                    lang('Pricing.features.email-support'),
+                    lang('Pricing.features.basic-and-advanced-booking'),
+                    lang('Pricing.features.sell-product'),
+                    lang('Pricing.features.store-webpage')
+                ],
+                'prices' => [
+                    'th' => [1200, 12000]
+                ]
+            ]
+        ];
         $data        = [
             'page_slug'  => 'pricing',
             'url_part'   => 'pricing',
             'locale'     => $locale,
             'language'   => $locale_data['language'],
             'country'    => $locale_data['country'],
+            'packages'   => $packages,
         ];
         return view('pricing', $data);
     }
