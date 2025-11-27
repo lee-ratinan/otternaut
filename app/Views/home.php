@@ -11,17 +11,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <span class="hero-badge" data-aos="fade-right" data-aos-delay="300">Innovative Solutions</span>
-                        <h1 data-aos="fade-right" data-aos-delay="400">Transform Your Business with Modern Technology</h1>
-                        <p data-aos="fade-right" data-aos-delay="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
+                        <span class="hero-badge" data-aos="fade-right" data-aos-delay="300"><?= lang('Home.hero.innovative-solutions') ?></span>
+                        <h1 data-aos="fade-right" data-aos-delay="400"><?= lang('Home.hero.headline') ?></h1>
+                        <p data-aos="fade-right" data-aos-delay="500"><?= lang('Home.hero.subheadline') ?></p>
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                            <a href="#services" class="btn-primary">Explore Services</a>
-                            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-secondary glightbox">
-                                <i class="bi bi-play-circle"></i>
-                                <span>Watch Demo</span>
-                            </a>
+                            <a href="#" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('Home.hero.cta') ?></a>
+                            <a href="#" class="btn-secondary glightbox"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
                         </div>
-                        <div class="hero-stats" data-aos="fade-up" data-aos-delay="700">
+                        <div class="hero-stats d-none" data-aos="fade-up" data-aos-delay="700">
                             <div class="stat-item">
                                 <span class="stat-number">500+</span>
                                 <span class="stat-label">Projects Completed</span>
@@ -42,22 +39,22 @@
                         <div class="row g-3">
                             <div class="col-6">
                                 <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="bi bi-shield-check"></i>
-                                    <span>Secure &amp; Reliable</span>
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <span><?= lang('Home.hero.boxes.high-performance') ?></span>
                                 </div>
                                 <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
-                                    <i class="bi bi-people"></i>
-                                    <span>Expert Team</span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <span><?= lang('Home.hero.boxes.convenience') ?></span>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                                    <i class="bi bi-speedometer2"></i>
-                                    <span>High Performance</span>
+                                    <i class="bi bi-list-check"></i>
+                                    <span><?= lang('Home.hero.boxes.flexibility') ?></span>
                                 </div>
                                 <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
-                                    <i class="bi bi-award"></i>
-                                    <span>Award Winning</span>
+                                    <i class="bi bi-clipboard2-data"></i>
+                                    <span><?= lang('Home.hero.boxes.transparency') ?></span>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +305,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="visual-content">
-                                    <img src="<?= base_url('assets/img/features/features-2.webp') ?>" alt="" class="img-fluid">
+                                    <img src="<?= base_url('assets/img/features/use-case-spa.jpg') ?>" alt="" class="img-fluid">
                                     <div class="floating-element">
                                         <div class="floating-card">
                                             <i class="bi bi-lightning-charge"></i>
@@ -367,7 +364,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="visual-content">
-                                    <img src="<?= base_url('assets/img/features/features-4.webp') ?>" alt="" class="img-fluid">
+                                    <img src="<?= base_url('assets/img/features/use-case-school.jpg') ?>" alt="" class="img-fluid">
                                     <div class="floating-element">
                                         <div class="floating-card">
                                             <i class="bi bi-graph-up-arrow"></i>
@@ -426,7 +423,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="visual-content">
-                                    <img src="<?= base_url('assets/img/features/features-1.webp') ?>" alt="" class="img-fluid">
+                                    <img src="<?= base_url('assets/img/features/use-case-consultant.jpg') ?>" alt="" class="img-fluid">
                                     <div class="floating-element">
                                         <div class="floating-card">
                                             <i class="bi bi-cpu"></i>
@@ -485,7 +482,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="visual-content">
-                                    <img src="<?= base_url('assets/img/features/features-5.webp') ?>" alt="" class="img-fluid">
+                                    <img src="<?= base_url('assets/img/features/use-case-gym.jpg') ?>" alt="" class="img-fluid">
                                     <div class="floating-element">
                                         <div class="floating-card">
                                             <i class="bi bi-link-45deg"></i>
