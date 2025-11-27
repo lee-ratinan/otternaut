@@ -4,10 +4,9 @@
         <section id="contact" class="contact section mt-5">
             <!-- Section Title -->
             <div class="container section-title aos-init aos-animate mt-5" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2><?= lang('System.pages.contact.title') ?></h2>
+                <p><?= lang('Contact.subtitle') ?></p>
             </div><!-- End Section Title -->
-
             <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <div class="row g-4">
                     <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
@@ -16,37 +15,34 @@
                                 <div class="icon-wrapper">
                                     <i class="bi bi-envelope-paper"></i>
                                 </div>
-                                <h4>Email Support</h4>
-                                <p class="contact-detail">support@example.com</p>
-                                <span class="availability">Usually replies in 2 hours</span>
+                                <h4><?= lang('Contact.email.title') ?></h4>
+                                <p class="contact-detail"><a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
+                                <span class="availability"><?= lang('Contact.email.detail') ?></span>
                             </div>
-
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-headset"></i>
                                 </div>
-                                <h4>Live Chat</h4>
-                                <p class="contact-detail">Chat with our team</p>
-                                <span class="availability">Available Mon-Fri, 9AM-6PM</span>
+                                <h4><?= lang('Contact.live-chat.title') ?></h4>
+                                <p class="contact-detail"><?= lang('Contact.live-chat.whatsapp') ?></p>
+                                <span class="availability"><?= lang('Contact.live-chat.detail') ?></span>
                             </div>
-
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-pin-map"></i>
                                 </div>
-                                <h4>Our Location</h4>
-                                <p class="contact-detail">2847 Market Street<br>San Francisco, CA 94114</p>
-                                <span class="availability">Open for visits</span>
+                                <h4><?= lang('Contact.location.title') ?></h4>
+                                <p class="contact-detail"><?= lang('Contact.location.bangkok') ?></p>
+                                <span class="availability"><?= lang('Contact.location.detail') ?></span>
                             </div>
-
                             <div class="trust-indicators">
                                 <div class="indicator-item">
                                     <div class="indicator-icon">
                                         <i class="bi bi-shield-check"></i>
                                     </div>
                                     <div class="indicator-text">
-                                        <strong>100% Secure</strong>
-                                        <span>Your data is protected</span>
+                                        <strong><?= lang('Contact.messages.secured.title') ?></strong>
+                                        <span><?= lang('Contact.messages.secured.detail') ?></span>
                                     </div>
                                 </div>
                                 <div class="indicator-item">
@@ -54,73 +50,71 @@
                                         <i class="bi bi-clock-history"></i>
                                     </div>
                                     <div class="indicator-text">
-                                        <strong>Quick Response</strong>
-                                        <span>We reply within hours</span>
+                                        <strong><?= lang('Contact.messages.quick.title') ?></strong>
+                                        <span><?= lang('Contact.messages.quick.detail') ?></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-8 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         <div class="main-form-container">
                             <div class="form-intro">
                                 <div class="intro-badge">
                                     <i class="bi bi-stars"></i>
-                                    <span>Get Started Today</span>
+                                    <span><?= lang('Contact.form.label') ?></span>
                                 </div>
-                                <h2>Send us a message</h2>
-                                <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.</p>
+                                <h2><?= lang('Contact.form.title') ?></h2>
+                                <p><?= lang('Contact.form.subtitle') ?></p>
                             </div>
-
-                            <form action="forms/contact.php" method="post" class="php-email-form modern-form">
+                            <form action="<?= base_url('contact-submit') ?>" method="post" class="php-email-form modern-form">
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" name="name" placeholder="Full Name" required="">
+                                        <label class="d-none" for="name"><?= lang('Contact.form.fields.full-name') ?></label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="<?= lang('Contact.form.fields.full-name') ?>" required="">
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                                        <label class="d-none" for="email"><?= lang('Contact.form.fields.email') ?></label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="<?= lang('Contact.form.fields.email') ?>" required="">
                                     </div>
                                 </div>
 
                                 <div class="row g-3 mt-1">
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" name="phone" placeholder="Phone Number (Optional)">
+                                        <label class="d-none" for="phone"><?= lang('Contact.form.fields.phone') ?></label>
+                                        <input type="text" class="form-control" name="phone" id="phone" placeholder="<?= lang('Contact.form.fields.phone') ?>">
                                     </div>
                                     <div class="col-md-6">
-                                        <select class="form-select" name="subject" required="">
-                                            <option value="">Select Inquiry Type</option>
-                                            <option value="general">General Inquiry</option>
-                                            <option value="support">Technical Support</option>
-                                            <option value="sales">Sales Question</option>
-                                            <option value="partnership">Partnership</option>
+                                        <label class="d-none" for="subject"><?= lang('Contact.form.fields.subject.label') ?></label>
+                                        <select class="form-select" name="subject" id="subject" required="">
+                                            <option value=""><?= lang('Contact.form.fields.subject.please-select') ?></option>
+                                            <option value="general"><?= lang('Contact.form.fields.subject.general') ?></option>
+                                            <option value="support"><?= lang('Contact.form.fields.subject.technical-support') ?></option>
+                                            <option value="sales"><?= lang('Contact.form.fields.subject.sales') ?></option>
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="mt-3">
-                                    <textarea class="form-control" name="message" placeholder="Tell us more about your needs" rows="6" required=""></textarea>
+                                    <label class="d-none" for="message"><?= lang('Contact.form.fields.message') ?></label>
+                                    <textarea class="form-control" name="message" id="message" placeholder="<?= lang('Contact.form.fields.message-tell-us-more') ?>" rows="6" required=""></textarea>
                                 </div>
-
+                                <input type="hidden" name="locale" value="<?= $locale ?>">
                                 <div class="my-3">
-                                    <div class="loading">Loading</div>
+                                    <div class="loading"><?= lang('Contact.form.loading') ?></div>
                                     <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    <div class="sent-message"><?= lang('Contact.form.sent') ?></div>
                                 </div>
-
                                 <button type="submit" class="btn-submit">
-                                    <span>Send Message</span>
+                                    <span><?= lang('Contact.form.send-btn') ?></span>
                                     <i class="bi bi-arrow-right"></i>
                                 </button>
-
                                 <div class="form-footer-note">
                                     <i class="bi bi-info-circle"></i>
-                                    <span>We typically respond within 24 hours on business days</span>
+                                    <span><?= lang('Contact.form.est-respond-time') ?></span>
                                 </div>
                             </form>
-
                             <div class="social-proof">
-                                <div class="proof-stats">
+                                <div class="proof-stats d-none">
                                     <div class="stat-box">
                                         <div class="stat-value">4.9/5</div>
                                         <div class="stat-label">Customer Rating</div>
@@ -134,21 +128,14 @@
                                         <div class="stat-label">Support Available</div>
                                     </div>
                                 </div>
-
                                 <div class="social-channels">
-                                    <p>Or reach us on social media</p>
+                                    <p><?= lang('Contact.social-media') ?></p>
                                     <div class="channel-links">
-                                        <a href="#" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="250">
+                                        <a href="<?= getenv('SOCIAL_FACEBOOK') ?>" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="250">
                                             <i class="bi bi-facebook"></i>
                                         </a>
-                                        <a href="#" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                        <a href="#" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="350">
+                                        <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="350">
                                             <i class="bi bi-instagram"></i>
-                                        </a>
-                                        <a href="#" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
-                                            <i class="bi bi-linkedin"></i>
                                         </a>
                                     </div>
                                 </div>
