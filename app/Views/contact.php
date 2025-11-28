@@ -17,15 +17,15 @@
                                 </div>
                                 <h4><?= lang('Contact.email.title') ?></h4>
                                 <p class="contact-detail"><a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
-                                <span class="availability"><?= lang('Contact.email.detail') ?></span>
+                                <span class="availability d-none"><?= lang('Contact.email.detail') ?></span>
                             </div>
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-headset"></i>
                                 </div>
                                 <h4><?= lang('Contact.live-chat.title') ?></h4>
-                                <p class="contact-detail"><?= lang('Contact.live-chat.whatsapp') ?></p>
-                                <span class="availability"><?= lang('Contact.live-chat.detail') ?></span>
+                                <p class="contact-detail"><?= lang('Contact.live-chat.app') ?></p>
+                                <span class="availability d-none"><?= lang('Contact.live-chat.detail') ?></span>
                             </div>
                             <div class="contact-card">
                                 <div class="icon-wrapper">
@@ -33,7 +33,7 @@
                                 </div>
                                 <h4><?= lang('Contact.location.title') ?></h4>
                                 <p class="contact-detail"><?= lang('Contact.location.bangkok') ?></p>
-                                <span class="availability"><?= lang('Contact.location.detail') ?></span>
+                                <span class="availability d-none"><?= lang('Contact.location.detail') ?></span>
                             </div>
                             <div class="trust-indicators">
                                 <div class="indicator-item">
@@ -78,7 +78,6 @@
                                         <input type="email" class="form-control" name="email" id="email" placeholder="<?= lang('Contact.form.fields.email') ?>" required="">
                                     </div>
                                 </div>
-
                                 <div class="row g-3 mt-1">
                                     <div class="col-md-6">
                                         <label class="d-none" for="phone"><?= lang('Contact.form.fields.phone') ?></label>
