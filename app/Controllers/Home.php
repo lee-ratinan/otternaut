@@ -41,11 +41,11 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $data        = [
-            'page_slug'  => 'home',
-            'url_part'   => '',
-            'locale'     => $locale,
-            'language'   => $locale_data['language'],
-            'country'    => $locale_data['country'],
+            'page_slug' => 'home',
+            'url_part'  => '',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
         ];
         return view('home', $data);
     }
@@ -58,8 +58,9 @@ class Home extends BaseController
     {
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
-        $packages = [
-            [
+        $packages    = [
+            'basic'    => [
+                'available'    => true,
                 'popular'      => false,
                 'name'         => lang('Pricing.plans.basic.title'),
                 'desc'         => lang('Pricing.plans.basic.desc'),
@@ -71,11 +72,12 @@ class Home extends BaseController
                     lang('Pricing.features.basic-booking'),
                     lang('Pricing.features.sell-product'),
                 ],
-                'prices' => [
+                'prices'       => [
                     'th' => [400, 4200]
                 ]
             ],
-            [
+            'standard' => [
+                'available'    => true,
                 'popular'      => true,
                 'name'         => lang('Pricing.plans.standard.title'),
                 'desc'         => lang('Pricing.plans.standard.desc'),
@@ -87,11 +89,12 @@ class Home extends BaseController
                     lang('Pricing.features.basic-and-advanced-booking'),
                     lang('Pricing.features.sell-product'),
                 ],
-                'prices' => [
+                'prices'       => [
                     'th' => [750, 7800]
                 ]
             ],
-            [
+            'premium'  => [
+                'available'    => false,
                 'popular'      => false,
                 'name'         => lang('Pricing.plans.premium.title'),
                 'desc'         => lang('Pricing.plans.premium.desc'),
@@ -104,18 +107,18 @@ class Home extends BaseController
                     lang('Pricing.features.sell-product'),
                     lang('Pricing.features.store-webpage')
                 ],
-                'prices' => [
+                'prices'       => [
                     'th' => [1200, 12000]
                 ]
             ]
         ];
-        $data        = [
-            'page_slug'  => 'pricing',
-            'url_part'   => 'pricing',
-            'locale'     => $locale,
-            'language'   => $locale_data['language'],
-            'country'    => $locale_data['country'],
-            'packages'   => $packages,
+        $data = [
+            'page_slug' => 'pricing',
+            'url_part'  => 'pricing',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+            'packages'  => $packages,
         ];
         return view('pricing', $data);
     }
@@ -129,11 +132,11 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $data        = [
-            'page_slug'  => 'contact',
-            'url_part'   => 'contact',
-            'locale'     => $locale,
-            'language'   => $locale_data['language'],
-            'country'    => $locale_data['country'],
+            'page_slug' => 'contact',
+            'url_part'  => 'contact',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
         ];
         return view('contact', $data);
     }
@@ -147,11 +150,11 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $data        = [
-            'page_slug'  => 'terms-and-conditions',
-            'url_part'   => 'terms-and-conditions',
-            'locale'     => $locale,
-            'language'   => $locale_data['language'],
-            'country'    => $locale_data['country'],
+            'page_slug' => 'terms-and-conditions',
+            'url_part'  => 'terms-and-conditions',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
         ];
         return view('terms-and-conditions', $data);
     }
@@ -165,11 +168,11 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $data        = [
-            'page_slug'  => 'privacy-policy',
-            'url_part'   => 'privacy-policy',
-            'locale'     => $locale,
-            'language'   => $locale_data['language'],
-            'country'    => $locale_data['country'],
+            'page_slug' => 'privacy-policy',
+            'url_part'  => 'privacy-policy',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
         ];
         return view('privacy-policy', $data);
     }

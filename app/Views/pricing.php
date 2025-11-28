@@ -9,7 +9,7 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4">
                     <?php $delay = 100; ?>
-                    <?php foreach ($packages as $package) : ?>
+                    <?php foreach ($packages as $key => $package) : ?>
                         <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
                             <?php $delay += 100; ?>
                             <div class="pricing-card featured">
@@ -52,8 +52,13 @@
                                     </ul>
                                 </div>
                                 <div class="plan-action">
-                                    <a href="#" class="btn-plan"><?= lang('Pricing.free-trial-cta') ?></a>
-                                    <p class="trial-info"><?= lang('Pricing.free-trial-msg') ?></p>
+                                    <?php if ($package['available']) : ?>
+                                        <a href="#<?= $key ?>" class="btn-plan"><?= lang('Pricing.free-trial-cta') ?></a>
+                                        <p class="trial-info"><?= lang('Pricing.free-trial-msg') ?></p>
+                                    <?php else : ?>
+                                        <a href="#" class="btn-plan bg-secondary disabled" disabled><?= lang('Pricing.coming-soon-btn') ?></a>
+                                        <p class="trial-info"><?= lang('Pricing.coming-soon-txt') ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
