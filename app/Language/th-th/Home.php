@@ -153,5 +153,31 @@ return [
 //                'detail' => 'bbb'
 //            ]
         ]
+    ],
+    'faq'       => [
+        'title'     => 'Frequently Asked Questions',
+        'subtitle'  => 'Quick answers for what you need to know.',
+        'questions' => [
+            [
+                'Can I use my own domain for the booking page?',
+                'No — but you can modify the look-and-feel of the page, including the logo.'
+            ],
+            [
+                'Do my staff get separate logins?',
+                'Absolutely. You can control permissions for each team member.'
+            ],
+            [
+                'Does it support different currencies, languages, and time zones?',
+                'Yes! Otternaut is built with multilingual and multi-timezone support in mind - however, you can only pick one country per business, which could dictate the timezones and currencies.'
+            ],
+            [
+                'Is there a free tier?',
+                'You can only use a free trial for up to 14 days.'
+            ],
+            [
+                'Can I cancel anytime?',
+                'Of course. No hostage situations here. You may export your data and request deletion of your data when you leave Otternaut. Guilt-free!'
+            ]
+        ]
     ]
 ];

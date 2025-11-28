@@ -15,7 +15,7 @@
                         <p data-aos="fade-right" data-aos-delay="500"><?= lang('Home.hero.subheadline') ?></p>
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
                             <a href="#" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('Home.hero.cta') ?></a>
-                            <a href="#" class="btn-secondary glightbox"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
+                            <a href="#" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
                         </div>
                         <div class="hero-stats d-none" data-aos="fade-up" data-aos-delay="700">
                             <div class="stat-item">
@@ -189,112 +189,31 @@
             </div>
         </div>
     </section>
-    <!-- Faq Section -->
     <section id="faq" class="faq section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Frequently Asked Questions</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title -->
-
+            <h2><?= lang('Home.faq.title') ?></h2>
+            <p><?= lang('Home.faq.subtitle') ?></p>
+        </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-
                     <div class="faq-wrapper">
-
-                        <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="150">
+                        <?php $delay = 150; ?>
+                        <?php foreach (lang('Home.faq.questions') as $i => $question) : ?>
+                        <div class="faq-item <?= (0 == $i ? 'faq-active' : '') ?>" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
                             <div class="faq-header">
-                                <h4>Vestibulum ac diam sit amet quam vehicula elementum?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
+                                <h4><?= $question[0] ?></h4>
+                                <div class="faq-icon"><i class="bi bi-chevron-down"></i></div>
                             </div>
                             <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-                                </div>
+                                <div class="content-inner"><p><?= $question[1] ?></p></div>
                             </div>
-                        </div><!-- End FAQ Item -->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                            <div class="faq-header">
-                                <h4>Nulla porttitor accumsan tincidunt mauris blandit?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh.</p>
-                                </div>
-                            </div>
-                        </div><!-- End FAQ Item -->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
-                            <div class="faq-header">
-                                <h4>Curabitur aliquet quam id dui posuere blandit proin?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
-                                </div>
-                            </div>
-                        </div><!-- End FAQ Item -->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                            <div class="faq-header">
-                                <h4>Vivamus magna justo lacinia eget consectetur sed?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-                                </div>
-                            </div>
-                        </div><!-- End FAQ Item -->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
-                            <div class="faq-header">
-                                <h4>Donec sollicitudin molestie malesuada proin eget?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati. Cupiditate non provident, similique sunt in culpa.</p>
-                                </div>
-                            </div>
-                        </div><!-- End FAQ Item -->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                            <div class="faq-header">
-                                <h4>Pellentesque in ipsum id orci porta dapibus vestibulum?</h4>
-                                <div class="faq-icon">
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="faq-content">
-                                <div class="content-inner">
-                                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in.</p>
-                                </div>
-                            </div>
-                        </div><!-- End FAQ Item -->
-
+                        </div><?php $delay+= 50; ?>
+                        <?php endforeach; ?>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
-    </section><!-- /Faq Section -->
+    </section>
 </main>
 <?php $this->endSection() ?>

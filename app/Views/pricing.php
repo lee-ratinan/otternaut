@@ -1,8 +1,8 @@
 <?php $this->extend('_layout'); ?>
 <?= $this->section('content') ?>
     <main class="main">
-        <section id="pricing" class="pricing section mt-5">
-            <div class="container section-title aos-init aos-animate mt-5">
+        <section id="pricing" class="pricing section">
+            <div class="container section-title aos-init aos-animate pt-5 mt-5">
                 <h2><?= lang('System.pages.pricing.title') ?></h2>
                 <p><?= lang('Pricing.subtitle') ?></p>
             </div>

@@ -1,12 +1,11 @@
 <?php $this->extend('_layout'); ?>
 <?= $this->section('content') ?>
     <main class="main">
-        <section id="contact" class="contact section mt-5">
-            <!-- Section Title -->
-            <div class="container section-title aos-init aos-animate mt-5" data-aos="fade-up">
+        <section id="contact" class="contact section">
+            <div class="container section-title aos-init aos-animate pt-5 mt-5" data-aos="fade-up">
                 <h2><?= lang('System.pages.contact.title') ?></h2>
                 <p><?= lang('Contact.subtitle') ?></p>
-            </div><!-- End Section Title -->
+            </div>
             <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <div class="row g-4">
                     <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
