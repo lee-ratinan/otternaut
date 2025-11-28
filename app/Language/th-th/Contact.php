@@ -1,6 +1,6 @@
 <?php
 return [
-    'subtitle'     => 'Our teams are ready to help, just name it!',
+    'subtitle'     => 'ทีมงานของเราพร้อมช่วยเหลือคุณเสมอ บอกเราได้เลย!',
     'email'        => [
         'title' => 'อีเมล',
         //        'detail' => 'ตอบภายใน 2-3 ชั่วโมงในเวลางาน'
@@ -17,34 +17,34 @@ return [
     ],
     'secured'      => [
         'title'  => 'ปลอดภัย 100%',
-        'detail' => 'Your data is protected by the team familiar with FinTech/Banking level security.'
+        'detail' => 'ข้อมูลของคุณได้รับการปกป้องโดยทีมงานที่มีประสบการณ์ด้านความปลอดภัยระดับฟินเทคและธนาคาร'
     ],
     'quick'        => [
         'title'  => 'ตอบเร็วทันใจ',
-        'detail' => 'We reply within hours and will never let you down.'
+        'detail' => 'เราตอบกลับภายในไม่กี่ชั่วโมง และจะไม่ทำให้คุณผิดหวัง'
     ],
     'form'         => [
-        'label'            => 'Happy to help!',
-        'title'            => 'Send us a message',
-        'subtitle'         => 'Our team is ready to respond within a few hours during business hours in Bangkok, Thailand.',
+        'label'            => 'ยินดีช่วยเหลือเต็มที่!',
+        'title'            => 'ส่งข้อความถึงเรา',
+        'subtitle'         => 'ทีมงานพร้อมตอบกลับภายในไม่กี่ชั่วโมงในช่วงเวลาทำการ',
         'fields'           => [
             'full-name'            => 'ชื่อของคุณ',
             'email'                => 'อีเมล',
-            'phone'                => 'หมายเลขโทรศัพท์ (?)',
+            'phone'                => 'หมายเลขโทรศัพท์ (ไม่บังคับ)',
             'subject'              => [
-                'label'             => 'หัวข้อ',
-                'please-select'     => 'Please select inquiry type',
-                'general'           => 'General Inquiry',
-                'technical-support' => 'Technical Support',
-                'sales'             => 'Sales Question'
+                'label'             => 'ประเภทคำถาม',
+                'please-select'     => 'โปรดเลือกประเภทคำถามของคุณ',
+                'general'           => 'สอบถามทั่วไป',
+                'technical-support' => 'ขอความสนับสนุนด้านเทคนิค',
+                'sales'             => 'สอบถามเกี่ยวกับการขาย'
             ],
-            'message'              => 'Message',
-            'message-tell-us-more' => 'Tell us more about your inquiry.'
+            'message'              => 'ข้อความ',
+            'message-tell-us-more' => 'โปรดบอกรายละเอียดเกี่ยวกับคำถามของคุณเพิ่มเติม'
         ],
         'send-btn'         => 'ส่งข้อความ',
-        'est-respond-time' => 'We typically respond within 2-3 hours during business hours.',
+        'est-respond-time' => 'ปกติเราจะตอบกลับภายใน 2–3 ชั่วโมงในช่วงเวลาทำการ',
         'loading'          => 'กำลังโหลด...',
         'sent'             => 'ข้อความของคุณถูกส่งเรียบร้อยแล้ว'
     ],
-    'social-media' => 'Or reach us on social media'
+    'social-media' => 'หรือจะติดต่อเราผ่านโซเชียลมีเดียก็ได้เช่นกัน'
 ];
