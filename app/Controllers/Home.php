@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\HTTP\ResponseInterface;
+
 class Home extends BaseController
 {
 
@@ -177,4 +179,22 @@ class Home extends BaseController
         return view('privacy-policy', $data);
     }
 
+    /**
+     * Handle sending email for contact form
+     * @return ResponseInterface
+     */
+    public function contactForm(): ResponseInterface
+    {
+        $locale  = $this->request->getPost('locale');
+        $this->request->setLocale($locale);
+        $name    = $this->request->getPost('name');
+        $email   = $this->request->getPost('email');
+        $phone   = $this->request->getPost('phone');
+        $subject = $this->request->getPost('subject');
+        $subject = lang('Contact.form.fields.subject.' . $subject);
+        $message = $this->request->getPost('message');
+        $email_subject = "[OTTERNOVA FORM][$subject] From: $name";
+        $email_content = "OtterNova Contact Form\n\nName: $name\nEmail: $email\nPhone: $phone\nMessage: $message\nLocale: $locale";
+        return $this->response->setJSON([$email_subject, $email_content]);
+    }
 }

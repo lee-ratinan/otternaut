@@ -18,3 +18,5 @@ $routes->get('{locale}/privacy-policy', 'Home::privacyPolicy');
 // home
 $routes->get('{locale}', 'Home::index');
 $routes->get('/', 'Home::index');
+// post
+$routes->post('contact-submit', 'Home::contactForm');

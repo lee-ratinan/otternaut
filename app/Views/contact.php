@@ -87,7 +87,7 @@
                                         <select class="form-select" name="subject" id="subject" required="">
                                             <option value=""><?= lang('Contact.form.fields.subject.please-select') ?></option>
                                             <option value="general"><?= lang('Contact.form.fields.subject.general') ?></option>
-                                            <option value="support"><?= lang('Contact.form.fields.subject.technical-support') ?></option>
+                                            <option value="technical-support"><?= lang('Contact.form.fields.subject.technical-support') ?></option>
                                             <option value="sales"><?= lang('Contact.form.fields.subject.sales') ?></option>
                                         </select>
                                     </div>
@@ -102,7 +102,7 @@
                                     <div class="error-message"></div>
                                     <div class="sent-message"><?= lang('Contact.form.sent') ?></div>
                                 </div>
-                                <button type="submit" class="btn-submit bg-secondary" disabled>
+                                <button type="submit" class="btn-submit bg-secondary">
                                     <span><?= lang('Contact.form.send-btn') ?></span>
                                     <i class="bi bi-arrow-right"></i>
                                 </button>
