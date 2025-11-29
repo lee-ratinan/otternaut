@@ -34,7 +34,7 @@ return [
         'store-webpage'              => '<i class="bi bi-globe"></i><span>Build your own webpage on our system to boost your branding</span>'
     ],
     'free-trial-cta'  => 'Start Free Trial',
-    'free-trial-msg'  => 'Try it free for 14 days — no stress, no tricks',
+    'free-trial-msg'  => 'Try it free for 30 days — no stress, no tricks',
     'coming-soon-btn' => 'Coming Soon',
     'coming-soon-txt' => 'This package is on the way — stay tuned!',
 ];

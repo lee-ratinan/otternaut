@@ -61,22 +61,22 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $packages    = [
-            'free'     => [
-                'available'    => false,
-                'popular'      => false,
-                'name'         => lang('Pricing.plans.free.title'),
-                'desc'         => lang('Pricing.plans.free.desc'),
-                'max_users'    => 1,
-                'max_services' => 3,
-                'max_products' => 0,
-                'features'     => [
-                    lang('Pricing.features.email-support'),
-                    lang('Pricing.features.basic-booking')
-                ],
-                'prices'       => [
-                    'th' => [0, 0]
-                ]
-            ],
+//            'free'     => [
+//                'available'    => false,
+//                'popular'      => false,
+//                'name'         => lang('Pricing.plans.free.title'),
+//                'desc'         => lang('Pricing.plans.free.desc'),
+//                'max_users'    => 1,
+//                'max_services' => 1,
+//                'max_products' => 0,
+//                'features'     => [
+//                    lang('Pricing.features.email-support'),
+//                    lang('Pricing.features.basic-booking')
+//                ],
+//                'prices'       => [
+//                    'th' => [0, 0]
+//                ]
+//            ],
             'basic'    => [
                 'available'    => false,
                 'popular'      => false,

@@ -123,7 +123,7 @@ return [
             ],
             [
                 'Is there a free tier?',
-                'You can only use a free trial for up to 14 days.'
+                'You can only use a free trial for up to 30 days.'
             ],
             [
                 'Can I cancel anytime?',
