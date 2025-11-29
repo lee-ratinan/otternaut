@@ -71,7 +71,7 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="<?= base_url('assets/img/about/about-21.webp') ?>" class="img-fluid rounded shadow" alt="Comprehensive solutions for business success">
+                    <img src="<?= base_url('assets/img/home/about.jpg') ?>" class="img-fluid rounded shadow" alt="Comprehensive solutions for business success">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
                     <div class="about-content">
