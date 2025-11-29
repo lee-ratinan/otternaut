@@ -1,8 +1,8 @@
 <?php
 return [
-    'site-name'         => 'Otternaut',
-    'author'            => 'Otternaut Team',
-    'copyright-message' => '© 2025-{0} <b>Otternaut</b>. All Rights Reserved.',
+    'site-name'         => 'OtterNova',
+    'author'            => 'OtterNova Team',
+    'copyright-message' => 'Copyright © 2025-{0} <b>OtterNova</b>. All Rights Reserved.',
     'slogan'            => 'Business solutions that you can trust.',
     'footer'            => [
         'useful-links' => 'Useful Links',

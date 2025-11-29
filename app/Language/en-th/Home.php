@@ -3,7 +3,7 @@ return [
     'hero'      => [
         'innovative-solutions' => 'Innovative solutions',
         'headline'             => 'Your bookings. Streamlined. Automated. Finally easy.',
-        'subheadline'          => 'Otternaut helps service businesses ditch the chaos and run smooth, reliable schedules — without juggling chats, spreadsheets, or double-bookings ever again.',
+        'subheadline'          => 'OtterNova helps service businesses ditch the chaos and run smooth, reliable schedules — without juggling chats, spreadsheets, or double-bookings ever again.',
         'cta'                  => 'Start Free',
         'demo'                 => 'Try Our Demo Account',
         'boxes'                => [
@@ -13,7 +13,13 @@ return [
             'transparency'     => 'Transparency'
         ]
     ],
-    'about'     => [],
+    'about'     => [
+        'title'      => 'About Us',
+        'tagline'    => 'Fixing messy bookings so businesses can run smoother every day.',
+        'visions'    => 'Visions that came from pains',
+        'paragraph1' => 'Many businesses still rely on paper notes, Excel sheets, and Post-its to handle bookings — a setup that quickly becomes chaotic during busy hours.',
+        'paragraph2' => 'OtterNova was created to replace that clutter with a clean, unified system that manages schedules, staff, and sessions automatically, giving every business a calmer, smarter way to stay organized.',
+    ],
     'features'  => [
         'title'    => 'Features',
         'subtitle' => 'Experience great features to automate your business operations.',
@@ -50,7 +56,7 @@ return [
             'tab-subtitle' => 'Bookings for Relaxation Services',
             'label'        => 'Hospitality Sector',
             'title'        => 'Smooth Booking for Spa Clients',
-            'description'  => 'Let customers book their preferred masseur and time slot without long text messages or confusions. Otternaut handles availability, staff schedules, and reminders automatically, giving your spa a calm, organized workflow while delivering a seamless booking experience.',
+            'description'  => 'Let customers book their preferred masseur and time slot without long text messages or confusions. OtterNova handles availability, staff schedules, and reminders automatically, giving your spa a calm, organized workflow while delivering a seamless booking experience.',
             'benefits'     => [
                 'Customers pick masseurs and time slots easily',
                 'No more double-bookings',
@@ -113,7 +119,7 @@ return [
             ],
             [
                 'Does it support different currencies, languages, and time zones?',
-                'Yes! Otternaut is built with multilingual and multi-timezone support in mind - however, you can only pick one country per business, which could dictate the timezones and currencies.'
+                'Yes! OtterNova is built with multilingual and multi-timezone support in mind - however, you can only pick one country per business, which could dictate the timezones and currencies.'
             ],
             [
                 'Is there a free tier?',
@@ -121,7 +127,7 @@ return [
             ],
             [
                 'Can I cancel anytime?',
-                'Of course. No hostage situations here. You may export your data and request deletion of your data when you leave Otternaut. Guilt-free!'
+                'Of course. No hostage situations here. You may export your data and request deletion of your data when you leave OtterNova. Guilt-free!'
             ]
         ]
     ]

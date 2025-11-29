@@ -65,20 +65,20 @@
     <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>About</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <h2><?= lang('Home.about.title') ?></h2>
+            <p><?= lang('Home.about.tagline') ?></p>
         </div><!-- End Section Title -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="<?= base_url('assets/img/home/about.jpg') ?>" class="img-fluid rounded shadow" alt="Comprehensive solutions for business success">
+                    <img src="<?= base_url('assets/img/home/about.jpg') ?>" class="img-fluid rounded shadow" alt="<?= lang('Home.about.title') ?>">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
                     <div class="about-content">
-                        <h2 class="mb-3">Our Visionary Endeavors</h2>
-                        <p class="lead mb-3">Discover how our diverse range of services can empower your business to achieve greater efficiency and growth in a competitive landscape.</p>
-                        <p>We provide expert consultancy and practical tools designed to streamline your operations, enhance productivity, and maximize your return on investment. Our committed team of professionals is dedicated to helping you navigate challenges and seize opportunities.</p>
-                        <a href="#" class="btn btn-primary mt-3">Discover Our Story</a>
+                        <h2 class="mb-3"><?= lang('Home.about.visions') ?></h2>
+                        <p class="lead mb-3"><?= lang('Home.about.paragraph1') ?></p>
+                        <p><?= lang('Home.about.paragraph2') ?></p>
+                        <a href="#" class="btn btn-primary mt-3 d-none">Discover Our Story</a>
                     </div>
                 </div>
             </div>
