@@ -32,7 +32,7 @@
     <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/vendor/flag-icons-main/css/flag-icons.min.css') ?>" rel="stylesheet">
     <!-- Main CSS File -->
-    <link href="<?= base_url('assets/css/main.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/main.min.css') ?>" rel="stylesheet">
     <!-- Link Languages -->
     <link rel="alternate" hreflang="en-th" href="<?= base_url('en-th/' . $url_part) ?>">
     <link rel="alternate" hreflang="th-th" href="<?= base_url('th-th/' . $url_part) ?>">
@@ -124,6 +124,6 @@
 <script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js') ?>"></script>
 <script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
 <!-- Main JS File -->
-<script src="<?= base_url('assets/js/main.js') ?>"></script>
+<script src="<?= base_url('assets/js/main.min.js') ?>"></script>
 </body>
 </html>
