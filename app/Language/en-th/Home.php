@@ -50,54 +50,27 @@ return [
             'tab-subtitle' => 'Bookings for Relaxation Services',
             'label'        => 'Hospitality Sector',
             'title'        => 'Smooth Booking for Spa Clients',
-            'description'  => 'Let customers book their preferred masseur and time slot without messages or confusion. Otternaut handles availability, staff schedules, and reminders automatically, giving your spa a calm, organized workflow while delivering a seamless booking experience.',
-            //            'boxes'        => [
-            //                [
-            //                    'value' => 'Physical products',
-            //                    'label' => 'Sure, selling essential oils or salt scrub is fine'
-            //                ],
-            //                [
-            //                    'value' => 'Couple Massage?',
-            //                    'label' => 'No problem'
-            //                ],
-            //            ],
+            'description'  => 'Let customers book their preferred masseur and time slot without long text messages or confusions. Otternaut handles availability, staff schedules, and reminders automatically, giving your spa a calm, organized workflow while delivering a seamless booking experience.',
             'benefits'     => [
-                'Customers pick masseurs easily',
+                'Customers pick masseurs and time slots easily',
                 'No more double-bookings',
                 'Clear staff schedules',
-                'Automated reminders for every session'
+                'Automated reminders for every session',
+                'Sell spa products alongside the services'
             ],
-            //            'float'        => [
-            //                'label'  => '100%',
-            //                'detail' => 'Hospitality'
-            //            ]
         ],
         'school'     => [
             'tab-title'    => 'Education',
-            'tab-subtitle' => 'Private Classes & Open Courses',
+            'tab-subtitle' => 'Private Classes & Group Sessions',
             'label'        => 'Academic Sector',
             'title'        => 'Smart Scheduling for Students',
-            'description'  => 'Offer private lessons or open group sessions with fixed schedules. Students can reserve slots or join available sessions instantly, while your staff enjoys a centralized system to manage classes, resources, and time-off smoothly.',
-            //            'boxes'        => [
-            //                [
-            //                    'value' => '1',
-            //                    'label' => 'xxx'
-            //                ],
-            //                [
-            //                    'value' => '2',
-            //                    'label' => 'yyy'
-            //                ],
-            //            ],
+            'description'  => 'Offer private lessons or open group sessions with fixed schedules. Students can reserve private time slots or join available sessions instantly, while your staff enjoys a centralized system to manage sessions, classrooms, and time-off smoothly.',
             'benefits'     => [
-                'Private or group scheduling',
+                'Private tuition and group sessions',
                 'Easy registration for students',
-                'Clear session management',
                 'Works for courses or workshops',
+                'Sell textbooks or cheatsheets'
             ],
-            //            'float'        => [
-            //                'label'  => 'aaa',
-            //                'detail' => 'bbb'
-            //            ]
         ],
         'consultant' => [
             'tab-title'    => 'Consulting',
@@ -105,53 +78,25 @@ return [
             'label'        => 'Various Sectors',
             'title'        => 'Reliable Scheduling for Consultants',
             'description'  => 'Perfect for medical, legal, counseling, and professional services. Clients can book appointments directly, while your team gets a clean calendar, complete session history, and automated reminders to keep operations running smoothly and professionally.',
-            //            'boxes'        => [
-            //                [
-            //                    'value' => '1',
-            //                    'label' => 'xxx'
-            //                ],
-            //                [
-            //                    'value' => '2',
-            //                    'label' => 'yyy'
-            //                ],
-            //            ],
             'benefits'     => [
                 'Flexible appointment booking',
                 'Works for many fields',
                 'Secure, clear schedules',
                 'Reduces missed appointments'
             ],
-            //            'float'        => [
-            //                'label'  => 'aaa',
-            //                'detail' => 'bbb'
-            //            ]
         ],
         'gym'        => [
             'tab-title'    => 'Trainer',
-            'tab-subtitle' => 'Fitness & Coaching Sessions',
+            'tab-subtitle' => 'Booking that Makes You Healthier',
             'label'        => 'Health Sector',
             'title'        => 'Effortless Scheduling for Training',
-            'description'  => 'Suitable for gyms, Muay Thai, yoga, and 1-on-1 coaching. Clients choose time slots or join training sessions easily while you manage availability, packages, and session progress all in one powerful dashboard.',
-            //            'boxes'        => [
-            //                [
-            //                    'value' => '1',
-            //                    'label' => 'xxx'
-            //                ],
-            //                [
-            //                    'value' => '2',
-            //                    'label' => 'yyy'
-            //                ],
-            //            ],
+            'description'  => 'Suitable for gyms, Muay Thai, yoga, 1-on-1 coaching, and more. Clients choose time slots or join training sessions easily while you manage availability, packages, and session progress all in one powerful dashboard.',
             'benefits'     => [
                 'Manage private sessions',
                 'Support group classes',
                 'Track trainer schedules',
                 'Works for gyms & studios'
             ],
-            //            'float'        => [
-            //                'label'  => 'aaa',
-            //                'detail' => 'bbb'
-            //            ]
         ]
     ],
     'faq'       => [
