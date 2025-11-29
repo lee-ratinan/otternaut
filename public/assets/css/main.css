@@ -13,8 +13,11 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font-th: "Roboto", "Noto Serif Thai", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Ubuntu",  sans-serif;
+  --heading-font-th: "Ubuntu", "Noto Sans Thai", sans-serif;
   --nav-font: "Inter",  sans-serif;
+  --nav-font-th: "Ubuntu", "Noto Sans Thai", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -63,7 +66,11 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--default-font), sans-serif;
+}
+
+body.country-th {
+  font-family: var(--default-font-th), serif !important;
 }
 
 a {
@@ -84,7 +91,16 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
+}
+
+.country-th h1,
+.country-th h2,
+.country-th h3,
+.country-th h4,
+.country-th h5,
+.country-th h6 {
+    font-family: var(--heading-font-th), sans-serif !important;
 }
 
 /* PHP Email Form Messages
@@ -256,7 +272,7 @@ h6 {
     color: color-mix(in srgb, var(--nav-color), transparent 30%);
     font-size: 15px;
     padding: 0 2px;
-    font-family: var(--nav-font);
+    font-family: var(--nav-font), sans-serif;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -264,6 +280,11 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+  }
+
+  .country-th .navmenu a,
+  .country-th .navmenu a:focus {
+    font-family: var(--nav-font-th), sans-serif !important;
   }
 
   .navmenu a i,
@@ -392,7 +413,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: var(--nav-font), sans-serif;
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -400,6 +421,11 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+  }
+
+  .country-th .navmenu a,
+  .country-th .navmenu a:focus {
+      font-family: var(--nav-font), sans-serif !important;
   }
 
   .navmenu a i,
@@ -509,15 +535,23 @@ h6 {
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
+.country-th .footer .footer-about .logo span {
+  font-family: var(--heading-font-th), sans-serif !important;
+}
+
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
+}
+
+.country-th .footer .footer-about p {
+  font-family: var(--heading-font-th), sans-serif !important;
 }
 
 .footer .social-links a {
@@ -1046,9 +1080,13 @@ section,
 --------------------------------------------------------------*/
 .about .about-content h2 {
   font-size: 2.25rem;
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
   color: var(--heading-color);
   font-weight: 700;
+}
+
+.country-th .about .about-content h2 {
+  font-family: var(--heading-font-th), sans-serif !important;
 }
 
 .about .about-content .lead {
@@ -1102,10 +1140,14 @@ section,
 
 .about .about-card h5 {
   font-size: 1.22rem;
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
   color: var(--heading-color);
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.country-th .about .about-card h5 {
+  font-family: var(--heading-font-th), sans-serif !important;
 }
 
 .about .about-card p {
@@ -1204,7 +1246,11 @@ section,
   margin-bottom: 1rem;
   font-weight: 600;
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
+}
+
+.country-th .services .service-item h3 {
+  font-family: var(--heading-font-th), sans-serif !important;
 }
 
 .services .service-item p {
@@ -2496,12 +2542,16 @@ section,
 .faq .faq-item .faq-header h4 {
   flex: 1;
   margin: 0;
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: var(--heading-color);
   transition: all 0.3s ease;
   line-height: 1.6;
+}
+
+.country-th .faq .faq-item .faq-header h4 {
+  font-family: var(--heading-font-th), sans-serif !important;
 }
 
 .faq .faq-item .faq-header .faq-icon {
