@@ -20,6 +20,7 @@
                                     <h3 class="plan-name"><?= $package['name'] ?></h3>
                                     <p class="plan-subtitle"><?= $package['desc'] ?></p>
                                 </div>
+                                <?php if (0 < $package['prices'][$country][0]) : ?>
                                 <div class="plan-pricing">
                                     <?php if ('th' == $country) : ?>
                                         <!-- FOR COUNTRIES WHERE SYMBOL IS ON THE LEFT -->
@@ -41,11 +42,14 @@
                                     ?>
                                     <p class="billing-info"><?= lang('Pricing.yearly-saved', [$saved]) ?></p>
                                 </div>
+                                <?php endif; ?>
                                 <div class="plan-features">
                                     <ul class="features-list">
                                         <li><i class="bi bi-people-fill"></i><span><?= lang('Pricing.features.max-users', [$package['max_users']]) ?></span></li>
                                         <li><i class="bi bi-stars"></i><span><?= lang('Pricing.features.max-services', [$package['max_services']]) ?></span></li>
-                                        <li><i class="bi bi-box-seam-fill"></i><span><?= lang('Pricing.features.max-products', [$package['max_products']]) ?></span></li>
+                                        <?php if (0 < $package['max_products']) : ?>
+                                            <li><i class="bi bi-box-seam-fill"></i><span><?= lang('Pricing.features.max-products', [$package['max_products']]) ?></span></li>
+                                        <?php endif; ?>
                                         <?php foreach ($package['features'] as $feature) : ?>
                                             <li><?= $feature ?></li>
                                         <?php endforeach; ?>

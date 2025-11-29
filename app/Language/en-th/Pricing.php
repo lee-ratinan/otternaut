@@ -12,15 +12,19 @@ return [
         ],
         'standard' => [
             'title' => 'Standard',
-            'desc'  => 'Optimized for your business’ expansion'
+            'desc'  => 'Optimized for your business’ expansion.'
         ],
         'premium'  => [
             'title' => 'Premium',
             'desc'  => 'Extend your reach to the world with your own page!'
+        ],
+        'free'     => [
+            'title' => 'Free',
+            'desc'  => 'Doing it solo?! Good for you here.'
         ]
     ],
     'features'        => [
-        'max-users'                  => 'Up to {0} users',
+        'max-users'                  => 'Up to {0, plural, one {one user} other {# users}}',
         'max-services'               => 'Up to {0} services',
         'max-products'               => 'Up to {0} products',
         'email-support'              => '<i class="bi bi-envelope"></i><span>Email support</span>',
