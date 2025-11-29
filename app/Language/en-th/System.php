@@ -7,6 +7,7 @@ return [
     'footer'            => [
         'useful-links' => 'Useful Links',
     ],
+    'coming-soon'       => 'Coming Soon',
     'locales'           => [
         'title' => '<i class="bi bi-globe"></i> Change Country',
         'en-th' => 'Thailand (English)',
