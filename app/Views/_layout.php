@@ -93,8 +93,10 @@
             <div class="col-lg-4 col-md-6 footer-links">
                 <h4><?= lang('System.locales.title') ?></h4>
                 <p>
-                    <span class="fi fi-th"></span> &nbsp; ประเทศไทย &middot; Thailand<br>
-                    <span class="bi bi-chat-dots"></span> <a href="<?= base_url('en-th/' . $url_part) ?>">English</a> <span class="bi bi-dot"></span> <a href="<?= base_url('th-th/' . $url_part) ?>">ประเทศไทย</a>
+                    <span class="fi fi-th"></span> &nbsp; ประเทศไทย <span class="bi bi-dot"></span> Thailand<br>
+                    <span class="bi bi-chat-dots mx-2"></span>
+                    <a href="<?= base_url('th-th/' . $url_part) ?>">ภาษาไทย</a> <span class="bi bi-dot"></span>
+                    <a href="<?= base_url('en-th/' . $url_part) ?>">English</a>
                 </p>
             </div>
         </div>

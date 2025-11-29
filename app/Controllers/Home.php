@@ -60,7 +60,7 @@ class Home extends BaseController
         $locale_data = $this->splitLocale($locale);
         $packages    = [
             'basic'    => [
-                'available'    => true,
+                'available'    => false,
                 'popular'      => false,
                 'name'         => lang('Pricing.plans.basic.title'),
                 'desc'         => lang('Pricing.plans.basic.desc'),
@@ -77,7 +77,7 @@ class Home extends BaseController
                 ]
             ],
             'standard' => [
-                'available'    => true,
+                'available'    => false,
                 'popular'      => true,
                 'name'         => lang('Pricing.plans.standard.title'),
                 'desc'         => lang('Pricing.plans.standard.desc'),
