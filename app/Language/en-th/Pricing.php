@@ -1,7 +1,7 @@
 <?php
 return [
     'subtitle'        => 'Easy, transparent pricing for all businesses to thrive.',
-    'popular'         => 'Most Popular',
+    'popular'         => 'Recommended',
     'per-year'        => 'per year',
     'per-month'       => 'per month',
     'yearly-saved'    => 'You saved <b class="text-white" style="font-size:1.2em">{0}</b> when billed annually.',

@@ -1,7 +1,7 @@
 <?php
 return [
     'subtitle'        => 'ราคาง่ายๆ เป็นกันเอง เพื่อช่วยให้ธุรกิจของคุณราบรื่น และเติบโตขึ้น',
-    'popular'         => 'ยอดฮิต',
+    'popular'         => 'แนะนำ',
     'per-year'        => 'ต่อปี',
     'per-month'       => 'ต่อเดือน',
     'yearly-saved'    => 'ประหยัด <b class="text-white" style="font-size:1.2em">{0}</b> เมื่อจ่ายเป็นรายปี',
