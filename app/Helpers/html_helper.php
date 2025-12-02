@@ -43,7 +43,7 @@ function format_phone_number(string $phone_number): string|bool
  * - IDR
  * - MYR
  * @param float $price The price to be formatted
- * @param string $currency The currency to be formatted in
+ * @param string $currency The currency to be formatted in, country code can be used here instead
  * @param int $decimal_override (optional) Use this decimal point if the value is not negative
  * @return string
  */
@@ -51,7 +51,20 @@ function format_price(float $price, string $currency, int $decimal_override = -1
 {
     $negative = (0 > $price ? '-' : '');
     $price    = abs($price);
+    $currency = strtoupper($currency);
+    if (2 == strlen($currency)) {
+        $currencies = [
+            'US' => 'USD',
+            'TH' => 'THB',
+            'SG' => 'SGD',
+            'ID' => 'IDR',
+            'MY' => 'MYR',
+            'JP' => 'JPY',
+        ];
+        $currency = $currencies[$currency];
+    }
     $decimals = [
+        'USD' => 2,
         'THB' => 2,
         'SGD' => 2,
         'IDR' => 0,

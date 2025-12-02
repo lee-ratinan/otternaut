@@ -5,6 +5,7 @@ return [
     'per-year'        => 'ต่อปี',
     'per-month'       => 'ต่อเดือน',
     'yearly-saved'    => 'ประหยัด <b class="text-white" style="font-size:1.2em">{0}</b> เมื่อจ่ายเป็นรายปี',
+    'from-price'      => '(ลดจาก <b><s>{0}</s></b>)',
     'plans'           => [
         'basic'    => [
             'title' => 'เบสิก',

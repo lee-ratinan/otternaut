@@ -26,18 +26,24 @@
                                         <!-- FOR COUNTRIES WHERE SYMBOL IS ON THE LEFT -->
                                         <div class="price-wrapper">
                                             <span class="currency"><?= get_currency_symbol($country) ?></span>
-                                            <span class="amount"><?= number_format($package['prices'][$country][0]) ?></span>
-                                            <span class="period"><?= lang('Pricing.per-month') ?></span>
+                                            <span class="amount"><?= number_format($package['discounted'][$country][0]) ?></span>
+                                            <span class="period">
+                                                <?= lang('Pricing.per-month') ?>
+                                                <?= lang('Pricing.from-price', [format_price($package['prices'][$country][0], $country, 0)]) ?>
+                                            </span>
                                         </div>
                                         <div class="price-wrapper">
                                             <span class="currency"><?= get_currency_symbol($country) ?></span>
-                                            <span class="amount"><?= number_format($package['prices'][$country][1]) ?></span>
-                                            <span class="period"><?= lang('Pricing.per-year') ?></span>
+                                            <span class="amount"><?= number_format($package['discounted'][$country][1]) ?></span>
+                                            <span class="period">
+                                                <?= lang('Pricing.per-year') ?>
+                                                <?= lang('Pricing.from-price', [format_price($package['prices'][$country][1], $country, 0)]) ?>
+                                            </span>
                                         </div>
                                     <?php endif; ?>
                                     <?php
-                                    $per_month_in_a_year = $package['prices'][$country][0] * 12;
-                                    $delta               = $per_month_in_a_year - $package['prices'][$country][1];
+                                    $per_month_in_a_year = $package['discounted'][$country][0] * 12;
+                                    $delta               = $per_month_in_a_year - $package['discounted'][$country][1];
                                     $saved               = number_format($delta / $per_month_in_a_year * 100, 1) . '%';
                                     ?>
                                     <p class="billing-info"><?= lang('Pricing.yearly-saved', [$saved]) ?></p>

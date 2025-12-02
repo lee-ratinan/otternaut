@@ -5,6 +5,7 @@ return [
     'per-year'        => 'per year',
     'per-month'       => 'per month',
     'yearly-saved'    => 'You saved <b class="text-white" style="font-size:1.2em">{0}</b> when billed annually.',
+    'from-price'      => '(from <b><s>{0}</s></b>)',
     'plans'           => [
         'basic'    => [
             'title' => 'Basic',

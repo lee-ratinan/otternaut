@@ -92,6 +92,9 @@ class Home extends BaseController
                 ],
                 'prices'       => [
                     'th' => [400, 4200]
+                ],
+                'discounted'   => [
+                    'th' => [320, 3360]
                 ]
             ],
             'standard' => [
@@ -109,6 +112,9 @@ class Home extends BaseController
                 ],
                 'prices'       => [
                     'th' => [750, 7800]
+                ],
+                'discounted'   => [
+                    'th' => [600, 6240]
                 ]
             ],
             'premium'  => [
@@ -127,6 +133,9 @@ class Home extends BaseController
                 ],
                 'prices'       => [
                     'th' => [1200, 12000]
+                ],
+                'discounted'   => [
+                    'th' => [960, 9600]
                 ]
             ]
         ];
