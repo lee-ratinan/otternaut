@@ -38,6 +38,48 @@
     <link rel="alternate" hreflang="th-th" href="<?= base_url('th-th/' . $url_part) ?>">
     <link rel="alternate" hreflang="x-default" href="<?= base_url($url_part) ?>">
     <link rel="canonical" href="<?= current_url() ?>">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "OtterNova",
+            "url": "https://otternova.com/",
+            "logo": "https://otternova.com/assets/img/logo-original.png"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "OtterNova",
+            "url": "https://otternova.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "OtterNova",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://otternova.com/",
+            "description": "OtterNova is a smart booking and scheduling system for businesses, replacing paper chaos with an organized dashboard.",
+            "offers": {
+                "@type": "Offer",
+                "price": "320",
+                "priceCurrency": "THB",
+                "description": "30-day free trial, then paid plans available."
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact OtterNova",
+            "url": "https://otternova.com/contact"
+        }
+    </script>
     <!-- =======================================================
     * Template Name: Aventro
     * Template URL: https://bootstrapmade.com/aventro-bootstrap-template/
