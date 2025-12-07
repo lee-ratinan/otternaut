@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="<?= lang('System.pages.' . $page_slug . '.title') . ' | ' . lang('System.site-name') ?>">
     <meta property="og:description" content="<?= lang('System.pages.' . $page_slug . '.meta.description') ?>">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="<?= base_url('assets/img/otternova-greeting.jpg') ?>">
     <meta property="og:url" content="<?= current_url() ?>">
     <meta property="og:type" content="website" />
     <!-- Favicons -->
