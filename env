@@ -14,13 +14,13 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+CI_ENVIRONMENT=XXXXXX
 
 #--------------------------------------------------------------------
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = ''
+app.baseURL=XXXXXX
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -66,4 +66,16 @@
 # LOGGER
 #--------------------------------------------------------------------
 
-# logger.threshold = 4
+logger.threshold=4
+
+#--------------------------------------------------------------------
+# OTHERS
+#--------------------------------------------------------------------
+
+CONTACT_EMAIL=XXXXXX
+CONTACT_PHONE=XXXXXX
+SOCIAL_FACEBOOK=XXXXXX
+SOCIAL_INSTAGRAM=XXXXXX
+
+REGISTER_LINK=XXXXXX
+DEMO_LINK=XXXXXX

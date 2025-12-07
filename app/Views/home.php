@@ -14,8 +14,8 @@
                         <h1 data-aos="fade-right" data-aos-delay="400"><?= lang('Home.hero.headline') ?></h1>
                         <p data-aos="fade-right" data-aos-delay="500"><?= lang('Home.hero.subheadline') ?></p>
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                            <a href="#" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('Home.hero.cta') ?></a>
-                            <a href="#" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
+                            <a href="<?= getenv('REGISTER_LINK') ?>" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('Home.hero.cta') ?></a>
+                            <a href="<?= getenv('DEMO_LINK') ?>" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
                         </div>
                         <div class="hero-stats d-none" data-aos="fade-up" data-aos-delay="700">
                             <div class="stat-item">
@@ -157,7 +157,6 @@
                                             <span class="stat-label"><?= lang('Home.use-cases.' . $key . '.boxes.1.label') ?></span>
                                         </div>
                                     </div>
-
                                     <div class="feature-points">
                                         <?php foreach (lang('Home.use-cases.' . $key . '.benefits') as $line) : ?>
                                         <div class="point-item"><i class="bi bi-arrow-right"></i><span><?= $line ?></span></div>

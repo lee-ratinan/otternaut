@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="plan-action">
                                     <?php if ($package['available']) : ?>
-                                        <a href="#<?= $key ?>" class="btn-plan"><?= lang('Pricing.free-trial-cta') ?></a>
+                                        <a href="<?= getenv('REGISTER_LINK') ?>#<?= $key ?>" class="btn-plan"><?= lang('Pricing.free-trial-cta') ?></a>
                                         <p class="trial-info"><?= lang('Pricing.free-trial-msg') ?></p>
                                     <?php else : ?>
                                         <a href="#" class="btn-plan bg-secondary disabled" disabled><?= lang('Pricing.coming-soon-btn') ?></a>
