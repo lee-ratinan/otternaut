@@ -44,7 +44,8 @@ return [
         'send-btn'         => 'Send Message',
         'est-respond-time' => 'We typically respond within 2-3 hours during business hours.',
         'loading'          => 'Loading...',
-        'sent'             => 'Your message has been sent.'
+        'sent'             => 'Your message has been sent.',
+        'error'            => 'There was an error sending your message.',
     ],
     'social-media' => 'Or reach us on social media'
 ];

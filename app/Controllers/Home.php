@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\HTTP\ResponseInterface;
+use Config\Services;
 
 class Home extends BaseController
 {
@@ -210,16 +211,32 @@ class Home extends BaseController
      */
     public function contactForm(): ResponseInterface
     {
-        $locale  = $this->request->getPost('locale');
-        $this->request->setLocale($locale);
-        $name    = $this->request->getPost('name');
-        $email   = $this->request->getPost('email');
-        $phone   = $this->request->getPost('phone');
-        $subject = $this->request->getPost('subject');
-        $subject = lang('Contact.form.fields.subject.' . $subject);
-        $message = $this->request->getPost('message');
-        $email_subject = "[OTTERNOVA FORM][$subject] From: $name";
-        $email_content = "OtterNova Contact Form\n\nName: $name\nEmail: $email\nPhone: $phone\nMessage: $message\nLocale: $locale";
-        return $this->response->setJSON([$email_subject, $email_content]);
+        try {
+            $locale   = $this->request->getPost('locale');
+            $this->request->setLocale($locale);
+            $to       = getenv('CONTACT_EMAIL');
+            $no_reply = getenv('NO_REPLY_EMAIL');
+            $name     = $this->request->getPost('name');
+            $from     = $this->request->getPost('email');
+            $phone    = $this->request->getPost('phone');
+            $subject  = $this->request->getPost('subject');
+            $subject  = lang('Contact.form.fields.subject.' . $subject);
+            $message  = $this->request->getPost('message');
+            $date     = date('d M Y');
+            // Send the email
+            $email    = Services::email();
+            $email->setTo($to);
+            $email->setFrom($no_reply);
+            $email->setReplyTo($from);
+            $email->setSubject("[OtterNova Contact Form][$subject] From: $name - $date");
+            $email->setMessage("Contact Form Submission\n\nName: $name\nEmail: $from\nPhone: $phone\nMessage: $message\nLanguage: $locale\n\nThis email is system generated.\nOtterNova");
+            if ($email->send()) {
+                return $this->response->setBody('OK');
+            } else {
+                return $this->response->setBody(lang('Contact.form.error'));
+            }
+        } catch (\Exception $e) {
+            return $this->response->setBody(lang('Contact.form.error'));
+        }
     }
 }

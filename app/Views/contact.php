@@ -102,7 +102,7 @@
                                     <div class="error-message"></div>
                                     <div class="sent-message"><?= lang('Contact.form.sent') ?></div>
                                 </div>
-                                <button type="submit" class="btn-submit bg-secondary">
+                                <button type="submit" class="btn-submit">
                                     <span><?= lang('Contact.form.send-btn') ?></span>
                                     <i class="bi bi-arrow-right"></i>
                                 </button>
