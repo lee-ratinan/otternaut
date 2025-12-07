@@ -145,30 +145,30 @@
                     <a href="<?= base_url('en-th/' . $url_part) ?>">English</a>
                 </p>
                 <p class="d-none">
-                    <span class="fi fi-my"></span> &nbsp; Malaysia (<?= lang('System.coming-soon') ?>)<br>
+                    <span class="fi fi-my"></span> &nbsp; Malaysia (Akan Datang)<br>
                     <span class="bi bi-chat-dots mx-2"></span>
                     Bahasa Malaysia <span class="bi bi-dot"></span>
                     English
                 </p>
                 <p class="d-none">
-                    <span class="fi fi-id"></span> &nbsp; Indonesia (<?= lang('System.coming-soon') ?>)<br>
+                    <span class="fi fi-id"></span> &nbsp; Indonesia (Segera Hadir)<br>
                     <span class="bi bi-chat-dots mx-2"></span>
                     Bahasa Indonesia <span class="bi bi-dot"></span>
                     English
                 </p>
                 <p class="d-none">
-                    <span class="fi fi-sg"></span> &nbsp; Singapore (<?= lang('System.coming-soon') ?>)<br>
+                    <span class="fi fi-sg"></span> &nbsp; Singapore (Coming Soon)<br>
                     <span class="bi bi-chat-dots mx-2"></span>
                     English
                 </p>
                 <p class="d-none">
-                    <span class="fi fi-jp"></span> &nbsp; 日本 <span class="bi bi-dot"></span> Japan (<?= lang('System.coming-soon') ?>)<br>
+                    <span class="fi fi-jp"></span> &nbsp; 日本 <span class="bi bi-dot"></span> Japan (近日公開)<br>
                     <span class="bi bi-chat-dots mx-2"></span>
                     日本語 <span class="bi bi-dot"></span>
                     English
                 </p>
                 <p class="d-none">
-                    <span class="fi fi-tw"></span> &nbsp; 台灣 <span class="bi bi-dot"></span> Taiwan (<?= lang('System.coming-soon') ?>)<br>
+                    <span class="fi fi-tw"></span> &nbsp; 台灣 <span class="bi bi-dot"></span> Taiwan (即將推出)<br>
                     <span class="bi bi-chat-dots mx-2"></span>
                     中文 (台灣) <span class="bi bi-dot"></span>
                     English
