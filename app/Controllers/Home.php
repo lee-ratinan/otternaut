@@ -239,4 +239,42 @@ class Home extends BaseController
             return $this->response->setBody(lang('Contact.form.error'));
         }
     }
+
+    public function sitemap()
+    {
+        $languages  = [
+            '',
+            // Thailand
+            '/th-th',
+            '/en-th',
+        ];
+        $main_pages = [
+            ['/', '2025-12-01', 'monthly', '1.0'],
+            ['/pricing', '2025-12-01', 'monthly', '0.9'],
+            ['/contact', '2025-12-08', 'monthly', '0.8'],
+            ['/termsAndConditions', '2025-12-01', 'monthly', '0.5'],
+            ['/privacyPolicy', '2025-12-01', 'monthly', '0.5'],
+        ];
+        $xml        = [];
+        foreach ($main_pages as $page) {
+            foreach ($languages as $lang) {
+                $xml[] = [
+                    'loc'        => base_url($lang . $page[0]),
+                    'lastmod'    => $page[1],
+                    'changefreq' => $page[2],
+                    'priority'   => $page[3],
+                ];
+            }
+        }
+        $final_xml = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
+        foreach ($xml as $item) {
+            $final_xml .= '<url>';
+            foreach ($item as $key => $value) {
+                $final_xml .= '<' . $key . '>' . $value . '</' . $key . '>';
+            }
+            $final_xml .= '</url>';
+        }
+        $final_xml .= '</urlset>';
+        return $this->response->setXML($final_xml);
+    }
 }

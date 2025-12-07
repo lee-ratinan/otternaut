@@ -10,6 +10,7 @@ $routes->get('pricing', 'Home::pricing');
 $routes->get('contact', 'Home::contact');
 $routes->get('terms-and-conditions', 'Home::termsAndConditions');
 $routes->get('privacy-policy', 'Home::privacyPolicy');
+$routes->get('sitemap.xml', 'Home::sitemap');
 // with locale
 $routes->get('{locale}/pricing', 'Home::pricing');
 $routes->get('{locale}/contact', 'Home::contact');
