@@ -38,6 +38,13 @@ return [
             'title'       => 'Privacy Policy',
             'description' => 'Review OtterNova’s Privacy Policy to understand how we collect, use, and protect data across our websites, booking system, and business dashboard.',
             'keywords'    => 'privacy policy, data protection, data usage, OtterNova privacy, information security, booking system privacy'
+        ],
+        'not-found'            => [
+            'title'            => 'Page Not Found',
+            'description'      => '-',
+            'keywords'         => '-',
+            'got-lost'         => 'Looks like our otter got lost and couldn’t recognize your destination.',
+            'return-to-safety' => 'Return to safety 🚀'
         ]
     ]
 ];

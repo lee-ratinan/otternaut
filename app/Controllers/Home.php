@@ -277,4 +277,17 @@ class Home extends BaseController
         $final_xml .= '</urlset>';
         return $this->response->setXML($final_xml);
     }
+
+    public function show404(): string|ResponseInterface
+    {
+        $method = $this->request->getMethod();
+        $lang         = $this->request->getLocale();
+        $businessName = '';
+        $data    = [
+            'slug'         => 'not-found',
+            'lang'         => $lang,
+            'businessName' => $businessName
+        ];
+        return view('_404', $data);
+    }
 }
