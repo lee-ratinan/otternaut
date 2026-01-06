@@ -83,19 +83,19 @@ class Home extends BaseController
                 'popular'      => false,
                 'name'         => lang('Pricing.plans.basic.title'),
                 'desc'         => lang('Pricing.plans.basic.desc'),
-                'max_users'    => 10,
-                'max_services' => 10,
-                'max_products' => 10,
+                'max_users'    => 3,
+                'max_services' => 5,
+                'max_products' => 5,
                 'features'     => [
                     lang('Pricing.features.email-support'),
                     lang('Pricing.features.basic-booking'),
                     lang('Pricing.features.sell-product'),
                 ],
                 'prices'       => [
-                    'th' => [400, 4200]
+                    'th' => [400, 4000]
                 ],
                 'discounted'   => [
-                    'th' => [320, 3360]
+                    'th' => [299, 2990]
                 ]
             ],
             'standard' => [
@@ -103,19 +103,19 @@ class Home extends BaseController
                 'popular'      => true,
                 'name'         => lang('Pricing.plans.standard.title'),
                 'desc'         => lang('Pricing.plans.standard.desc'),
-                'max_users'    => 20,
-                'max_services' => 30,
-                'max_products' => 30,
+                'max_users'    => 10,
+                'max_services' => 20,
+                'max_products' => 20,
                 'features'     => [
                     lang('Pricing.features.email-support'),
                     lang('Pricing.features.basic-and-advanced-booking'),
                     lang('Pricing.features.sell-product'),
                 ],
                 'prices'       => [
-                    'th' => [750, 7800]
+                    'th' => [800, 8000]
                 ],
                 'discounted'   => [
-                    'th' => [600, 6240]
+                    'th' => [599, 5990]
                 ]
             ],
             'premium'  => [
@@ -123,9 +123,9 @@ class Home extends BaseController
                 'popular'      => false,
                 'name'         => lang('Pricing.plans.premium.title'),
                 'desc'         => lang('Pricing.plans.premium.desc'),
-                'max_users'    => 50,
-                'max_services' => 100,
-                'max_products' => 100,
+                'max_users'    => 30,
+                'max_services' => 50,
+                'max_products' => 50,
                 'features'     => [
                     lang('Pricing.features.email-support'),
                     lang('Pricing.features.basic-and-advanced-booking'),
@@ -133,10 +133,10 @@ class Home extends BaseController
                     lang('Pricing.features.store-webpage')
                 ],
                 'prices'       => [
-                    'th' => [1200, 12000]
+                    'th' => [1800, 18000]
                 ],
                 'discounted'   => [
-                    'th' => [960, 9600]
+                    'th' => [1290, 12900]
                 ]
             ]
         ];
