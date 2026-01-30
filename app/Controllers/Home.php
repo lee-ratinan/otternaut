@@ -288,12 +288,14 @@ class Home extends BaseController
             ['/', '2025-12-01', 'monthly', '1.0'],
             ['/pricing', '2025-12-01', 'monthly', '0.9'],
             ['/contact', '2025-12-08', 'monthly', '0.8'],
-            ['/termsAndConditions', '2025-12-01', 'monthly', '0.5'],
-            ['/privacyPolicy', '2025-12-01', 'monthly', '0.5'],
+//            ['/leadership', '2025-12-08', 'monthly', '0.5'],
+//            ['/choose-region', '2025-12-01', 'monthly', '0.5'],
+            ['/terms-and-conditions', '2025-12-01', 'monthly', '0.5'],
+            ['/privacy-policy', '2025-12-01', 'monthly', '0.5'],
         ];
         $xml        = [];
-        foreach ($main_pages as $page) {
-            foreach ($languages as $lang) {
+        foreach ($languages as $lang) {
+            foreach ($main_pages as $page) {
                 $xml[] = [
                     'loc'        => base_url($lang . $page[0]),
                     'lastmod'    => $page[1],
