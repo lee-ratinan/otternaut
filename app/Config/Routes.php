@@ -8,6 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 // without locale
 $routes->get('pricing', 'Home::pricing');
 $routes->get('contact', 'Home::contact');
+$routes->get('leadership', 'Home::leadership');
+$routes->get('choose-region', 'Home::chooseRegion');
 $routes->get('terms-and-conditions', 'Home::termsAndConditions');
 $routes->get('privacy-policy', 'Home::privacyPolicy');
 $routes->get('sitemap.xml', 'Home::sitemap');
@@ -15,6 +17,8 @@ $routes->get('sitemap.xml', 'Home::sitemap');
 $routes->group('{locale}', ['filter' => 'localeGuard'], static function($routes) {
     $routes->get('pricing', 'Home::pricing');
     $routes->get('contact', 'Home::contact');
+    $routes->get('leadership', 'Home::leadership');
+    $routes->get('choose-region', 'Home::chooseRegion');
     $routes->get('terms-and-conditions', 'Home::termsAndConditions');
     $routes->get('privacy-policy', 'Home::privacyPolicy');
     $routes->get('/', 'Home::index');

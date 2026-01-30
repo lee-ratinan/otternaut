@@ -29,6 +29,12 @@ return [
             'description' => 'Contact OtterNova for support, sales, or general inquiries. Our team responds quickly and helps you set up effortless booking for your business.',
             'keywords'    => 'contact OtterNova, customer support, sales inquiry, booking system help, SaaS support, appointment software assistance'
         ],
+        'choose-region'        => [
+            'title'       => 'Choose Region',
+        ],
+        'leadership'           => [
+            'title'       => 'Leadership',
+        ],
         'terms-and-conditions' => [
             'title'       => 'Terms & Conditions',
             'description' => 'Read OtterNova’s Terms and Conditions for using our booking and scheduling platform. Learn about user rights, responsibilities, and service usage.',

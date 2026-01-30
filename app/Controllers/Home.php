@@ -170,6 +170,42 @@ class Home extends BaseController
     }
 
     /**
+     * Leadership page
+     * @return string
+     */
+    public function leadership(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug' => 'leadership',
+            'url_part'  => 'leadership',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('leadership', $data);
+    }
+
+    /**
+     * Choose region page
+     * @return string
+     */
+    public function chooseRegion(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug' => 'choose-region',
+            'url_part'  => 'choose-region',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('choose-region', $data);
+    }
+
+    /**
      * Terms and Conditions page
      * @return string
      */
