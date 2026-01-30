@@ -31,9 +31,13 @@ return [
         ],
         'choose-region'        => [
             'title'       => 'เลือกประเทศและภาษา',
+            'description' => 'รายการประเทศและภาษาและเลือก',
+            'keywords'    => 'เปลี่ยนประเทศ, เปลี่ยนภาษา'
         ],
         'leadership'           => [
             'title'       => 'ผู้นำ',
+            'description' => 'แนะนำให้รู้จักกับทีมผู้นำของ OtterNova',
+            'keywords'    => 'ทำความรู้จักกับทีม OtterNova, รู้จักกับผู้นำ, แนะนำตัว'
         ],
         'terms-and-conditions' => [
             'title'       => 'เงื่อนไขการใช้งาน',

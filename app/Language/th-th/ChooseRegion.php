@@ -2,6 +2,7 @@
 return [
     'subtitle' => 'กรุณาเลือกประเทศและภาษาเพื่อดำเนินการต่อ',
     'regions'  => [
-        'southeast-asia' => 'Southeast Asia',
+        'southeast-asia' => 'เอเชียตะวันออกเฉียงใต้',
+        'east-asia'      => 'เอเชียตะวันออก',
     ]
 ];

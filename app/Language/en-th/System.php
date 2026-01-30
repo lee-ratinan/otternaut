@@ -31,9 +31,13 @@ return [
         ],
         'choose-region'        => [
             'title'       => 'Choose Region',
+            'description' => 'List the country and language to change to.',
+            'keywords'    => 'Change language, change country, change region'
         ],
         'leadership'           => [
             'title'       => 'Leadership',
+            'description' => 'Introduction to the leadership team of OtterNova.',
+            'keywords'    => 'OtterNova leadership, get to know the team, introduction'
         ],
         'terms-and-conditions' => [
             'title'       => 'Terms & Conditions',
