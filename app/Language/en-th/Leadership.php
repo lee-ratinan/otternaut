@@ -2,8 +2,10 @@
 return [
     'subtitle' => 'Getting to know OtterNova Leadership',
     'eikin'    => [
-        'name'      => 'Eikin',
+        'name'      => 'Nat',
         'title'     => 'Chief Executive Officer<br>Chief Technology Officer',
-        'paragraph' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices ac neque quis rutrum. Phasellus maximus quis urna eget imperdiet. Nam non interdum orci, sit amet pretium velit. Phasellus ex est, convallis sit amet eleifend non, elementum id ipsum. Phasellus placerat lacus congue, gravida mi sollicitudin, rutrum ligula. Proin nec quam varius, dictum nunc a, egestas risus. Aliquam auctor leo eget blandit sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
+        'paragraph' => 'Nat is the Founder, CTO, and CEO of OtterNova.<br><br>
+Before founding OtterNova in late 2025, Nat worked across regional FinTech and leading e-commerce companies, where he built and led high-impact engineering teams. In 2023, he led a Financial AI initiative that won an award at the Singapore FinTech Festival.<br><br>
+Nat holds an MSc in Information Systems from Nanyang Technological University and a BSc in Computer Science (First Class Honours) from Thammasat University. He is also a certified Scrum Master (CSM, PSM II) and Professional Scrum Product Owner (PSPO II).'
     ]
 ];

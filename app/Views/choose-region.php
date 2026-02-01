@@ -3,36 +3,36 @@
 <?php
 $structure = [
     'southeast-asia' => [
-        'id' => [
-            'label' => 'Indonesia',
-            'lang'  => []
-        ],
-        'my' => [
-            'label' => 'Malaysia',
-            'lang'  => []
-        ],
-        'sg' => [
-            'label' => 'Singapore',
-            'lang'  => []
-        ],
+//        'id' => [
+//            'label' => 'Indonesia',
+//            'lang'  => []
+//        ],
+//        'my' => [
+//            'label' => 'Malaysia',
+//            'lang'  => []
+//        ],
+//        'sg' => [
+//            'label' => 'Singapore',
+//            'lang'  => []
+//        ],
         'th' => [
-            'label' => 'Thailand &middot; ประเทศไทย',
+            'label' => 'OtterNova Thailand &middot; ออทเทอร์โนวา ประเทศไทย',
             'lang'  => [
                 'en' => 'English',
                 'th' => 'ไทย'
             ]
         ]
     ],
-    'east-asia'      => [
-        'jp' => [
-            'label' => 'Japan &middot; 日本',
-            'lang'  => []
-        ],
-        'tw' => [
-            'label' => 'Taiwan &middot; 台灣',
-            'lang'  => []
-        ]
-    ]
+//    'east-asia'      => [
+//        'jp' => [
+//            'label' => 'OtterNova Japan &middot; オッターノヴァ 日本',
+//            'lang'  => []
+//        ],
+//        'tw' => [
+//            'label' => 'Taiwan &middot; 台灣',
+//            'lang'  => []
+//        ]
+//    ]
 ];
 ?>
     <main class="main">
