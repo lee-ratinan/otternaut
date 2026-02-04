@@ -195,12 +195,49 @@ class Home extends BaseController
     {
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
-        $data        = [
+        $data = [
             'page_slug' => 'choose-region',
             'url_part'  => 'choose-region',
             'locale'    => $locale,
             'language'  => $locale_data['language'],
             'country'   => $locale_data['country'],
+            'structure' => [
+                'southeast-asia' => [
+//                    'id' => [
+//                        'label' => 'OtterNova Indonesia',
+//                        'lang'  => []
+//                    ],
+//                    'my' => [
+//                        'label' => 'OtterNova Malaysia',
+//                        'lang'  => []
+//                    ],
+//                    'sg' => [
+//                        'label' => 'OtterNova Singapore',
+//                        'lang'  => []
+//                    ],
+                    'th' => [
+                        'label' => 'OtterNova Thailand &middot; ออทเทอร์โนวา ประเทศไทย',
+                        'lang'  => [
+                            'en' => 'English',
+                            'th' => 'ไทย'
+                        ]
+                    ]
+                ],
+//                'east-asia'      => [
+//                    'jp' => [
+//                        'label' => 'OtterNova Japan &middot; オッターノヴァ 日本',
+//                        'lang'  => []
+//                    ],
+//                    'kr' => [
+//                        'label' => 'OtterNova South Korea &middot; 오터노바 한국',
+//                        'lang'  => []
+//                    ],
+//                    'tw' => [
+//                        'label' => 'OtterNova Taiwan &middot; 奧特諾瓦 台灣',
+//                        'lang'  => []
+//                    ]
+//                ]
+            ]
         ];
         return view('choose-region', $data);
     }
@@ -289,7 +326,7 @@ class Home extends BaseController
             ['/pricing', '2025-12-01', 'monthly', '0.9'],
             ['/contact', '2025-12-08', 'monthly', '0.8'],
 //            ['/leadership', '2025-12-08', 'monthly', '0.5'],
-//            ['/choose-region', '2025-12-01', 'monthly', '0.5'],
+            ['/choose-region', '2025-12-01', 'monthly', '0.5'],
             ['/terms-and-conditions', '2025-12-01', 'monthly', '0.5'],
             ['/privacy-policy', '2025-12-01', 'monthly', '0.5'],
         ];

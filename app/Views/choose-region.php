@@ -1,40 +1,5 @@
 <?php $this->extend('_layout'); ?>
 <?= $this->section('content') ?>
-<?php
-$structure = [
-    'southeast-asia' => [
-//        'id' => [
-//            'label' => 'Indonesia',
-//            'lang'  => []
-//        ],
-//        'my' => [
-//            'label' => 'Malaysia',
-//            'lang'  => []
-//        ],
-//        'sg' => [
-//            'label' => 'Singapore',
-//            'lang'  => []
-//        ],
-        'th' => [
-            'label' => 'OtterNova Thailand &middot; ออทเทอร์โนวา ประเทศไทย',
-            'lang'  => [
-                'en' => 'English',
-                'th' => 'ไทย'
-            ]
-        ]
-    ],
-//    'east-asia'      => [
-//        'jp' => [
-//            'label' => 'OtterNova Japan &middot; オッターノヴァ 日本',
-//            'lang'  => []
-//        ],
-//        'tw' => [
-//            'label' => 'Taiwan &middot; 台灣',
-//            'lang'  => []
-//        ]
-//    ]
-];
-?>
     <main class="main">
         <section id="pricing" class="pricing section">
             <div class="container section-title aos-init aos-animate pt-5 mt-5">
