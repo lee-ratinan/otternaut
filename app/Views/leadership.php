@@ -9,7 +9,7 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row">
                     <div class="col-12 col-md-8 col-lg-6">
-                        <?php $keys = ['eikin']; ?>
+                        <?php $keys = ['nat']; ?>
                         <?php foreach ($keys as $key) : ?>
                         <div class="py-5">
                             <img class="img-thumbnail mb-5" src="<?= base_url('assets/img/leadership/' . $key . '.png') ?>" alt="<?= lang('Leadership.' . $key . '.name') ?>" style="max-width:200px" />
