@@ -76,6 +76,10 @@
                                         <label class="d-none" for="email"><?= lang('Contact.form.fields.email') ?></label>
                                         <input type="email" class="form-control" name="email" id="email" placeholder="<?= lang('Contact.form.fields.email') ?>" required="">
                                     </div>
+                                    <div class="col-md-6 corp">
+                                        <label class="d-none" for="company-name"><?= lang('Contact.form.fields.company-name') ?></label>
+                                        <input type="text" class="form-control" name="company-name" id="company-name" placeholder="<?= lang('Contact.form.fields.company-name') ?>">
+                                    </div>
                                 </div>
                                 <div class="row g-3 mt-1">
                                     <div class="col-md-6">

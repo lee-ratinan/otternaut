@@ -287,6 +287,10 @@ class Home extends BaseController
         try {
             $locale   = $this->request->getPost('locale');
             $this->request->setLocale($locale);
+            $company  = $this->request->getPost('company-name');
+            if (!empty($company)) {
+                return $this->response->setBody('Fine');
+            }
             $to       = getenv('CONTACT_EMAIL');
             $no_reply = getenv('NO_REPLY_EMAIL');
             $name     = $this->request->getPost('name');

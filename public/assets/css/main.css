@@ -3764,3 +3764,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.main-form-container .corp {
+    display: none;
+}

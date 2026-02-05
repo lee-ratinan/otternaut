@@ -31,6 +31,7 @@ return [
             'full-name'            => 'Full Name',
             'email'                => 'Email',
             'phone'                => 'Phone (optional)',
+            'company-name'         => 'Company Name',
             'subject'              => [
                 'label'             => 'Subject',
                 'please-select'     => 'Please select inquiry type',
