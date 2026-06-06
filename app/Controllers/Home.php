@@ -279,7 +279,7 @@ class Home extends BaseController
     }
 
     /**
-     * Handle sending email for contact form
+     * Handle sending email for a contact form
      * @return ResponseInterface
      */
     public function contactForm(): ResponseInterface
