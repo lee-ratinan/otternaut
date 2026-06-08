@@ -29,6 +29,9 @@ return [
             'description' => 'Contact OtterNova for support, sales, or general inquiries. Our team responds quickly and helps you set up effortless booking for your business.',
             'keywords'    => 'contact OtterNova, customer support, sales inquiry, booking system help, SaaS support, appointment software assistance'
         ],
+        'resources'            => [
+            'title' => 'Resources',
+        ],
         'choose-region'        => [
             'title'       => 'Choose Region',
             'description' => 'List the country and language to change to.',

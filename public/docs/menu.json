@@ -1,0 +1,16 @@
+{
+  "en": [
+    { "title": "Getting Started", "file": "en/introduction.md" },
+    { "title": "Setup", "file": "en/setup.md" },
+    { "title": "Products" },
+    { "title": "Product Settings", "file": "en/product-settings.md" },
+    { "title": "Product Variants", "file": "en/product-variants.md" },
+    { "title": "Services" },
+    { "title": "Service Settings", "file": "en/service-settings.md" },
+    { "title": "Service Variants", "file": "en/service-variants.md" }
+  ],
+  "th": [
+    { "title": "เริ่มต้น", "file": "th/introduction.md" },
+    { "title": "การตั้งค่า", "file": "th/setup.md" }
+  ]
+}

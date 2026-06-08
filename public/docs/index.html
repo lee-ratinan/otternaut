@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm h-16 flex items-center justify-between px-6">
+        <div class="flex items-center space-x-6">
+            <a href="/" class="font-bold main-color" id="text-otternova">OtterNova</a>
+            <span class="text-gray-300">|</span>
+            <span class="font-semibold text-gray-700" id="text-docs-portal">Docs Portal</span>
+        </div>
+        
+        <nav class="flex items-center space-x-6">
+            <a href="/api-reference" class="text-sm font-medium text-gray-600 hover:text-blue-600">API</a>
+            <a href="/github" class="text-sm font-medium text-gray-600 hover:text-blue-600">GitHub</a>
+            
+            <select id="langSelector" class="bg-gray-100 border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="en">English</option>
+                <option value="th">ภาษาไทย</option>
+            </select>
+        </nav>
+    </header>
+
+    <div class="flex flex-1 max-w-8xl w-full mx-auto">
+        
+        <aside class="w-64 border-r border-gray-200 bg-white p-6 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4" id="text-navigation">Navigation</h3>
+            <ul id="sidebarMenu" class="space-y-2">
+                </ul>
+        </aside>
+
+        <main class="flex-1 p-10 min-w-0">
+            <article id="docContent" class="prose max-w-3xl mx-auto">
+                <p class="text-gray-500" id="text-loading">Loading documentation...</p>
+            </article>
+        </main>
+
+        <aside class="w-64 p-6 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto hidden xl:block">
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4" id="text-on-this-page">On This Page</h3>
+            <ul id="tocMenu" class="space-y-2 text-sm text-gray-600 border-l border-gray-200 pl-4">
+            </ul>
+        </aside>
+
+    </div>
+
+    <script>
+        let currentLang = 'en';
+        let menuData = {};
+        let translationData = {};
+        function getMetadataFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('page');
+        }
+        // Initialize Documentation App
+        async function initDocs() {
+            try {
+                const response = await fetch('menu.json');
+                menuData = await response.json();
+                const translationResponse = await fetch('translation.json');
+                translationData = await translationResponse.json();
+                
+                // Detect initial language based on URL or fallback to English
+                const urlPage = getMetadataFromURL();
+                if (urlPage) {
+                    currentLang = urlPage.split('/')[0];
+                    document.getElementById('langSelector').value = currentLang;
+                }
+                renderSidebar();
+                // Load default page if none specified in URL query
+                const targetFile = urlPage || menuData[currentLang][0].file;
+                loadMarkdownPage(targetFile);
+                translatePage();
+            } catch (error) {
+                console.error("Failed to initialize documentation maps:", error);
+            }
+        }
+        function translatePage() {
+            let translatedText = translationData[currentLang] || [];
+            Object.entries(translatedText).forEach(([key, value]) => {
+                let textId = `text-${key}`;
+                let element = document.getElementById(textId);
+                if (element) { element.textContent = value; }
+            });
+        }
+        // Render Left Sidebar based on chosen Language
+        function renderSidebar() {
+            const menuList = document.getElementById('sidebarMenu');
+            menuList.innerHTML = '';
+            
+            const files = menuData[currentLang] || [];
+            files.forEach(item => {
+                if (!item.file) {
+                    const li = document.createElement('li');
+                    const b = document.createElement('b');
+                    b.textContent = item.title;
+                    li.appendChild(b);
+                    menuList.appendChild(li);
+                } else {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `?page=${item.file}`;
+                    a.textContent = item.title;
+                    a.className = "block text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors py-1";
+
+                    // Highlight active item
+                    if (getMetadataFromURL() === item.file || (!getMetadataFromURL() && menuData[currentLang][0].file === item.file)) {
+                        a.classList.add('text-blue-600', 'font-semibold');
+                    }
+
+                    li.appendChild(a);
+                    menuList.appendChild(li);
+                }
+            });
+        }
+
+        // Fetch and Render Markdown + Build ToC
+        async function loadMarkdownPage(filePath) {
+            const contentArea = document.getElementById('docContent');
+            try {
+                const response = await fetch(`contents/${filePath}`);
+                if(!response.ok) throw new Error("File not found");
+                const markdownText = await response.text();
+                
+                // Convert Markdown to HTML
+                contentArea.innerHTML = marked.parse(markdownText);
+                
+                // Post-processing: Build Right Panel Table of Contents
+                buildTableOfContents();
+            } catch (error) {
+                let translatedText = translationData[currentLang] || translationData['en'];
+                contentArea.innerHTML = `<h1 class="text-red-500" id="text-404-title">${translatedText['404-title']}</h1><p id="text-404-message">${translatedText['404-message']}</p>`;
+            }
+        }
+
+        // Read all headers dynamically and map right panel ToC
+        function buildTableOfContents() {
+            const tocMenu = document.getElementById('tocMenu');
+            tocMenu.innerHTML = '';
+            
+            const contentArea = document.getElementById('docContent');
+            // Select all heading scopes inside the content article
+            const headings = contentArea.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+            if(headings.length === 0) {
+                tocMenu.innerHTML = '<li class="text-gray-400 italic">No headers found</li>';
+                return;
+            }
+
+            headings.forEach((heading, index) => {
+                // Generate unique ID for anchor links if they don't have one
+                const id = heading.id || heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + `-${index}`;
+                heading.id = id;
+
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${id}`;
+                a.textContent = heading.textContent;
+                a.className = "hover:text-blue-600 block transition-colors py-0.5";
+                
+                // Indent ToC elements depending on depth tags (h1 vs h2 vs h3)
+                const depth = parseInt(heading.tagName.substring(1));
+                if (depth > 1) {
+                    a.style.paddingLeft = `${(depth - 1) * 0.75}rem`;
+                }
+
+                li.appendChild(a);
+                tocMenu.appendChild(li);
+            });
+        }
+
+        // Event Listener: Language Switching
+        document.getElementById('langSelector').addEventListener('change', (e) => {
+            currentLang = e.target.value;
+            renderSidebar();
+            // Load the first document matching the newly selected language context
+            if(menuData[currentLang] && menuData[currentLang].length > 0) {
+                const newPage = menuData[currentLang][0].file;
+                window.location.search = `?page=${newPage}`;
+            }
+        });
+
+        // Run on boot
+        initDocs();
+    </script>
+</body>
+</html>

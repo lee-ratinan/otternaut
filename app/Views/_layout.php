@@ -100,6 +100,7 @@
                 <li><a href="<?= base_url($locale) ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
+                <li><a href="<?= base_url('docs') ?>"><?= lang('System.pages.resources.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.locales.'. $locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -134,6 +135,7 @@
                     <li><a href="<?= base_url($locale) ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
+                    <li><a href="<?= base_url('docs') ?>"><?= lang('System.pages.resources.title') ?></a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 footer-links">

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "otternova": "OtterNova",
+    "docs-portal": "Docs Portal",
+    "navigation": "Navigation",
+    "on-this-page": "On This Page",
+    "loading": "Loading documentation...",
+    "404-title": "404 - Page Not Found",
+    "404-message": "The documentation page you requested does not exist."
+  },
+  "th": {
+    "otternova": "OtterNova",
+    "docs-portal": "เอกสารการเรียนรู้",
+    "navigation": "นำทาง",
+    "on-this-page": "ในหน้านี้",
+    "loading": "กำลังโหลดเอกสาร...",
+    "404-title": "404 - ไม่พบหน้าที่ต้องการ",
+    "404-message": "ขออภัย ไม่พบเอกสารที่คุณต้องการ"
+  }
+}
