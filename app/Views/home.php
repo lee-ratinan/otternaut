@@ -15,7 +15,7 @@
                         <p data-aos="fade-right" data-aos-delay="500"><?= lang('Home.hero.subheadline') ?></p>
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
                             <a href="<?= getenv('REGISTER_LINK') ?>" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('Home.hero.cta') ?></a>
-                            <a href="<?= getenv('DEMO_LINK') ?>" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('Home.hero.demo') ?></span></a>
+                            <a href="<?= base_url($locale . '/pricing') ?>" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('System.pages.pricing.title') /* = lang('Home.hero.demo') */ ?></span></a>
                         </div>
                         <div class="hero-stats d-none" data-aos="fade-up" data-aos-delay="700">
                             <div class="stat-item">
