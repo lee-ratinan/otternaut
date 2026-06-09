@@ -102,6 +102,7 @@
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
+                <li><a href="https://mart.otternova.com" target="_blank">OtterMart</a></li>
                 <li class="d-none d-md-block"><a href="<?= base_url($locale . '/choose-region') ?>"><?= get_locale_name($locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -139,6 +140,7 @@
                     <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
+                    <li><a href="https://mart.otternova.com" target="_blank">OtterMart</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 footer-links">
