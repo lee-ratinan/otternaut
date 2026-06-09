@@ -1,47 +1,44 @@
 <?php
+
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\PhoneNumberFormat;
+use libphonenumber\NumberParseException;
+
 /**
- * Format telephone number form E.164 format to national format for viewing.
- * Return FALSE if the number is invalid
- * Current support:
- * - Thailand +66
- * - Singapore +65
- * @param string $phone_number The phone number in E.164 format
- * @return string|bool
+ * Formats an E.164 number to its national standard using libphonenumber.
+ * Automatically handles complex area codes for JP, MY, TH, SG, TW.
  */
-function format_phone_number(string $phone_number): string|bool
+function format_phone_number(string $e164Number): string
 {
-    $length = strlen($phone_number);
-    $pieces = [];
-    if (str_starts_with($phone_number, '+66')) {
-        // Thai number
-        if (11 == $length) {
-            // HOME +6629299876 > +66 2 929 9876
-            $pieces[] = '+66';
-            $pieces[] = substr($phone_number, 3, 1);
-            $pieces[] = substr($phone_number, 4, 3);
-            $pieces[] = substr($phone_number, 7, 4);
-            return implode(' ', $pieces);
-        } else if (12 == $length) {
-            // CELL +66897828331 > +66 89 782 8331
-            $pieces[] = '+66';
-            $pieces[] = substr($phone_number, 3, 2);
-            $pieces[] = substr($phone_number, 4, 3);
-            $pieces[] = substr($phone_number, 8, 4);
-            return implode(' ', $pieces);
+    $phoneUtil = PhoneNumberUtil::getInstance();
+
+    try {
+        // libphonenumber automatically detects the country from the E.164 '+' prefix
+        $numberProto = $phoneUtil->parse($e164Number, null);
+        if ($phoneUtil->isValidNumber($numberProto)) {
+            // NATIONAL format converts +813XXXX -> 03-XXXX-XXXX (handles all 400+ JP codes)
+            $countryCode = strtolower($phoneUtil->getRegionCodeForNumber($numberProto));
+            return '<span class="fi fi-' . $countryCode . '"></span> ' . $phoneUtil->format($numberProto, PhoneNumberFormat::NATIONAL);
         }
-        return FALSE;
+    } catch (NumberParseException $e) {
+        // If parsing fails, log it or handle quietly
+        log_message('debug', 'Phone parsing failed: ' . $e->getMessage());
     }
-    return $phone_number;
+    // Fallback to original input if invalid or parsing fails
+    return $e164Number;
 }
 
 /**
  * Format the price by currency.
  * Return the default format with the same currency code if not supported
  * Current support:
- * - THB
- * - SGD
  * - IDR
+ * - JPY
  * - MYR
+ * - SGD
+ * - THB
+ * - TWD
+ * - USD
  * @param float $price The price to be formatted
  * @param string $currency The currency to be formatted in, country code can be used here instead
  * @param int $decimal_override (optional) Use this decimal point if the value is not negative
@@ -54,52 +51,72 @@ function format_price(float $price, string $currency, int $decimal_override = -1
     $currency = strtoupper($currency);
     if (2 == strlen($currency)) {
         $currencies = [
-            'US' => 'USD',
-            'TH' => 'THB',
-            'SG' => 'SGD',
             'ID' => 'IDR',
-            'MY' => 'MYR',
             'JP' => 'JPY',
+            'MY' => 'MYR',
+            'SG' => 'SGD',
+            'TH' => 'THB',
+            'TW' => 'TWD',
+            'US' => 'USD',
         ];
         $currency = $currencies[$currency];
     }
     $decimals = [
-        'USD' => 2,
-        'THB' => 2,
-        'SGD' => 2,
         'IDR' => 0,
+        'JPY' => 0,
         'MYR' => 2,
-        'JPY' => 0
+        'SGD' => 2,
+        'THB' => 2,
+        'TWD' => 2,
+        'USD' => 2,
     ];
-    $use_decimal = $decimals[$currency];
+    $use_decimal = $decimals[$currency] ?? 2;
     if (0 <= $decimal_override) {
         $use_decimal = $decimal_override;
     }
-    if ('THB' == $currency) {
-        return $negative . '฿' . number_format($price, $use_decimal);
-    } else if ('SGD' == $currency) {
-        return $negative . 'S$' . number_format($price, $use_decimal);
-    } else if ('IDR' == $currency) {
+    if ('IDR' == $currency) {
         return $negative . 'Rp ' . number_format($price, $use_decimal, ',', '.');
-    } else if ('MYR' == $currency) {
-        return $negative . 'RM' . number_format($price, $use_decimal);
     } else if ('JPY' == $currency) {
         return $negative . number_format($price, $use_decimal) . '円';
+    } else if ('MYR' == $currency) {
+        return $negative . 'RM' . number_format($price, $use_decimal);
+    } else if ('SGD' == $currency) {
+        return $negative . 'S$' . number_format($price, $use_decimal);
+    } else if ('THB' == $currency) {
+        return $negative . '฿' . number_format($price, $use_decimal);
+    } else if ('TWD' == $currency) {
+        return $negative . 'NT$' . number_format($price, $use_decimal);
+    } else if ('USD' == $currency) {
+        return $negative . '$' . number_format($price, $use_decimal);
     }
     return $negative . $currency . ' ' . number_format($price, 2);
 }
 
 /**
  * Get currency symbol
- * @param string $country Country code
+ * @param string $code Country code or currency code
  * @return string Symbol of the currency
  */
-function get_currency_symbol (string $country): string
+function get_currency_symbol (string $code): string
 {
-    if ('th' == $country) {
-        return '฿';
-    }
-    return '$';
+    $symbols = [
+        'IDR' => 'Rp',
+        'ID'  => 'Rp',
+        'JPY' => '円',
+        'JP'  => '円',
+        'MYR' => 'RM',
+        'MY'  => 'RM',
+        'SGD' => 'S$',
+        'SG'  => 'S$',
+        'THB' => '฿',
+        'TH'  => '฿',
+        'TWD' => 'NT$',
+        'TW'  => 'NT$',
+        'USD' => '$',
+        'US'  => '$',
+    ];
+    $code = strtoupper($code);
+    return $symbols[$code] ?? '$';
 }
 
 /**
@@ -111,6 +128,11 @@ function check_link_empty(string $link): bool
 {
     return empty($link) || '#' == $link;
 }
+
+/**
+ * Get social media links
+ * @return array Array of social media links
+ */
 function get_social_list(): array
 {
     $social = [];
