@@ -23,7 +23,10 @@
                                     <i class="bi bi-headset"></i>
                                 </div>
                                 <h4><?= lang('Contact.live-chat.title') ?></h4>
-                                <p class="contact-detail"><?= lang('Contact.live-chat.app') ?></p>
+                                <p class="contact-detail">
+                                    <?= lang('Contact.live-chat.app') ?>
+                                    <a href="<?= getenv('SOCIAL_LINE') ?>" target="_blank" class="btn-link ms-1"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </p>
                                 <span class="availability d-none"><?= lang('Contact.live-chat.detail') ?></span>
                             </div>
                             <div class="contact-card">

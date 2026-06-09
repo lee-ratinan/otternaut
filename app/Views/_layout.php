@@ -102,13 +102,14 @@
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-                <li><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.locales.'. $locale) ?></a></li>
+                <li class="d-none d-md-block"><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.locales.'. $locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-        <div class="header-social-links">
-            <a href="<?= getenv('SOCIAL_FACEBOOK') ?>" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>" class="instagram"><i class="bi bi-instagram"></i></a>
+        <div class="header-social-links d-none d-md-flex">
+            <?php foreach (get_social_list() as $key => $link) : ?>
+                <a href="<?= $link ?>" class="<?= $key ?>" target="_blank"><i class="bi bi-<?= $key ?>"></i></a>
+            <?php endforeach; ?>
         </div>
     </div>
 </header>
@@ -126,8 +127,9 @@
                     <p><i class="bi bi-envelope"></i> <a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
                 </div>
                 <div class="social-links d-flex mt-4">
-                    <a href="<?= getenv('SOCIAL_FACEBOOK') ?>"><i class="bi bi-facebook"></i></a>
-                    <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>"><i class="bi bi-instagram"></i></a>
+                    <?php foreach (get_social_list() as $key => $link) : ?>
+                        <a href="<?= $link ?>"><i class="bi bi-<?= $key ?>"></i></a>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 footer-links">
@@ -136,7 +138,7 @@
                     <li><a href="<?= base_url($locale) ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
-                    <li><a href="<?= base_url('docs') ?>"><?= lang('System.pages.resources.title') ?></a></li>
+                    <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 footer-links">

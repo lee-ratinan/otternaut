@@ -99,5 +99,30 @@ function get_currency_symbol (string $country): string
     if ('th' == $country) {
         return '฿';
     }
-    return '';
+    return '$';
+}
+
+/**
+ * If the link is empty or '#', then return true
+ * @param string $link
+ * @return bool
+ */
+function check_link_empty(string $link): bool
+{
+    return empty($link) || '#' == $link;
+}
+function get_social_list(): array
+{
+    $social = [];
+    $list   = [
+        'facebook', 'instagram', 'line', 'whatsapp', 'twitter_x', 'youtube'
+    ];
+    foreach ($list as $item) {
+        $key = 'SOCIAL_' . strtoupper($item);
+        if (!check_link_empty(getenv($key))) {
+            if ('twitter_x' == $item) { $item = 'twitter-x'; }
+            $social[$item] = getenv($key);
+        }
+    }
+    return $social;
 }
