@@ -136,12 +136,9 @@
                                 <div class="social-channels">
                                     <p><?= lang('Contact.social-media') ?></p>
                                     <div class="channel-links">
-                                        <a href="<?= getenv('SOCIAL_FACEBOOK') ?>" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="250">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                        <a href="<?= getenv('SOCIAL_INSTAGRAM') ?>" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="350">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
+                                        <?php foreach (get_social_list() as $key => $link) : ?>
+                                            <a href="<?= $link ?>" class="channel-link aos-init aos-animate" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-<?= $key ?>"></i></a>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </div>
