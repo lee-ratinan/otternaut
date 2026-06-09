@@ -101,7 +101,7 @@
                 <li><a href="<?= base_url($locale) ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
-                <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>"><?= lang('System.pages.resources.title') ?></a></li>
+                <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.locales.'. $locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

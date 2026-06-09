@@ -207,14 +207,14 @@ class Home extends BaseController
 //                        'label' => 'OtterNova Indonesia',
 //                        'lang'  => []
 //                    ],
-//                    'my' => [
-//                        'label' => 'OtterNova Malaysia',
-//                        'lang'  => []
-//                    ],
-//                    'sg' => [
-//                        'label' => 'OtterNova Singapore',
-//                        'lang'  => []
-//                    ],
+                    'my' => [
+                        'label' => 'OtterNova Malaysia',
+                        'lang'  => []
+                    ],
+                    'sg' => [
+                        'label' => 'OtterNova Singapore',
+                        'lang'  => []
+                    ],
                     'th' => [
                         'label' => 'OtterNova Thailand &middot; ออทเทอร์โนวา ประเทศไทย',
                         'lang'  => [
@@ -223,20 +223,20 @@ class Home extends BaseController
                         ]
                     ]
                 ],
-//                'east-asia'      => [
-//                    'jp' => [
-//                        'label' => 'OtterNova Japan &middot; オッターノヴァ 日本',
-//                        'lang'  => []
-//                    ],
+                'east-asia'      => [
+                    'jp' => [
+                        'label' => 'OtterNova Japan &middot; オッターノヴァ 日本',
+                        'lang'  => []
+                    ],
 //                    'kr' => [
 //                        'label' => 'OtterNova South Korea &middot; 오터노바 한국',
 //                        'lang'  => []
 //                    ],
-//                    'tw' => [
-//                        'label' => 'OtterNova Taiwan &middot; 奧特諾瓦 台灣',
-//                        'lang'  => []
-//                    ]
-//                ]
+                    'tw' => [
+                        'label' => 'OtterNova Taiwan &middot; 奧特諾瓦 台灣',
+                        'lang'  => []
+                    ]
+                ]
             ]
         ];
         return view('choose-region', $data);
