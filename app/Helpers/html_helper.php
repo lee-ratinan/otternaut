@@ -161,7 +161,7 @@ function get_locale_name(string $locale): string
         'en-my' => '<span class="fi fi-my"></span>&nbsp;Malaysia (English)',
         'en-sg' => '<span class="fi fi-sg"></span>&nbsp;Singapore (English)',
         'en-th' => '<span class="fi fi-th"></span>&nbsp;Thailand (English)',
-        'th-th' => '<span class="fi fi-th"></span>&nbsp;ประเทศทไย (ภาษาไทย)',
+        'th-th' => '<span class="fi fi-th"></span>&nbsp;ประเทศไทย (ภาษาไทย)',
         'en-tw' => '<span class="fi fi-tw"></span>&nbsp;Taiwan (English)',
         'zh-tw' => '<span class="fi fi-tw"></span>&nbsp;台灣 (國語)',
     ];
