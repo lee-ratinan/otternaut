@@ -22,7 +22,7 @@
                                 </div>
                                 <?php if (0 < $package['prices'][$country][0]) : ?>
                                 <div class="plan-pricing">
-                                    <?php if ('th' == $country) : ?>
+                                    <?php if ('jp' != $country) : ?>
                                         <!-- FOR COUNTRIES WHERE SYMBOL IS ON THE LEFT -->
                                         <div class="price-wrapper">
                                             <span class="currency"><?= get_currency_symbol($country) ?></span>
@@ -35,6 +35,24 @@
                                         <div class="price-wrapper">
                                             <span class="currency"><?= get_currency_symbol($country) ?></span>
                                             <span class="amount"><?= number_format($package['discounted'][$country][1]) ?></span>
+                                            <span class="period">
+                                                <?= lang('Pricing.per-year') ?>
+                                                <?= lang('Pricing.from-price', [format_price($package['prices'][$country][1], $country, 0)]) ?>
+                                            </span>
+                                        </div>
+                                    <?php else : ?>
+                                        <!-- FOR COUNTRIES WHERE SYMBOL IS ON THE RIGHT -->
+                                        <div class="price-wrapper">
+                                            <span class="amount"><?= number_format($package['discounted'][$country][0]) ?></span>
+                                            <span class="currency"><?= get_currency_symbol($country) ?></span>
+                                            <span class="period">
+                                                <?= lang('Pricing.per-month') ?>
+                                                <?= lang('Pricing.from-price', [format_price($package['prices'][$country][0], $country, 0)]) ?>
+                                            </span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="amount"><?= number_format($package['discounted'][$country][1]) ?></span>
+                                            <span class="currency"><?= get_currency_symbol($country) ?></span>
                                             <span class="period">
                                                 <?= lang('Pricing.per-year') ?>
                                                 <?= lang('Pricing.from-price', [format_price($package['prices'][$country][1], $country, 0)]) ?>

@@ -92,10 +92,18 @@ class Home extends BaseController
                     lang('Pricing.features.sell-product'),
                 ],
                 'prices'       => [
-                    'th' => [400, 4000]
+                    'th' => [400, 4000],
+                    'sg' => [400, 4000],
+                    'my' => [400, 4000],
+                    'jp' => [400, 4000],
+                    'tw' => [400, 4000],
                 ],
                 'discounted'   => [
-                    'th' => [299, 2990]
+                    'th' => [299, 2990],
+                    'sg' => [299, 2990],
+                    'my' => [299, 2990],
+                    'jp' => [299, 2990],
+                    'tw' => [299, 2990],
                 ]
             ],
             'standard' => [
@@ -112,10 +120,18 @@ class Home extends BaseController
                     lang('Pricing.features.sell-product'),
                 ],
                 'prices'       => [
-                    'th' => [800, 8000]
+                    'th' => [800, 8000],
+                    'sg' => [800, 8000],
+                    'my' => [800, 8000],
+                    'jp' => [800, 8000],
+                    'tw' => [800, 8000],
                 ],
                 'discounted'   => [
-                    'th' => [599, 5990]
+                    'th' => [599, 5990],
+                    'sg' => [599, 5990],
+                    'my' => [599, 5990],
+                    'jp' => [599, 5990],
+                    'tw' => [599, 5990],
                 ]
             ],
             'premium'  => [
@@ -133,10 +149,18 @@ class Home extends BaseController
                     lang('Pricing.features.store-webpage')
                 ],
                 'prices'       => [
-                    'th' => [1800, 18000]
+                    'th' => [1800, 18000],
+                    'sg' => [1800, 18000],
+                    'my' => [1800, 18000],
+                    'jp' => [1800, 18000],
+                    'tw' => [1800, 18000],
                 ],
                 'discounted'   => [
-                    'th' => [1290, 12900]
+                    'th' => [1290, 12900],
+                    'sg' => [1290, 12900],
+                    'my' => [1290, 12900],
+                    'jp' => [1290, 12900],
+                    'tw' => [1290, 12900],
                 ]
             ]
         ];
