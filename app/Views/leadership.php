@@ -12,7 +12,7 @@
                         <?php $keys = ['nat', 'jate']; ?>
                         <?php foreach ($keys as $key) : ?>
                         <div class="py-5">
-                            <img class="img-thumbnail mb-5" src="<?= base_url('assets/img/leadership/' . $key . '.png') ?>" alt="<?= lang('Leadership.' . $key . '.name') ?>" style="max-width:200px" />
+                            <img class="img-thumbnail mb-5" src="<?= base_url('assets/img/leadership/' . $key . '.webp') ?>" alt="<?= lang('Leadership.' . $key . '.name') ?>" style="max-width:200px" />
                             <h3 class="mb-0"><?= lang('Leadership.' . $key . '.name') ?></h3>
                             <h4 class="mb-5" style="font-weight:200"><?= lang('Leadership.' . $key . '.title') ?></h4>
                             <p class="mb-5"><?= lang('Leadership.' . $key . '.paragraph') ?></p>

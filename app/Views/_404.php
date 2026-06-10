@@ -8,8 +8,8 @@
         <?= lang('System.site-name') ?>
     </title>
     <!-- Favicons -->
-    <link href="<?= base_url('assets/img/favicon.png') ?>" rel="icon">
-    <link href="<?= base_url('assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
+    <link href="<?= base_url('assets/img/favicon.webp') ?>" rel="icon">
+    <link href="<?= base_url('assets/img/apple-touch-icon.webp') ?>" rel="apple-touch-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <?php if ('th' == $lang) : ?>
@@ -36,7 +36,7 @@
             <h2 style="color:#c97232"><?= lang('System.pages.not-found.got-lost') ?></h2>
             <a class="btn btn-primary my-5" href="<?= base_url() ?>"><?= lang('System.pages.not-found.return-to-safety') ?></a>
             <br>
-            <img src="<?= base_url('assets/img/not-found.png') ?>" class="img-fluid py-5" alt="<?= lang('System.pages.not-found.title') ?>" />
+            <img src="<?= base_url('assets/img/not-found.webp') ?>" class="img-fluid py-5" alt="<?= lang('System.pages.not-found.title') ?>" />
         </section>
     </div>
 </main><!-- End #main -->

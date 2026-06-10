@@ -3,7 +3,7 @@
 <main class="main">
     <section id="hero" class="hero section">
         <div class="hero-background">
-            <img src="<?= base_url('assets/img/home/hero.jpg') ?>" alt="" data-aos="zoom-out" data-aos-duration="1000">
+            <img src="<?= base_url('assets/img/home/hero.webp') ?>" alt="" data-aos="zoom-out" data-aos-duration="1000">
             <div class="overlay"></div>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="200">
@@ -71,7 +71,7 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="<?= base_url('assets/img/home/about.jpg') ?>" class="img-fluid rounded shadow" alt="<?= lang('Home.about.title') ?>">
+                    <img src="<?= base_url('assets/img/home/about.webp') ?>" class="img-fluid rounded shadow" alt="<?= lang('Home.about.title') ?>">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
                     <div class="about-content">
@@ -169,7 +169,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="visual-content">
-                                    <img src="<?= base_url('assets/img/features/use-case-' . $key . '.jpg') ?>" alt="" class="img-fluid">
+                                    <img src="<?= base_url('assets/img/features/use-case-' . $key . '.webp') ?>" alt="" class="img-fluid">
                                     <div class="floating-element d-none">
                                         <div class="floating-card">
                                             <i class="bi bi-xxx"></i>

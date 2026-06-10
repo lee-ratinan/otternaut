@@ -10,12 +10,12 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="<?= lang('System.pages.' . $page_slug . '.title') . ' | ' . lang('System.site-name') ?>">
     <meta property="og:description" content="<?= lang('System.pages.' . $page_slug . '.meta.description') ?>">
-    <meta property="og:image" content="<?= base_url('assets/img/otternova-greeting.jpg') ?>">
+    <meta property="og:image" content="<?= base_url('assets/img/otternova-greeting.webp') ?>">
     <meta property="og:url" content="<?= current_url() ?>">
     <meta property="og:type" content="website" />
     <!-- Favicons -->
-    <link href="<?= base_url('assets/img/favicon.png') ?>" rel="icon">
-    <link href="<?= base_url('assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
+    <link href="<?= base_url('assets/img/favicon.webp') ?>" rel="icon">
+    <link href="<?= base_url('assets/img/apple-touch-icon.webp') ?>" rel="apple-touch-icon">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -44,7 +44,7 @@
             "@type": "Organization",
             "name": "OtterNova",
             "url": "https://otternova.com/",
-            "logo": "https://otternova.com/assets/img/logo-original.png"
+            "logo": "https://otternova.com/assets/img/logo-original.webp"
         }
     </script>
     <script type="application/ld+json">
@@ -92,7 +92,7 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="<?= base_url($locale) ?>" class="logo d-flex align-items-center me-auto me-xl-0">
-            <img src="<?= base_url('assets/img/logo-dark.png') ?>" alt="<?= lang('System.site-name') ?>">
+            <img src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="<?= lang('System.site-name') ?>">
             <h1 class="sitename"><?= lang('System.site-name') ?></h1>
         </a>
         <nav id="navmenu" class="navmenu">
