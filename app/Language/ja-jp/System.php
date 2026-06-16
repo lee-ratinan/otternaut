@@ -10,8 +10,8 @@ return [
     'coming-soon'       => 'Coming Soon',
     'locales'           => [
         'title' => '<i class="bi bi-globe"></i> Change Country',
-        'en-th' => 'Thailand (English)',
-        'th-th' => 'ประเทศไทย (ภาษาไทย)',
+        'en-TH' => 'Thailand (English)',
+        'th-TH' => 'ประเทศไทย (ภาษาไทย)',
     ],
     'pages'             => [
         'home'                 => [

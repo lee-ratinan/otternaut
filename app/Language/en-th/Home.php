@@ -111,23 +111,27 @@ return [
         'questions' => [
             [
                 'Can I use my own domain for the booking page?',
-                'No — but you can modify the look-and-feel of the page, including the logo.'
+                'Not at the moment—but you can completely customize the look and feel of the page, including your branding and logo.'
             ],
             [
-                'Do my staff get separate logins?',
-                'Absolutely. You can control permissions for each team member.'
+                'Do my staff members get separate logins?',
+                'Absolutely. You can invite your team and fully control access permissions for each member.'
             ],
             [
                 'Does it support different currencies, languages, and time zones?',
-                'Yes! OtterNova is built with multilingual and multi-timezone support in mind - however, you can only pick one country per business, which could dictate the timezones and currencies.'
+                'Yes! OtterNova is built from the ground up with multilingual and multi-timezone support. Please note that each business account is tied to a single country, which determines its primary currency and regional settings.'
             ],
             [
-                'Is there a free tier?',
-                'You can only use a free trial for up to 30 days.'
+                'Is there a free tier available?',
+                'Yes, we offer a free-forever plan with essential features. You can upgrade to a paid tier whenever you need advanced functionality and dedicated support.'
             ],
             [
-                'Can I cancel anytime?',
-                'Of course. No hostage situations here. You may export your data and request deletion of your data when you leave OtterNova. Guilt-free!'
+                'Can I cancel my subscription anytime?',
+                'Of course—no hostage situations here! You can cancel at any time, export your data, and request full deletion when you leave. Completely guilt-free.'
+            ],
+            [
+                'Why should I use OtterNova instead of building our own custom AI booking system?',
+                'Building an in-house AI system requires significant upfront capital, continuous engineering resources, and ongoing maintenance for LLM updates, infrastructure, and edge cases. OtterNova gives you an enterprise-grade, fully maintained AI solution on day one at a fraction of the cost—allowing you to focus on your core business instead of managing complex software infrastructure.'
             ]
         ]
     ]

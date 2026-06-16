@@ -18,7 +18,7 @@
                                         <em class="small"><?= lang('ChooseRegion.coming-soon') ?></em>
                                     <?php else: ?>
                                         <?php foreach ($value['lang'] as $lang_code => $lang_name) : ?>
-                                            <a class="px-3" href="<?= base_url($lang_code . '-' . $key) ?>"><?= $lang_name ?></a>
+                                            <a class="px-3" href="<?= base_url($lang_code . '-' . strtoupper($key)) ?>"><?= $lang_name ?></a>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
                                 </p>

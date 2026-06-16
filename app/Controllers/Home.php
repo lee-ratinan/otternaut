@@ -11,14 +11,14 @@ class Home extends BaseController
     /**
      * Split the locale
      * Available locales are (and will be)
-     * - th-th, en-th  for Thailand
-     * - en-sg         for Singapore       (future)
-     * - ja-jp, en-jp  for Japan           (future)
-     * - zh-tw, en-tw  for Taiwan          (future)
-     * - ms-my, en-my  for Malaysia        (future)
-     * - id-id, en-id  for Indonesia       (future)
-     * - en-ph         for the Philippines (future)
-     * - vt-vn, en-vn  for Vietnam         (future)
+     * - th-TH, en-TH  for Thailand
+     * - en-SG         for Singapore       (future)
+     * - ja-JP, en-JP  for Japan           (future)
+     * - zh-TW, en-TW  for Taiwan          (future)
+     * - ms-MY, en-MY  for Malaysia        (future)
+     * - id-ID, en-ID  for Indonesia       (future)
+     * - en-PH         for the Philippines (future)
+     * - vt-VN, en-VN  for Vietnam         (future)
      * @param string $locale IETF BCP 47 language tag
      * @return array
      */
@@ -27,7 +27,7 @@ class Home extends BaseController
         $split = explode('-', $locale);
         return [
             'language' => $split[0],
-            'country'  => $split[1],
+            'country'  => strtolower($split[1])
         ];
     }
 
@@ -346,8 +346,8 @@ class Home extends BaseController
         $languages  = [
             '',
             // Thailand
-            '/th-th',
-            '/en-th',
+            '/th-TH',
+            '/en-TH',
         ];
         $main_pages = [
             ['/', '2025-12-01', 'monthly', '1.0'],

@@ -33,3 +33,5 @@ h1, .main-color { color: #ff7533; }
   background-size: contain;
   background-repeat: no-repeat;
 }
+table {border: 1px solid #444;border-collapse: collapse;border-spacing: 0;margin-bottom: 1rem;width:100%;}
+td, th {border: 1px solid #444;padding: 0.15rem 0.5rem;}

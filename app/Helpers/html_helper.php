@@ -156,14 +156,14 @@ function get_social_list(): array
 function get_locale_name(string $locale): string
 {
     $locales = [
-        'en-jp' => '<span class="fi fi-jp"></span>&nbsp;Japan (English)',
-        'ja-jp' => '<span class="fi fi-jp"></span>&nbsp;日本 (日本語)',
-        'en-my' => '<span class="fi fi-my"></span>&nbsp;Malaysia (English)',
-        'en-sg' => '<span class="fi fi-sg"></span>&nbsp;Singapore (English)',
-        'en-th' => '<span class="fi fi-th"></span>&nbsp;Thailand (English)',
-        'th-th' => '<span class="fi fi-th"></span>&nbsp;ประเทศไทย (ภาษาไทย)',
-        'en-tw' => '<span class="fi fi-tw"></span>&nbsp;Taiwan (English)',
-        'zh-tw' => '<span class="fi fi-tw"></span>&nbsp;台灣 (國語)',
+        'en-JP' => '<span class="fi fi-jp"></span>&nbsp;Japan (English)',
+        'ja-JP' => '<span class="fi fi-jp"></span>&nbsp;日本 (日本語)',
+        'en-MY' => '<span class="fi fi-my"></span>&nbsp;Malaysia (English)',
+        'en-SG' => '<span class="fi fi-sg"></span>&nbsp;Singapore (English)',
+        'en-TH' => '<span class="fi fi-th"></span>&nbsp;Thailand (English)',
+        'th-TH' => '<span class="fi fi-th"></span>&nbsp;ประเทศไทย (ภาษาไทย)',
+        'en-TW' => '<span class="fi fi-tw"></span>&nbsp;Taiwan (English)',
+        'zh-TW' => '<span class="fi fi-tw"></span>&nbsp;台灣 (國語)',
     ];
     return $locales[$locale] ?? $locale;
 }

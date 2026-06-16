@@ -34,8 +34,8 @@
     <!-- Main CSS File -->
     <link href="<?= base_url('assets/css/main.min.css') ?>" rel="stylesheet">
     <!-- Link Languages -->
-    <link rel="alternate" hreflang="en-th" href="<?= base_url('en-th/' . $url_part) ?>">
-    <link rel="alternate" hreflang="th-th" href="<?= base_url('th-th/' . $url_part) ?>">
+    <link rel="alternate" hreflang="en-TH" href="<?= base_url('en-TH/' . $url_part) ?>">
+    <link rel="alternate" hreflang="th-TH" href="<?= base_url('th-TH/' . $url_part) ?>">
     <link rel="alternate" hreflang="x-default" href="<?= base_url($url_part) ?>">
     <link rel="canonical" href="<?= current_url() ?>">
     <script type="application/ld+json">
