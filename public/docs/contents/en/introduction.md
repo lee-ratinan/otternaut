@@ -1,41 +1,44 @@
 # Introduction
 
-Welcome to OtterNova Documentation Portal. You can find all the documentation from our navigation on the left side. Start your business today with no hassles for free!
+Welcome to the **OtterNova Documentation Portal**. Whether you are setting up your first service or scaling a growing team, this guide will help you get up and running in minutes.
 
-## Plans
+Use the navigation menu on the left to explore specific features, or follow the quick overview below to get started for free.
 
-There are basically three (3) plans to choose from. Please check the table below to see the differences between them. For the pricing, please check the <a href="/pricing" target="_blank">pricing page</a>.
+## Core Ecosystem
 
-| Details                                     | Free | Basic | Standard | Premium |
-|---------------------------------------------|:----:|:-----:|:--------:|:------:|
-| User accounts                               |  1   |   3   |    10    |   30   |
-| Number of services                          |  1   |   5   |    20    |   50   |
-| Number of products                          |  1   |   5   |    20    |   50   |
-| Number of variants for each service/product |  1   |   5   |    5     |   10   |
-| Timeslot-based service booking              |  ✅   |  ✅    |    ✅     |    ✅   |
-| Session-based service booking               |  ❌   |   ❌   |    ✅     |    ✅   |
-| Build your own webpage (About Us)           |  ❌   |   ❌   |    ❌     |    ✅   |
+OtterNova is split into two primary areas: your management backend and your public-facing storefront.
 
-## OtterPlex
+### 🛠️ OtterPlex (The Dashboard)
 
-This is where you can manage your business, from creating your first service, to delivery of your physical products.
+This is your private business command center. Use it to configure services, track physical product deliveries, and manage your team.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet tellus sed elementum auctor. Aenean ut convallis enim, eu volutpat ligula. Nulla ligula est, aliquet at augue eget, convallis sodales erat. Nulla facilisi. In faucibus neque quis quam iaculis ullamcorper. Aliquam facilisis, mauris eget rhoncus malesuada, tortor ipsum porta nibh, vel efficitur mauris lorem vitae nibh. Donec aliquet odio ac sagittis volutpat. Donec vel tempus nunc, quis tempor ante.
+Access Portal: <a href="https://client.otternova.com" target="_blank">https://client.otternova.com</a>
 
-Nulla ullamcorper, eros tristique ullamcorper iaculis, arcu tortor condimentum nunc, quis rhoncus lacus purus eu libero. Nulla euismod dignissim odio. In hendrerit posuere enim, a condimentum arcu varius vel. Etiam in ipsum ac orci consequat scelerisque ut ut neque. Curabitur non lectus posuere, vestibulum dui sit amet, maximus sapien. Curabitur tristique purus at imperdiet egestas. Pellentesque tempor facilisis ex, vitae convallis leo sollicitudin quis. Vestibulum pellentesque lacus ac augue suscipit porttitor non id ipsum. Proin nulla enim, auctor ac fringilla eu, maximus pellentesque urna. Pellentesque vehicula tempus felis, ut tempor neque facilisis at. Etiam enim sem, suscipit posuere sollicitudin id, efficitur in est. Donec orci risus, maximus nec elit at, hendrerit consequat magna.
+Getting Started: Log in with your registered email to invite employees to create their own accounts.
 
-## OtterMart
+### 🛒 OtterMart (Your Storefront)
 
-You can market your <a href="https://mart.otternova.com/" target="_blank">OtterMart (mart.otternova.com)</a> page on your social media, direct your target customers to make purchases, book your services, and more. You may host your contact information, maps, and so on, on your OtterMark page.
+This is your public, customer-facing booking page and marketplace. Link it to your social media bios to drive traffic, capture leads, and accept bookings.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet tellus sed elementum auctor. Aenean ut convallis enim, eu volutpat ligula. Nulla ligula est, aliquet at augue eget, convallis sodales erat. Nulla facilisi. In faucibus neque quis quam iaculis ullamcorper. Aliquam facilisis, mauris eget rhoncus malesuada, tortor ipsum porta nibh, vel efficitur mauris lorem vitae nibh. Donec aliquet odio ac sagittis volutpat. Donec vel tempus nunc, quis tempor ante.
+Your Live Page: <a href="https://mart.otternova.com" target="_blank">https://mart.otternova.com</a>
 
-Nulla ullamcorper, eros tristique ullamcorper iaculis, arcu tortor condimentum nunc, quis rhoncus lacus purus eu libero. Nulla euismod dignissim odio. In hendrerit posuere enim, a condimentum arcu varius vel. Etiam in ipsum ac orci consequat scelerisque ut ut neque. Curabitur non lectus posuere, vestibulum dui sit amet, maximus sapien. Curabitur tristique purus at imperdiet egestas. Pellentesque tempor facilisis ex, vitae convallis leo sollicitudin quis. Vestibulum pellentesque lacus ac augue suscipit porttitor non id ipsum. Proin nulla enim, auctor ac fringilla eu, maximus pellentesque urna. Pellentesque vehicula tempus felis, ut tempor neque facilisis at. Etiam enim sem, suscipit posuere sollicitudin id, efficitur in est. Donec orci risus, maximus nec elit at, hendrerit consequat magna.
+Features: Host contact info, embed maps, sell products, and automate client booking schedules.
 
-## Help Center
+## Subscription Plans
 
-You can contact us using the contact form or through our contact information on our <a href="https://otternova.com/contact" target="_blank">contact page</a>.
+We offer four flexible tiers tailored to your business size. Check the breakdown below to find your fit, or view full details on our <a href="/pricing" target="_blank">Pricing Page</a>.
 
-Nulla ullamcorper, eros tristique ullamcorper iaculis, arcu tortor condimentum nunc, quis rhoncus lacus purus eu libero. Nulla euismod dignissim odio. In hendrerit posuere enim, a condimentum arcu varius vel. Etiam in ipsum ac orci consequat scelerisque ut ut neque. Curabitur non lectus posuere, vestibulum dui sit amet, maximus sapien. Curabitur tristique purus at imperdiet egestas. Pellentesque tempor facilisis ex, vitae convallis leo sollicitudin quis. Vestibulum pellentesque lacus ac augue suscipit porttitor non id ipsum. Proin nulla enim, auctor ac fringilla eu, maximus pellentesque urna. Pellentesque vehicula tempus felis, ut tempor neque facilisis at. Etiam enim sem, suscipit posuere sollicitudin id, efficitur in est. Donec orci risus, maximus nec elit at, hendrerit consequat magna.
+| Feature / Detail               | Free | Basic | Standard | Premium |
+|:-------------------------------|:----:|:-----:|:--------:|:-------:|
+| User accounts                  |  1   |   3   |    10    |   30    |
+| Number of services             |  1   |   5   |    20    |   50    |
+| Number of products             |  1   |   5   |    20    |   50    |
+| Variants per Service/Product   |  1   |   5   |    5     |   10    |
+| Timeslot-based service booking |  ✅   |   ✅   |    ✅     |    ✅    |
+| Session-based service booking  |  ❌   |   ❌   |    ✅     |    ✅    |
+| Custom Webpage (About Us)      |  ❌   |   ❌   |    ❌     |    ✅    |
 
-Nulla ullamcorper, eros tristique ullamcorper iaculis, arcu tortor condimentum nunc, quis rhoncus lacus purus eu libero. Nulla euismod dignissim odio. In hendrerit posuere enim, a condimentum arcu varius vel. Etiam in ipsum ac orci consequat scelerisque ut ut neque. Curabitur non lectus posuere, vestibulum dui sit amet, maximus sapien. Curabitur tristique purus at imperdiet egestas. Pellentesque tempor facilisis ex, vitae convallis leo sollicitudin quis. Vestibulum pellentesque lacus ac augue suscipit porttitor non id ipsum. Proin nulla enim, auctor ac fringilla eu, maximus pellentesque urna. Pellentesque vehicula tempus felis, ut tempor neque facilisis at. Etiam enim sem, suscipit posuere sollicitudin id, efficitur in est. Donec orci risus, maximus nec elit at, hendrerit consequat magna.
+
+
+## Help & Support
+Stuck on something? We are here to help. You can reach out to our support team at any time via the contact form on our <a href="/contact" target="_blank">Contact Page</a>.
