@@ -33,12 +33,12 @@ We offer four flexible tiers tailored to your business size. Check the breakdown
 | User accounts                  |  1   |   3   |    10    |   30    |
 | Number of services             |  1   |   5   |    20    |   50    |
 | Number of products             |  1   |   5   |    20    |   50    |
-| Variants per Service/Product   |  1   |   5   |    5     |   10    |
+| Variants per service/product   |  1   |   5   |    5     |   10    |
+| Images per service/product     |  1   |   1   |    3     |    5    |
+| Number of branches             |  1   |   1   |    5     |   10    |
 | Timeslot-based service booking |  ✅   |   ✅   |    ✅     |    ✅    |
 | Session-based service booking  |  ❌   |   ❌   |    ✅     |    ✅    |
 | Custom Webpage (About Us)      |  ❌   |   ❌   |    ❌     |    ✅    |
-
-
 
 ## Help & Support
 Stuck on something? We are here to help. You can reach out to our support team at any time via the contact form on our <a href="/contact" target="_blank">Contact Page</a>.
