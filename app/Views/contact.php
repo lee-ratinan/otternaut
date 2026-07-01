@@ -10,25 +10,30 @@
                 <div class="row g-4">
                     <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
                         <div class="quick-contact-wrapper">
+                            <?php if (getenv('CONTACT_EMAIL')) : ?>
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-envelope-paper"></i>
                                 </div>
                                 <h4><?= lang('Contact.email.title') ?></h4>
-                                <p class="contact-detail"><a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
+                                <p class="contact-detail">
+                                    <a href="mailto:<?= getenv('CONTACT_EMAIL') ?>" target="_blank"><?= getenv('CONTACT_EMAIL') ?></a>
+                                </p>
                                 <span class="availability d-none"><?= lang('Contact.email.detail') ?></span>
                             </div>
+                            <?php endif; ?>
+                            <?php if (getenv('SOCIAL_LINE')): ?>
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-headset"></i>
                                 </div>
                                 <h4><?= lang('Contact.live-chat.title') ?></h4>
                                 <p class="contact-detail">
-                                    <?= lang('Contact.live-chat.app') ?>
-                                    <a href="<?= getenv('SOCIAL_LINE') ?>" target="_blank" class="btn-link ms-1"><i class="bi bi-box-arrow-up-right"></i></a>
+                                    <a href="<?= getenv('SOCIAL_LINE') ?>" target="_blank"><?= lang('Contact.live-chat.app') ?> <i class="bi bi-box-arrow-up-right"></i></a>
                                 </p>
                                 <span class="availability d-none"><?= lang('Contact.live-chat.detail') ?></span>
                             </div>
+                            <?php endif; ?>
                             <div class="contact-card">
                                 <div class="icon-wrapper">
                                     <i class="bi bi-pin-map"></i>

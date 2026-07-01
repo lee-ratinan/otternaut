@@ -315,7 +315,7 @@ class Home extends BaseController
             if (!empty($company)) {
                 return $this->response->setBody('Fine');
             }
-            $to       = getenv('CONTACT_EMAIL');
+            $to       = getenv('CONTACT_FORM_EMAIL');
             $no_reply = getenv('NO_REPLY_EMAIL');
             $name     = $this->request->getPost('name');
             $from     = $this->request->getPost('email');

@@ -102,7 +102,7 @@
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-                <li><a href="https://mart.otternova.com" target="_blank">OtterMart</a></li>
+                <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
                 <li class="d-none d-md-block"><a href="<?= base_url($locale . '/choose-region') ?>"><?= get_locale_name($locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -124,8 +124,12 @@
                 </a>
                 <div class="footer-contact">
                     <p><?= lang('System.slogan') ?></p>
-                    <p class="mt-3"><i class="bi bi-telephone"></i> <?= format_phone_number(getenv('CONTACT_PHONE')) ?></p>
-                    <p><i class="bi bi-envelope"></i> <a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
+                    <?php if (getenv('CONTACT_PHONE')) : ?>
+                        <p class="mt-3"><i class="bi bi-telephone"></i> <?= format_phone_number(getenv('CONTACT_PHONE')) ?></p>
+                    <?php endif; ?>
+                    <?php if (getenv('CONTACT_EMAIL')) : ?>
+                        <p><i class="bi bi-envelope"></i> <a href="mailto:<?= getenv('CONTACT_EMAIL') ?>"><?= getenv('CONTACT_EMAIL') ?></a></p>
+                    <?php endif; ?>
                 </div>
                 <div class="social-links d-flex mt-4">
                     <?php foreach (get_social_list() as $key => $link) : ?>
@@ -140,7 +144,7 @@
                     <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-                    <li><a href="https://mart.otternova.com" target="_blank">OtterMart</a></li>
+                    <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 footer-links">
