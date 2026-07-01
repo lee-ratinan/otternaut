@@ -167,3 +167,36 @@ function get_locale_name(string $locale): string
     ];
     return $locales[$locale] ?? $locale;
 }
+
+function isSpamSubmission ($name, $message): bool
+{
+    // 1. Check for Same First & Last Name Pattern (e.g., "John John")
+    // This cleans up whitespace and checks if the name repeats.
+    $cleanedName = trim(preg_replace('/\s+/', ' ', $name));
+    $nameParts = explode(' ', $cleanedName);
+    if (count($nameParts) === 2 && strtolower($nameParts[0]) === strtolower($nameParts[1])) {
+        return true;
+    }
+    // 2. Check for HTML link injection
+    if (preg_match('/<a\s+href|\[url=/i', $message)) {
+        return true;
+    }
+    // 3. Count URLs - If more than 2 links, flag it
+    $urlCount = preg_match_all('/https?:\/\//i', $message);
+    if ($urlCount > 2) {
+        return true;
+    }
+    // 4. Spam Keywords Array (Grouped by pipes '|' for regex)
+    $spamPatterns = [
+        'seo|backlink|rank on google|search engine optimization|domain authority|guest post|drive traffic', // SEO
+        'crypto|bitcoin|forex|trading bot|passive income|make \$\$\$|earn cash', // Financial
+        'account suspended|payment declined|copyright infringement|legal action|urgent response', // Phishing
+        'viagra|casino|betting|weight loss pill' // Adult/Pharma
+    ];
+    // Combine all groups into one regex pattern
+    $masterPattern = '/' . implode('|', $spamPatterns) . '/i'; // 'i' flag makes it case-insensitive
+    if (preg_match($masterPattern, $message)) {
+        return true;
+    }
+    return false; // Looks clean!
+}

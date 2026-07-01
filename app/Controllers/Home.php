@@ -324,6 +324,11 @@ class Home extends BaseController
             $subject  = lang('Contact.form.fields.subject.' . $subject);
             $message  = $this->request->getPost('message');
             $date     = date('d M Y');
+            // Check spam potential
+            $is_spam  = isSpamSubmission($name, $message);
+            if ($is_spam) {
+                $subject = '[SPAM?] ' . $subject;
+            }
             // Send the email
             $email    = Services::email();
             $email->setTo($to);
