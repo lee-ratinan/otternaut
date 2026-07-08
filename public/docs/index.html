@@ -186,13 +186,21 @@
 
         // Event Listener: Language Switching
         document.getElementById('langSelector').addEventListener('change', (e) => {
+            // 1. Get the current ?page= value from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentPageValue = urlParams.get('page'); // e.g., "en/getting-started.md" or "fr/about.md"
+            // Change the currentLang variable
             currentLang = e.target.value;
             renderSidebar();
-            // Load the first document matching the newly selected language context
-            if(menuData[currentLang] && menuData[currentLang].length > 0) {
-                const newPage = currentLang + '/' + menuData[currentLang][0].file;
-                window.location.search = `?page=${newPage}`;
+            let pageName = 'introduction.md';
+            if (currentPageValue) {
+                // 2. Extract everything after the first slash (the actual page name)
+                const parts = currentPageValue.split('/');
+                parts.shift();
+                pageName = parts.join('/');
             }
+            let newPage = `${currentLang}/${pageName}`;
+            window.location.search = `?page=${newPage}`;
         });
 
         // Run on boot

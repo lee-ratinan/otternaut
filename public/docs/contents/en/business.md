@@ -2,31 +2,31 @@
 
 ## Introduction
 
-When you [create your account](https://client.otternova.com/create-account), you create one business account and one user account at the same time.
+When you [create your account](https://client.otternova.com/create-account), you will create one business account and one user account simultaneously.
 
-Apart from your name, email address, and password, you need to provide the business name and country during the registration. Please note that the country cannot be changed at the later date.
+Apart from your name, email address, and password, you must provide your business name and country during registration. **Please note that the country cannot be changed at a later date**.
 
-At the moment, only Thailand is available. Here are the important information regarding the available countries:
+Currently, only Thailand is available. Here is the essential information regarding supported countries:
 
 | Country   | Languages     | Currencies |
 |-----------|---------------|------------|
 | Thailand  | Thai, English | THB, USD   |
 
-Once you logged in, at the navigation menu on the left, you can find the **Business** section, click there, and click at the **Business** menu to go to the **Manage Business** page.
+Once logged in, look at the navigation menu on the left side. Locate the **Business** section, click it, and then select the **Business** sub-menu to proceed to the **Manage Business** page.
 
 ## Generic Information
 
-Generic information is the first section on this **Manage Business** page. Please fill in your business type, business’s name in various languages, the slug, the number of days allowed for advanced booking, and the status of the online store. If the status is **offline**, the store will not be shown on the [marketplace](https://mart.otternova.com/).
+Generic Information is the first section on the **Manage Business** page. Please fill in your business type, business name in various languages, your custom URL slug, the number of days allowed for advanced booking, and your online store’s status. If the status is set to **offline**, your store will not appear on the [marketplace](https://mart.otternova.com/).
 
 ### Business Type
 
-Currently, there are 2 main business types, which are:
+Currently, there are two main business categories available:
 
 1. Health & Wellness
    * Massage Spa
    * Medicure
    * Salon
-1. School
+2. School
    * Generic School
    * Language School
    * Music School
@@ -34,59 +34,60 @@ Currently, there are 2 main business types, which are:
 
 ### Slug
 
-The slug is the part of the URL (Uniform Resource Locator). It is a version of your business name in lowercase letters, stripped off all special characters, and spaces are replaced by dashes.
+A slug is a specific portion of a URL (Uniform Resource Locator). It serves as a web-friendly version of your business name, written entirely in lowercase letters, with all special characters removed and spaces replaced by dashes.
 
-For example, if your business name is **John Doe’s Shop**, your slug is *john-does-shop*, and the link to your online store is *mart.otternova.com/@john-does-shop*.
+For example, if your business name is **John Doe’s Shop**, your slug will be *john-does-shop*, and the direct link to your online store will be *mart.otternova.com/@john-does-shop*.
 
 ## Tax Information
 
-Generally, for the countries where taxes are unified, this section is used to set up the tax to be applied to all orders. You may set up the tax rate here, along with the inclusivity, and the currency. The table below shows the default values as set based on the generic information of the country.
+For countries with unified tax structures, this section allows you to configure the tax rate applied to all orders. You can set the tax rate percentage, tax inclusivity, and the primary currency here. The table below outlines the default configurations based on the country’s generic settings:
 
 | Country  | Tax Rate (%) | Inclusivity | Default Currency |
 |:--------:|:------------:|:-----------:|:----------------:|
 | Thailand |      7       |  Included   |       THB        |
 
-Please note that the currency can only be changed when the store is *offline*, and once changed, all services’ and products’ prices will **not** be adjusted to the new currency (i.e. if the service costed 100 baht, it will be 100 US dollars when the business’s currency changed from baht to US dollar).
+⚠️ **Important Note on Currencies:** The currency can only be modified while your store status is set to offline. Once changed, the numerical prices of your existing products and services will not auto-convert to the new currency value (e.g., if a service was previously 100 THB, changing your store currency to USD will make that service 100 USD).
 
 ## Contact Information
 
-You can fill in the contact information here. These information will be shown on your page in the martketplace. The information includes a telephone number, an email address, and a website.
+Provide your official contact details here. This information will be displayed on your marketplace store page and includes a telephone number, an email address, and a website URL.
 
 ## Social Media
 
-You can fill in the link to your social media from here, Facebook, LINE, Instagram, YouTube.
-
-The links will be shown on the store page.
+You can link your business social media profiles here, including Facebook, LINE, Instagram, and YouTube. These links will be visible to customers on your store page.
 
 ## Shipping
 
-If your business does not provide any physical product, please skip this section entirely.
+If your business provides only digital or in-person services and does not sell physical products, please skip this section entirely.
 
-For the physical products, you can (1) ship the product to the customer, (2) let the customer collects at the branch, (3) or both.
+For physical products, you can select up to two options: (1) ship the products directly to the customer, (2) allow the customer to collect the items at your branch, or (3) offer both methods.
 
-For the shipping fee (if any), it can be either taxable or not taxable. You can read more about the rates at [Shipping Rates](/docs/?page=en/shipping-rate.md).
+Shipping fees (if applicable) can be configured as either taxable or non-taxable. To learn more about setting up pricing, please read the [Shipping Rates](/docs/?page=en/shipping-rate.md) guide.
 
 ## SEO Information
 
-To ensure search engines know the content of your store better, you need to add meta description and meta keywords. The description is the short detailed explanation of your business, and the keywords are the list of words that can be indexed by search engine. 
+To ensure search engines can discover and correctly index your store, you should add a Meta Description and Meta Keywords.
+
+- **Meta Description:** A short, detailed explanation summarizing what your business does.
+- **Meta Keywords:** A targeted list of words or search terms relevant to your business for search engine indexing. 
 
 ## Your Marketplace Decoration
 
 ### Colors
 
-You can choose three colors for your store page:
+You can customize the appearance of your store page using three core colors:
 
-- The primary color will be the color of the headers, icons, and main elements on the pages.
-- The background color will be the main background color of the page.
-- The text color will be the main color of the all text, paragraphs, and so on.
+- **Primary Color:** Applied to headers, icons, and prominent design elements across your pages.
+- **Background Color:** Sets the main background color of your store page.
+- **Text Color:** Sets the default color for all body text, paragraphs, and descriptions.
 
 ### Introduction Paragraph
 
-You can add the introduction paragraph in local languages to be shown on the store page here.
+You can write an introductory summary or welcome message in your local languages to be featured prominently on your store page.
 
 ### Images
 
-You can upload two images for your business: the logo and header images. Please follow the guidelines below. The images will be adjusted and reformatted according to the specifications as given.
+You can upload two distinct images for your business profile: a logo and a header banner. Please adhere to the specifications below. Uploaded images will automatically be optimized and reformatted to match these guidelines.
 
 #### Business Logo
 
@@ -106,10 +107,10 @@ You can upload two images for your business: the logo and header images. Please 
 
 ## Clear Cache
 
-A cache is a temporary storage of the data that is used to speed up the process of loading the page. The changes to your store will not take effect immediately until the cache is expired or manually cleared. Please click the **Clear Cache** button to clear the cache if you need your changes to take effect immediately.
+A cache is a temporary data storage mechanism used to speed up page loading times. Because of this, modifications made to your store configuration may not appear to your customers instantly until the cache expires or is cleared manually. If you need your updates to go live immediately, please click the **Clear Cache** button.
 
 ## Contract
 
-The contract section lists all paid plans you have with OtterNova. If you remain on the **free** plan, your contract section will be empty.
+The Contract section lists all historical paid subscription plans you hold or previously held with OtterNova. If you are operating on our **Free** tier, this section will appear empty.
 
-You can choose to upgrade your plan by clicking the **Upgrade/Renew Plan** button and following the instructions on the next page.
+You can upgrade or renew your plan at any time by clicking the **Upgrade/Renew Plan** button and following the step-by-step instructions provided.

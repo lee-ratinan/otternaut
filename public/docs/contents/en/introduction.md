@@ -1,32 +1,30 @@
-# Introduction
+# Welcome to OtterNova
 
-Welcome to the **OtterNova Documentation Portal**. Whether you are setting up your first service or scaling a growing team, this guide will help you get up and running in minutes.
+Welcome to the **OtterNova Documentation Portal**. Whether you are setting up your very first service or scaling an expanding team, this guide is designed to get your business up and running within minutes.
 
-Use the navigation menu on the left to explore specific features, or follow the quick overview below to get started for free.
+Use the left navigation menu to explore specific features, or follow the quick overview below to kickstart your journey for free.
 
 ## Core Ecosystem
 
-OtterNova is split into two primary areas: your management backend and your public-facing storefront.
+The OtterNova ecosystem is divided into two primary platforms: your private management backend and your public-facing storefront.
 
 ### 🛠️ OtterPlex (The Dashboard)
 
-This is your private business command center. Use it to configure services, track physical product deliveries, and manage your team.
+This is your private business command center. Use it to configure services, track physical product deliveries, manage staff permissions, and oversee daily operations.
 
-Access Portal: <a href="https://client.otternova.com" target="_blank">https://client.otternova.com</a>
-
-Getting Started: Log in with your registered email to invite employees to create their own accounts.
+- Access Portal: <a href="https://client.otternova.com" target="_blank">https://client.otternova.com</a>
+- Getting Started: Log in with your registered credentials to access your dashboard and invite team members to create their accounts.
 
 ### 🛒 OtterMart (Your Storefront)
 
-This is your public, customer-facing booking page and marketplace. Link it to your social media bios to drive traffic, capture leads, and accept bookings.
+This is your public, customer-facing marketplace and booking page. Add this link to your social media bios to drive traffic, capture leads, and accept direct bookings.
 
-Your Live Page: <a href="https://mart.otternova.com" target="_blank">https://mart.otternova.com</a>
-
-Features: Host contact info, embed maps, sell products, and automate client booking schedules.
+- Your Live Page: <a href="https://mart.otternova.com" target="_blank">https://mart.otternova.com</a>
+- Key Features: Display official content, contact details, embed location maps, showcase products, and automate client booking schedules.
 
 ## Subscription Plans
 
-We offer four flexible tiers tailored to your business size. Check the breakdown below to find your fit, or view full details on our <a href="/pricing" target="_blank">Pricing Page</a>.
+We offer four flexible tiers tailored to your business scale. Review the breakdown below to find the best fit for your team, or view comprehensive details on our <a href="/pricing" target="_blank">Pricing Page</a>.
 
 | Feature / Detail               | Free | Basic | Standard | Premium |
 |:-------------------------------|:----:|:-----:|:--------:|:-------:|
@@ -41,4 +39,5 @@ We offer four flexible tiers tailored to your business size. Check the breakdown
 | Custom Webpage (About Us)      |  ❌   |   ❌   |    ❌     |    ✅    |
 
 ## Help & Support
-Stuck on something? We are here to help. You can reach out to our support team at any time via the contact form on our <a href="/contact" target="_blank">Contact Page</a>.
+
+Need assistance? We are always here to help. You can contact our support team at any time by submitting a request via our <a href="/contact" target="_blank">Contact Page</a>.
