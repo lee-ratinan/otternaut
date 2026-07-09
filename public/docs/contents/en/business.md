@@ -109,8 +109,10 @@ You can upload two distinct images for your business profile: a logo and a heade
 
 A cache is a temporary data storage mechanism used to speed up page loading times. Because of this, modifications made to your store configuration may not appear to your customers instantly until the cache expires or is cleared manually. If you need your updates to go live immediately, please click the **Clear Cache** button.
 
-## Contract
+[//]: # (## Contract)
 
-The Contract section lists all historical paid subscription plans you hold or previously held with OtterNova. If you are operating on our **Free** tier, this section will appear empty.
+[//]: # ()
+[//]: # (The Contract section lists all historical paid subscription plans you hold or previously held with OtterNova. If you are operating on our **Free** tier, this section will appear empty.)
 
-You can upgrade or renew your plan at any time by clicking the **Upgrade/Renew Plan** button and following the step-by-step instructions provided.
+[//]: # ()
+[//]: # (You can upgrade or renew your plan at any time by clicking the **Upgrade/Renew Plan** button and following the step-by-step instructions provided.)
