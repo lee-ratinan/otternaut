@@ -38,6 +38,45 @@
 | การจองบริการแบบเลือกคอร์ส/เซสชัน (Session) |  ❌  |   ❌   |     ✅     |    ✅     |
 | หน้าเว็บที่กำหนดเองได้ (หน้าเกี่ยวกับเรา)  |  ❌  |   ❌   |     ❌     |    ✅     |
 
+### Renewal and Change of Plan
+
+Your business will be on a Free plan once you sign up. However, you can upgrade to any of our subscription plans at any time.
+
+#### From Free Plan
+
+You can upgrade from our generous Free plan to any of our subscription plans in our system. Please go to <a href="?page=en%2Fplan.md">Business/Plan</a> for more information.
+
+#### From Basic and Standard Plans
+
+You can upgrade to the Standard plan (from Basic) or to the Premium plan (from Standard) at any time, subject to the upgrade paths mapped below. The price will be prorated based on the remaining value of your current billing cycle.
+
+|    From / To     | Standard Monthly | Standard Annual | Premium Monthly | Premium Annual |
+|:----------------:|:----------------:|:---------------:|:---------------:|:--------------:|
+|  Basic Monthly   |        ✅         |        ✅        |        ✅        |       ✅        |
+|   Basic Annual   |        -         |        ✅        |        -        |       ✅        |
+| Standard Monthly |        -         |        -        |        ✅        |       ✅        |
+| Standard Annual  |        -         |        -        |        -        |       ✅        |
+
+### Downgrading
+
+You cannot downgrade your plan in the middle of an active billing cycle. However, you may select a lower-tier plan during your renewal window.
+
+### Renewal
+
+Renewal options become available 30 days before the expiry date for Annual plans, and 14 days before the expiry date for Monthly plans. You have the choice to remain on the same plan or switch to a different tier.
+
+If you choose to downgrade to a lower tier, you must manually disable or delete entities (such as services, products, variants, users, etc.) to ensure your account does not exceed the new plan’s limits. If your account remains over the limit 3 days after your previous plan expires, the system will automatically disable the most recently created entities until the new limit is met.
+
+### Cancellation & Expiration
+
+If you do not renew your subscription, your paid plan will automatically revert to the Free plan 3 days after your expiry date.
+
+If you wish to completely close your account and delete your business data, please contact our support team. Your account, business, and all associated entities will be disabled within 3 business days, and scheduled for permanent deletion in the next system cycle (within 30 to 60 days).
+
+### Refund Policy
+
+All paid plans are non-refundable.
+
 ## ความช่วยเหลือและฝ่ายสนับสนุน
 
 หากมีข้อสงสัยหรือติดปัญหาในการใช้งาน เราพร้อมช่วยเหลือคุณเสมอ คุณสามารถติดต่อทีมงานฝ่ายสนับสนุนของเราได้ตลอดเวลา โดยกรอกแบบฟอร์มติดต่อที่<a href="/contact" target="_blank">หน้าติดต่อเรา</a>
