@@ -150,6 +150,10 @@
             <div class="col-lg-4 col-md-6 footer-links">
                 <h4><?= lang('System.locales.title') ?></h4>
                 <p><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.pages.choose-region.title') ?></a></p>
+                <div id="dbd-section">
+                    <p>OtterNova | ทะเบียนพาณิชย์เลขที่ XXXXXXXXXXXXX</p>
+                    <div>[area to embed DBD script after registration is complete]</div>
+                </div>
             </div>
         </div>
     </div>
