@@ -64,13 +64,11 @@ class Home extends BaseController
     public function comingSoon(): string
     {
         $locale      = $this->request->getLocale();
-        $locale_data = $this->splitLocale($locale);
-        $data        = [
-            'page_slug' => 'coming-soon',
-            'url_part'  => 'coming-soon',
-            'locale'    => $locale,
-            'language'  => $locale_data['language'],
-            'country'   => $locale_data['country'],
+        $businessName = lang('System.site-name');
+        $data         = [
+            'slug'         => 'coming-soon',
+            'lang'         => $locale,
+            'businessName' => $businessName
         ];
         return view('coming-soon', $data);
     }

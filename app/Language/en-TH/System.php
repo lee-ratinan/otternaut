@@ -58,6 +58,10 @@ return [
             'keywords'         => '-',
             'got-lost'         => 'Looks like our otter got lost and couldn’t recognize your destination.',
             'return-to-safety' => 'Return to safety 🚀'
+        ],
+        'coming-soon'          => [
+            'title'     => 'Coming Soon',
+            'paragraph' => 'Our otters are working hard to bring you the great product!'
         ]
     ]
 ];

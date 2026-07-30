@@ -28,10 +28,10 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
-<body>
+<body style="background-color:#08101b;">
 <main>
     <div class="container">
-        <section class="section text-center align-items-center justify-content-center mt-5 p-5">
+        <section class="section text-center align-items-center justify-content-center mt-5 p-5" style="background-color:#08101b;">
             <h1 class="pt-5" style="color:#c97232">404</h1>
             <h2 style="color:#c97232"><?= lang('System.pages.not-found.got-lost') ?></h2>
             <a class="btn btn-primary my-5" href="<?= base_url() ?>"><?= lang('System.pages.not-found.return-to-safety') ?></a>
