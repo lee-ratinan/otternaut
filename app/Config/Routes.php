@@ -12,6 +12,7 @@ $routes->get('leadership', 'Home::leadership');
 $routes->get('choose-region', 'Home::chooseRegion');
 $routes->get('terms-and-conditions', 'Home::termsAndConditions');
 $routes->get('privacy-policy', 'Home::privacyPolicy');
+$routes->get('coming-soon', 'Home::comingSoon');
 $routes->get('sitemap.xml', 'Home::sitemap');
 // with locale
 $routes->group('{locale}', ['filter' => 'localeGuard'], static function($routes) {
@@ -21,6 +22,7 @@ $routes->group('{locale}', ['filter' => 'localeGuard'], static function($routes)
     $routes->get('choose-region', 'Home::chooseRegion');
     $routes->get('terms-and-conditions', 'Home::termsAndConditions');
     $routes->get('privacy-policy', 'Home::privacyPolicy');
+    $routes->get('coming-soon', 'Home::comingSoon');
     $routes->get('/', 'Home::index');
 });
 $routes->get('/', 'Home::index');

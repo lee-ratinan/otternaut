@@ -52,9 +52,9 @@ You can upgrade to the Standard plan (from Basic) or to the Premium plan (from S
 
 |    From / To     | Standard Monthly | Standard Annual | Premium Monthly | Premium Annual |
 |:----------------:|:----------------:|:---------------:|:---------------:|:--------------:|
-|  Basic Monthly   |        ✅         |        ✅        |        ✅        |       ✅        |
+|  Basic Monthly   |        ✅         |        -        |        ✅        |       -        |
 |   Basic Annual   |        -         |        ✅        |        -        |       ✅        |
-| Standard Monthly |        -         |        -        |        ✅        |       ✅        |
+| Standard Monthly |        -         |        -        |        ✅        |       -        |
 | Standard Annual  |        -         |        -        |        -        |       ✅        |
 
 ### Downgrading

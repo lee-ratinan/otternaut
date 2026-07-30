@@ -37,11 +37,15 @@ class Home extends BaseController
 
     /**
      * Home page
-     * @return string
+     * @return string|ResponseInterface
      */
-    public function index(): string
+    public function index(): string|ResponseInterface
     {
         $locale      = $this->request->getLocale();
+        $bypass      = $this->request->getGet('bypass');
+        if (in_array($locale, ['en-TH', 'th-TH']) && 'Y' !== $bypass) {
+            return redirect()->to($locale . '/coming-soon');
+        }
         $locale_data = $this->splitLocale($locale);
         $data        = [
             'page_slug' => 'home',
@@ -51,6 +55,24 @@ class Home extends BaseController
             'country'   => $locale_data['country'],
         ];
         return view('home', $data);
+    }
+
+    /**
+     * Home page
+     * @return string
+     */
+    public function comingSoon(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug' => 'coming-soon',
+            'url_part'  => 'coming-soon',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('coming-soon', $data);
     }
 
     /**
@@ -346,7 +368,11 @@ class Home extends BaseController
         }
     }
 
-    public function sitemap()
+    /**
+     * Sitemap XML
+     * @return ResponseInterface
+     */
+    public function sitemap(): ResponseInterface
     {
         $languages  = [
             '',
@@ -386,12 +412,19 @@ class Home extends BaseController
         return $this->response->setXML($final_xml);
     }
 
+    /**
+     * Page Not Found Handler
+     * @return string|ResponseInterface
+     */
     public function show404(): string|ResponseInterface
     {
-        $method = $this->request->getMethod();
+        $method       = $this->request->getMethod();
         $lang         = $this->request->getLocale();
-        $businessName = '';
-        $data    = [
+        if ('post' == $method) {
+            return $this->response->setStatusCode(404)->setJSON(json_encode(['status' => 404, 'message' => 'Page not found.']));
+        }
+        $businessName = lang('System.site-name');
+        $data         = [
             'slug'         => 'not-found',
             'lang'         => $lang,
             'businessName' => $businessName
