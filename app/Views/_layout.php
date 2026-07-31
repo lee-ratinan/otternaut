@@ -105,7 +105,12 @@
                         <li><a href="<?= base_url($locale . '/solutions/page') ?>"><?= lang('System.pages.solutions.page') ?></a></li>
                     </ul>
                 </li>
-                <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
+                <li class="dropdown"><a href="#"><span><?= lang('System.pages.pricing.title') ?></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="<?= base_url($locale . '/pricing/mart') ?>"><?= lang('System.pages.pricing.mart') ?></a></li>
+                        <li><a href="<?= base_url($locale . '/pricing/page') ?>"><?= lang('System.pages.pricing.page') ?></a></li>
+                    </ul>
+                </li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                 <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
