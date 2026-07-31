@@ -6,6 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 // without locale
+$routes->get('solutions/mart', 'Home::solutionsMart');
+$routes->get('solutions/page', 'Home::solutionsPage');
 $routes->get('pricing', 'Home::pricing');
 $routes->get('contact', 'Home::contact');
 $routes->get('leadership', 'Home::leadership');
@@ -16,6 +18,8 @@ $routes->get('coming-soon', 'Home::comingSoon');
 $routes->get('sitemap.xml', 'Home::sitemap');
 // with locale
 $routes->group('{locale}', ['filter' => 'localeGuard'], static function($routes) {
+    $routes->get('solutions/mart', 'Home::solutionsMart');
+    $routes->get('solutions/page', 'Home::solutionsPage');
     $routes->get('pricing', 'Home::pricing');
     $routes->get('contact', 'Home::contact');
     $routes->get('leadership', 'Home::leadership');

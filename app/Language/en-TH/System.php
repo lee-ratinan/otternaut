@@ -16,6 +16,13 @@ return [
     'pages'             => [
         'home'                 => [
             'title'       => 'Home',
+            'description' => '',
+            'keywords'    => ''
+        ],
+        'solutions'            => [
+            'title'       => 'Solutions',
+            'mart'        => 'E-Commerce Solution',
+            'page'        => 'Web Hosting Solution',
             'description' => 'OtterNova is a smart booking and scheduling system for businesses. Replace paper chaos with an organized dashboard for appointments, staff, and services.',
             'keywords'    => 'booking system, appointment software, scheduling SaaS, reservation platform, business scheduling, online booking, staff scheduling, OtterNova'
         ],

@@ -74,6 +74,42 @@ class Home extends BaseController
     }
 
     /**
+     * Solutions / Mart page
+     * @return string
+     */
+    public function solutionsMart(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data = [
+            'page_slug' => 'solutions-mart',
+            'url_part'  => 'solutions/mart',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('solutions-mart', $data);
+    }
+
+    /**
+     * Solutions / Page page
+     * @return string
+     */
+    public function solutionsPage(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data = [
+            'page_slug' => 'solutions-part',
+            'url_part'  => 'solutions/part',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('solutions-page', $data);
+    }
+
+    /**
      * Pricing page
      * @return string
      */

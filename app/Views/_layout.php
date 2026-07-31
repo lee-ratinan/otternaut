@@ -99,6 +99,12 @@
             <ul>
                 <?php $doc_lang = substr($locale, 0, 2); ?>
                 <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
+                <li class="dropdown"><a href="#"><span><?= lang('System.pages.solutions.title') ?></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="<?= base_url($locale . '/solutions/mart') ?>"><?= lang('System.pages.solutions.mart') ?></a></li>
+                        <li><a href="<?= base_url($locale . '/solutions/page') ?>"><?= lang('System.pages.solutions.page') ?></a></li>
+                    </ul>
+                </li>
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
