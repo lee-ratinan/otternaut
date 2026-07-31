@@ -98,7 +98,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <?php $doc_lang = substr($locale, 0, 2); ?>
-                <li><a href="<?= base_url($locale) ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
+                <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>" <?= ('home' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.home.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/pricing') ?>" <?= ('pricing' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.pricing.title') ?></a></li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
@@ -140,7 +140,7 @@
             <div class="col-lg-4 col-md-6 footer-links">
                 <h4><?= lang('System.footer.useful-links') ?></h4>
                 <ul>
-                    <li><a href="<?= base_url($locale) ?>"><?= lang('System.pages.home.title') ?></a></li>
+                    <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>

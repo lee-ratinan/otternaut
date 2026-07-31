@@ -42,8 +42,8 @@ class Home extends BaseController
     public function index(): string|ResponseInterface
     {
         $locale      = $this->request->getLocale();
-        $bypass      = $this->request->getGet('bypass');
-        if (in_array($locale, ['en-TH', 'th-TH']) && 'Y' !== $bypass) {
+        $bypass      = $this->request->getGet('dv');
+        if (in_array($locale, ['en-TH', 'th-TH']) && '1' !== $bypass) {
             return redirect()->to($locale . '/coming-soon');
         }
         $locale_data = $this->splitLocale($locale);
