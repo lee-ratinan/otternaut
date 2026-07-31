@@ -15,10 +15,10 @@ return [
     ],
     'about'     => [
         'title'      => 'About Us',
-        'tagline'    => 'Fixing messy bookings so businesses can run smoother every day.',
+        'tagline'    => 'Fixing messy online problems so businesses can run smoother every day.',
         'visions'    => 'Visions that came from pains',
-        'paragraph1' => 'Many businesses still rely on paper notes, Excel sheets, and Post-its to handle bookings — a setup that quickly becomes chaotic during busy hours.',
-        'paragraph2' => 'OtterNova was created to replace that clutter with a clean, unified system that manages schedules, staff, and sessions automatically, giving every business a calmer, smarter way to stay organized.',
+        'paragraph1' => 'Many businesses still rely on paper notes, Excel sheets, and Post-its to handle bookings — a setup that quickly becomes chaotic during busy hours. And many others struggled with complex hostings, expensive bills of pushing own website online. And the AI is way too limited, costly, sometimes the mobile design is not responsive.',
+        'paragraph2' => 'OtterNova was created to replace that clutter with a clean, unified system that manages webpages, schedules, staff, and sessions automatically, giving every business a calmer, smarter way to stay organized.',
     ],
     'features'  => [
         'title'    => 'Features',

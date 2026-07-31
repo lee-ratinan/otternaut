@@ -100,8 +100,8 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $data = [
-            'page_slug' => 'solutions-part',
-            'url_part'  => 'solutions/part',
+            'page_slug' => 'solutions-page',
+            'url_part'  => 'solutions/page',
             'locale'    => $locale,
             'language'  => $locale_data['language'],
             'country'   => $locale_data['country'],
@@ -221,8 +221,8 @@ class Home extends BaseController
             ]
         ];
         $data = [
-            'page_slug' => 'pricing',
-            'url_part'  => 'pricing',
+            'page_slug' => 'pricing-mart',
+            'url_part'  => 'pricing/mart',
             'locale'    => $locale,
             'language'  => $locale_data['language'],
             'country'   => $locale_data['country'],
@@ -327,8 +327,8 @@ class Home extends BaseController
             ]
         ];
         $data = [
-            'page_slug' => 'pricing',
-            'url_part'  => 'pricing',
+            'page_slug' => 'pricing-page',
+            'url_part'  => 'pricing/page',
             'locale'    => $locale,
             'language'  => $locale_data['language'],
             'country'   => $locale_data['country'],

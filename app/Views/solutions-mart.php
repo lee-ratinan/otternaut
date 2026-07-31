@@ -15,7 +15,7 @@
                         <p data-aos="fade-right" data-aos-delay="500"><?= lang('SolutionsMart.hero.subheadline') ?></p>
                         <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
                             <a href="<?= getenv('REGISTER_LINK') ?>" class="btn-primary"><i class="bi bi-check2-circle"></i> <?= lang('SolutionsMart.hero.cta') ?></a>
-                            <a href="<?= base_url($locale . '/pricing') ?>" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('System.pages.pricing.title') /* = lang('SolutionsMart.hero.demo') */ ?></span></a>
+                            <a href="<?= base_url($locale . '/pricing/mart') ?>" class="btn-secondary"><i class="bi bi-play-circle"></i> <span><?= lang('System.pages.pricing.title') /* = lang('SolutionsMart.hero.demo') */ ?></span></a>
                         </div>
                         <div class="hero-stats d-none" data-aos="fade-up" data-aos-delay="700">
                             <div class="stat-item">
@@ -62,28 +62,7 @@
             </div>
         </div>
     </section>
-    <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2><?= lang('SolutionsMart.about.title') ?></h2>
-            <p><?= lang('SolutionsMart.about.tagline') ?></p>
-        </div><!-- End Section Title -->
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="<?= base_url('assets/img/home/about.webp') ?>" class="img-fluid rounded shadow" alt="<?= lang('SolutionsMart.about.title') ?>">
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-                    <div class="about-content">
-                        <h2 class="mb-3"><?= lang('SolutionsMart.about.visions') ?></h2>
-                        <p class="lead mb-3"><?= lang('SolutionsMart.about.paragraph1') ?></p>
-                        <p><?= lang('SolutionsMart.about.paragraph2') ?></p>
-                        <a href="#" class="btn btn-primary mt-3 d-none">Discover Our Story</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- /About Section -->
+    <?php include_once('_about-us.php') ?>
     <section id="services" class="services section">
         <div class="container section-title" data-aos="fade-up">
             <h2><?= lang('SolutionsMart.features.title') ?></h2>

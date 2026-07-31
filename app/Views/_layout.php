@@ -3,7 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title><?= lang('System.pages.' . $page_slug . '.title') . ' | ' . lang('System.site-name') ?></title>
+    <?php
+    $title = lang('System.pages.' . $page_slug . '.title');
+    if (str_contains($page_slug, 'pricing') || str_contains($page_slug, 'solutions')) {
+        $split_slug = str_replace('-', '.', $page_slug);
+        $title = lang('System.pages.' . $split_slug);
+    }
+    ?>
+    <title><?= $title . ' | ' . lang('System.site-name') ?></title>
     <meta name="description" content="<?= lang('System.pages.' . $page_slug . '.meta.description') ?>">
     <meta name="keywords" content="<?= lang('System.pages.' . $page_slug . '.meta.keywords') ?>">
     <meta name="author" content="<?= lang('System.author') ?>">
@@ -113,7 +120,7 @@
                 </li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-                <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
+<!--                <li><a href="--><?php //= getenv('MART_LINK') ?><!--" target="_blank">OtterMart</a></li>-->
                 <li class="d-none d-md-block"><a href="<?= base_url($locale . '/choose-region') ?>"><?= get_locale_name($locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
