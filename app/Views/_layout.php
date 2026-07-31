@@ -91,7 +91,7 @@
 <body class="index-page country-<?= $country ?>">
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="<?= base_url($locale) ?>" class="logo d-flex align-items-center me-auto me-xl-0">
+        <a href="<?= base_url($locale . DEV_MODE_BYPASS) ?>" class="logo d-flex align-items-center me-auto me-xl-0">
             <img src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="<?= lang('System.site-name') ?>">
             <h1 class="sitename"><?= lang('System.site-name') ?></h1>
         </a>
@@ -129,8 +129,8 @@
 <footer id="footer" class="footer light-background">
     <div class="container footer-top">
         <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about">
-                <a href="<?= base_url($locale) ?>" class="logo d-flex align-items-center">
+            <div class="col-lg-3 col-md-6 footer-about">
+                <a href="<?= base_url($locale . DEV_MODE_BYPASS) ?>" class="logo d-flex align-items-center">
                     <span class="sitename"><?= lang('System.site-name') ?></span>
                 </a>
                 <div class="footer-contact">
@@ -148,17 +148,31 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 footer-links">
+            <div class="col-lg-3 col-md-6 footer-links">
                 <h4><?= lang('System.footer.useful-links') ?></h4>
                 <ul>
                     <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>"><?= lang('System.pages.home.title') ?></a></li>
-                    <li><a href="<?= base_url($locale . '/pricing') ?>"><?= lang('System.pages.pricing.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                     <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6 footer-links">
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4><?= lang('System.pages.solutions.title') ?></h4>
+                <ul>
+                    <li class="pb-0">OtterMart</li>
+                    <li>
+                        <a class="mx-2" href="<?= base_url($locale . '/solutions/mart') ?>"><?= lang('System.pages.solutions.title') ?></a>
+                        <a class="mx-2" href="<?= base_url($locale . '/pricing/mart') ?>"><?= lang('System.pages.pricing.title') ?></a>
+                    </li>
+                    <li class="pb-0">OtterPage</li>
+                    <li>
+                        <a class="mx-2" href="<?= base_url($locale . '/solutions/page') ?>"><?= lang('System.pages.solutions.title') ?></a>
+                        <a class="mx-2" href="<?= base_url($locale . '/pricing/page') ?>"><?= lang('System.pages.pricing.title') ?></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
                 <h4><?= lang('System.locales.title') ?></h4>
                 <p><a href="<?= base_url($locale . '/choose-region') ?>"><?= lang('System.pages.choose-region.title') ?></a></p>
                 <div id="dbd-section">
