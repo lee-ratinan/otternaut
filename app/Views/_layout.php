@@ -120,7 +120,6 @@
                 </li>
                 <li><a href="<?= base_url($locale . '/contact') ?>" <?= ('contact' == $page_slug ? 'class="active"' : '') ?>><?= lang('System.pages.contact.title') ?></a></li>
                 <li><a href="<?= base_url('docs?page=' . $doc_lang . '/introduction.md') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-<!--                <li><a href="--><?php //= getenv('MART_LINK') ?><!--" target="_blank">OtterMart</a></li>-->
                 <li class="d-none d-md-block"><a href="<?= base_url($locale . '/choose-region') ?>"><?= get_locale_name($locale) ?></a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -161,7 +160,7 @@
                     <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
-                    <li><a href="<?= getenv('MART_LINK') ?>" target="_blank">OtterMart</a></li>
+                    <li><a href="<?= getenv('OTTERMART_LINK') ?>" target="_blank">OtterMart</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-links">

@@ -6,22 +6,44 @@ return [
     'per-month'       => 'per month',
     'yearly-saved'    => 'You saved <b class="text-white" style="font-size:1.2em">{0}</b> when billed annually.',
     'from-price'      => '(from <b><s>{0}</s></b>)',
-    'plans'           => [
-        'basic'    => [
-            'title' => 'Basic',
-            'desc'  => 'Great for your small business.'
+    'mart'            => [
+        'plans' => [
+            'basic'    => [
+                'title' => 'Basic',
+                'desc'  => 'Great for your small business.'
+            ],
+            'standard' => [
+                'title' => 'Standard',
+                'desc'  => 'Optimized for your business’ expansion.'
+            ],
+            'premium'  => [
+                'title' => 'Premium',
+                'desc'  => 'Extend your reach to the world with your own page!'
+            ],
+            'free'     => [
+                'title' => 'Free',
+                'desc'  => 'Doing it solo?! Good for you here.'
+            ]
         ],
-        'standard' => [
-            'title' => 'Standard',
-            'desc'  => 'Optimized for your business’ expansion.'
-        ],
-        'premium'  => [
-            'title' => 'Premium',
-            'desc'  => 'Extend your reach to the world with your own page!'
-        ],
-        'free'     => [
-            'title' => 'Free',
-            'desc'  => 'Doing it solo?! Good for you here.'
+    ],
+    'page'            => [
+        'plans' => [
+            'boost'    => [
+                'title' => 'Boost',
+                'desc'  => 'Great for your small business.'
+            ],
+            'velocity' => [
+                'title' => 'Velocity',
+                'desc'  => 'Optimized for your business’ expansion.'
+            ],
+            'quantum'  => [
+                'title' => 'Quantum',
+                'desc'  => 'Great if you want to use your domain name.'
+            ],
+            'free'     => [
+                'title' => 'Free',
+                'desc'  => 'Doing it solo?! Good for you here.'
+            ],
         ]
     ],
     'features'        => [
@@ -32,7 +54,11 @@ return [
         'basic-booking'              => '<i class="bi bi-check-circle-fill"></i><span>Only unlimited basic services booking</span>',
         'basic-and-advanced-booking' => '<i class="bi bi-check-circle-fill"></i><span>Unlimited basic and session-based services booking</span>',
         'sell-product'               => '<i class="bi bi-bag-check-fill"></i><span>Sell products along with your services</span>',
-        'store-webpage'              => '<i class="bi bi-globe"></i><span>Build your own webpage on our system to boost your branding</span>'
+        'store-webpage'              => '<i class="bi bi-globe"></i><span>Build your own webpage on our system to boost your branding</span>',
+        'max-images'                 => 'Store up to {0} of your images across your webpage(s).',
+        'max-pages'                  => 'Create up to {0} pages to show off your website',
+        'basic-page-builder'         => 'Easy-to-use Page Builder - no drag and drop and fail to adjust for mobile anymore',
+        'add-your-domain'            => 'You can add your domain address to your website.'
     ],
     'free-trial-cta'  => 'Start Free Trial',
     'free-trial-msg'  => 'Try it free for 30 days — no stress, no tricks',

@@ -69,11 +69,8 @@
                                 <?php endif; ?>
                                 <div class="plan-features">
                                     <ul class="features-list">
-                                        <li><i class="bi bi-people-fill"></i><span><?= lang('Pricing.features.max-users', [$package['max_users']]) ?></span></li>
-                                        <li><i class="bi bi-stars"></i><span><?= lang('Pricing.features.max-services', [$package['max_services']]) ?></span></li>
-                                        <?php if (0 < $package['max_products']) : ?>
-                                            <li><i class="bi bi-box-seam-fill"></i><span><?= lang('Pricing.features.max-products', [$package['max_products']]) ?></span></li>
-                                        <?php endif; ?>
+                                        <li><i class="bi bi-images"></i><span><?= lang('Pricing.features.max-images', [$package['max_images']]) ?></span></li>
+                                        <li><i class="bi bi-file-text"></i><span><?= lang('Pricing.features.max-pages', [$package['max_pages']]) ?></span></li>
                                         <?php foreach ($package['features'] as $feature) : ?>
                                             <li><?= $feature ?></li>
                                         <?php endforeach; ?>

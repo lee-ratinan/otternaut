@@ -118,27 +118,11 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $packages    = [
-//            'free'     => [
-//                'available'    => false,
-//                'popular'      => false,
-//                'name'         => lang('Pricing.plans.free.title'),
-//                'desc'         => lang('Pricing.plans.free.desc'),
-//                'max_users'    => 1,
-//                'max_services' => 1,
-//                'max_products' => 0,
-//                'features'     => [
-//                    lang('Pricing.features.email-support'),
-//                    lang('Pricing.features.basic-booking')
-//                ],
-//                'prices'       => [
-//                    'th' => [0, 0]
-//                ]
-//            ],
             'basic'    => [
                 'available'    => false,
                 'popular'      => false,
-                'name'         => lang('Pricing.plans.basic.title'),
-                'desc'         => lang('Pricing.plans.basic.desc'),
+                'name'         => lang('Pricing.mart.plans.basic.title'),
+                'desc'         => lang('Pricing.mart.plans.basic.desc'),
                 'max_users'    => 3,
                 'max_services' => 5,
                 'max_products' => 5,
@@ -165,8 +149,8 @@ class Home extends BaseController
             'standard' => [
                 'available'    => false,
                 'popular'      => true,
-                'name'         => lang('Pricing.plans.standard.title'),
-                'desc'         => lang('Pricing.plans.standard.desc'),
+                'name'         => lang('Pricing.mart.plans.standard.title'),
+                'desc'         => lang('Pricing.mart.plans.standard.desc'),
                 'max_users'    => 10,
                 'max_services' => 20,
                 'max_products' => 20,
@@ -193,8 +177,8 @@ class Home extends BaseController
             'premium'  => [
                 'available'    => false,
                 'popular'      => false,
-                'name'         => lang('Pricing.plans.premium.title'),
-                'desc'         => lang('Pricing.plans.premium.desc'),
+                'name'         => lang('Pricing.mart.plans.premium.title'),
+                'desc'         => lang('Pricing.mart.plans.premium.desc'),
                 'max_users'    => 30,
                 'max_services' => 50,
                 'max_products' => 50,
@@ -240,89 +224,62 @@ class Home extends BaseController
         $locale      = $this->request->getLocale();
         $locale_data = $this->splitLocale($locale);
         $packages    = [
-            'basic'    => [
+            'boost'    => [
                 'available'    => false,
                 'popular'      => false,
-                'name'         => lang('Pricing.plans.basic.title'),
-                'desc'         => lang('Pricing.plans.basic.desc'),
-                'max_users'    => 3,
-                'max_services' => 5,
-                'max_products' => 5,
+                'name'         => lang('Pricing.page.plans.boost.title'),
+                'desc'         => lang('Pricing.page.plans.boost.desc'),
+                'max_images'   => '10MB',
+                'max_pages'    => '2',
+                'with_domain'  => false,
                 'features'     => [
                     lang('Pricing.features.email-support'),
-                    lang('Pricing.features.basic-booking'),
-                    lang('Pricing.features.sell-product'),
+                    lang('Pricing.features.basic-page-builder'),
                 ],
                 'prices'       => [
                     'th' => [400, 4000],
-                    'sg' => [400, 4000],
-                    'my' => [400, 4000],
-                    'jp' => [400, 4000],
-                    'tw' => [400, 4000],
                 ],
                 'discounted'   => [
                     'th' => [299, 2990],
-                    'sg' => [299, 2990],
-                    'my' => [299, 2990],
-                    'jp' => [299, 2990],
-                    'tw' => [299, 2990],
                 ]
             ],
-            'standard' => [
+            'velocity' => [
                 'available'    => false,
                 'popular'      => true,
-                'name'         => lang('Pricing.plans.standard.title'),
-                'desc'         => lang('Pricing.plans.standard.desc'),
-                'max_users'    => 10,
-                'max_services' => 20,
-                'max_products' => 20,
+                'name'         => lang('Pricing.page.plans.velocity.title'),
+                'desc'         => lang('Pricing.page.plans.velocity.desc'),
+                'max_images'   => '20MB',
+                'max_pages'    => '4',
+                'with_domain'  => false,
                 'features'     => [
                     lang('Pricing.features.email-support'),
-                    lang('Pricing.features.basic-and-advanced-booking'),
-                    lang('Pricing.features.sell-product'),
+                    lang('Pricing.features.basic-page-builder'),
                 ],
                 'prices'       => [
                     'th' => [800, 8000],
-                    'sg' => [800, 8000],
-                    'my' => [800, 8000],
-                    'jp' => [800, 8000],
-                    'tw' => [800, 8000],
                 ],
                 'discounted'   => [
                     'th' => [599, 5990],
-                    'sg' => [599, 5990],
-                    'my' => [599, 5990],
-                    'jp' => [599, 5990],
-                    'tw' => [599, 5990],
                 ]
             ],
-            'premium'  => [
+            'quantum'  => [
                 'available'    => false,
                 'popular'      => false,
-                'name'         => lang('Pricing.plans.premium.title'),
-                'desc'         => lang('Pricing.plans.premium.desc'),
-                'max_users'    => 30,
-                'max_services' => 50,
-                'max_products' => 50,
+                'name'         => lang('Pricing.page.plans.quantum.title'),
+                'desc'         => lang('Pricing.page.plans.quantum.desc'),
+                'max_images'   => '20MB',
+                'max_pages'    => '4',
+                'with_domain'  => true,
                 'features'     => [
                     lang('Pricing.features.email-support'),
-                    lang('Pricing.features.basic-and-advanced-booking'),
-                    lang('Pricing.features.sell-product'),
-                    lang('Pricing.features.store-webpage')
+                    lang('Pricing.features.basic-page-builder'),
+                    lang('Pricing.features.add-your-domain'),
                 ],
                 'prices'       => [
                     'th' => [1800, 18000],
-                    'sg' => [1800, 18000],
-                    'my' => [1800, 18000],
-                    'jp' => [1800, 18000],
-                    'tw' => [1800, 18000],
                 ],
                 'discounted'   => [
                     'th' => [1290, 12900],
-                    'sg' => [1290, 12900],
-                    'my' => [1290, 12900],
-                    'jp' => [1290, 12900],
-                    'tw' => [1290, 12900],
                 ]
             ]
         ];
