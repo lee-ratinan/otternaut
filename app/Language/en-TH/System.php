@@ -21,15 +21,15 @@ return [
         ],
         'solutions'            => [
             'title'       => 'Solutions',
-            'mart'        => 'E-Commerce ‘OtterMart’ Solution',
-            'page'        => 'Web Hosting ‘OtterPage’ Solution',
+            'mart'        => 'E-Commerce',
+            'page'        => 'Web Hosting',
             'description' => 'OtterNova is a smart booking and scheduling system for businesses. Replace paper chaos with an organized dashboard for appointments, staff, and services.',
             'keywords'    => 'booking system, appointment software, scheduling SaaS, reservation platform, business scheduling, online booking, staff scheduling, OtterNova'
         ],
         'pricing'              => [
             'title'       => 'Pricing',
-            'mart'        => 'OtterMart Plans',
-            'page'        => 'OtterPage Plans',
+            'mart'        => 'E-Commerce Plans',
+            'page'        => 'Web Hosting Plans',
             'description' => 'Compare OtterNova’s pricing plans for booking and scheduling. Simple, transparent packages with features for businesses of all sizes.',
             'keywords'    => 'pricing plans, SaaS pricing, booking software cost, OtterNova pricing, subscription plans, scheduling software pricing'
         ],
