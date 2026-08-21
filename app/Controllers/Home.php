@@ -331,6 +331,24 @@ class Home extends BaseController
     }
 
     /**
+     * About Us page
+     * @return string
+     */
+    public function aboutUs(): string
+    {
+        $locale      = $this->request->getLocale();
+        $locale_data = $this->splitLocale($locale);
+        $data        = [
+            'page_slug' => 'about-us',
+            'url_part'  => 'about-us',
+            'locale'    => $locale,
+            'language'  => $locale_data['language'],
+            'country'   => $locale_data['country'],
+        ];
+        return view('about-us', $data);
+    }
+
+    /**
      * Choose region page
      * @return string
      */

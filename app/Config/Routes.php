@@ -11,6 +11,7 @@ $routes->get('solutions/page', 'Home::solutionsPage');
 $routes->get('pricing/mart', 'Home::pricingMart');
 $routes->get('pricing/page', 'Home::pricingPage');
 $routes->get('contact', 'Home::contact');
+$routes->get('about-us', 'Home::aboutUs');
 $routes->get('leadership', 'Home::leadership');
 $routes->get('choose-region', 'Home::chooseRegion');
 $routes->get('terms-and-conditions', 'Home::termsAndConditions');
@@ -24,6 +25,7 @@ $routes->group('{locale}', ['filter' => 'localeGuard'], static function($routes)
     $routes->get('pricing/mart', 'Home::pricingMart');
     $routes->get('pricing/page', 'Home::pricingPage');
     $routes->get('contact', 'Home::contact');
+    $routes->get('about-us', 'Home::aboutUs');
     $routes->get('leadership', 'Home::leadership');
     $routes->get('choose-region', 'Home::chooseRegion');
     $routes->get('terms-and-conditions', 'Home::termsAndConditions');
