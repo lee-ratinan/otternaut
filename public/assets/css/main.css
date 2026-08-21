@@ -3768,3 +3768,7 @@ section,
 .main-form-container .corp {
     display: none;
 }
+
+small.small {
+  font-size: 0.65em;
+}

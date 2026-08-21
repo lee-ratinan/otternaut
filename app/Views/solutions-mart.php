@@ -62,7 +62,6 @@
             </div>
         </div>
     </section>
-    <?php include_once('_about-us.php') ?>
     <section id="services" class="services section">
         <div class="container section-title" data-aos="fade-up">
             <h2><?= lang('SolutionsMart.features.title') ?></h2>

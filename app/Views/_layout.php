@@ -159,6 +159,7 @@
                 <ul>
                     <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
+                    <li><a href="<?= base_url($locale . '/leadership') ?>"><?= lang('System.pages.leadership.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                     <li><a href="<?= getenv('OTTERMART_LINK') ?>" target="_blank">OtterMart</a></li>
                 </ul>

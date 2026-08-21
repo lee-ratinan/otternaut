@@ -479,8 +479,12 @@ class Home extends BaseController
         ];
         $main_pages = [
             ['/', '2025-12-01', 'monthly', '1.0'],
-            ['/pricing', '2025-12-01', 'monthly', '0.9'],
+            ['/solutions/mart', '2025-12-01', 'monthly', '0.9'],
+            ['/solutions/page', '2025-12-01', 'monthly', '0.9'],
+            ['/pricing/mart', '2025-12-01', 'monthly', '0.9'],
+            ['/pricing/page', '2025-12-01', 'monthly', '0.9'],
             ['/contact', '2025-12-08', 'monthly', '0.8'],
+            ['/docs', '2025-12-08', 'monthly', '0.8'],
 //            ['/leadership', '2025-12-08', 'monthly', '0.5'],
             ['/choose-region', '2025-12-01', 'monthly', '0.5'],
             ['/terms-and-conditions', '2025-12-01', 'monthly', '0.5'],
