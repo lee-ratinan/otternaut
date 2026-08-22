@@ -51,6 +51,11 @@ return [
             'description' => 'Introduction to the leadership team of OtterNova.',
             'keywords'    => 'OtterNova leadership, get to know the team, introduction'
         ],
+        'about-us'             => [
+            'title'       => 'About Us',
+            'description' => 'OtterNova is an online booking platform for businesses.',
+            'keywords'    => 'OtterNova platform',
+        ],
         'terms-and-conditions' => [
             'title'       => 'Terms & Conditions',
             'description' => 'Read OtterNova’s Terms and Conditions for using our booking and scheduling platform. Learn about user rights, responsibilities, and service usage.',

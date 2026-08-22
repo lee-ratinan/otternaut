@@ -159,23 +159,25 @@
                 <ul>
                     <li><a href="<?= base_url($locale) . DEV_MODE_BYPASS ?>"><?= lang('System.pages.home.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/contact') ?>"><?= lang('System.pages.contact.title') ?></a></li>
+                    <li><a href="<?= base_url($locale . '/about-us') ?>"><?= lang('System.pages.about-us.title') ?></a></li>
                     <li><a href="<?= base_url($locale . '/leadership') ?>"><?= lang('System.pages.leadership.title') ?></a></li>
                     <li><a href="<?= base_url('docs') ?>" target="_blank"><?= lang('System.pages.resources.title') ?></a></li>
                     <li><a href="<?= getenv('OTTERMART_LINK') ?>" target="_blank">OtterMart</a></li>
+                    <li><a href="<?= getenv('OTTERPAGE_LINK') ?>" target="_blank">OtterPage</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-links">
                 <h4><?= lang('System.pages.solutions.title') ?></h4>
                 <ul>
-                    <li class="pb-0">OtterMart</li>
-                    <li>
-                        <a class="mx-2" href="<?= base_url($locale . '/solutions/mart') ?>"><?= lang('System.pages.solutions.title') ?></a>
-                        <a class="mx-2" href="<?= base_url($locale . '/pricing/mart') ?>"><?= lang('System.pages.pricing.title') ?></a>
+                    <li class="pb-0">
+                        <?= lang('System.pages.solutions.mart') ?>:
+                        <a class="ms-2" href="<?= base_url($locale . '/solutions/mart') ?>"><?= lang('System.pages.solutions.title') ?></a>
+                        <a class="ms-2" href="<?= base_url($locale . '/pricing/mart') ?>"><?= lang('System.pages.pricing.title') ?></a>
                     </li>
-                    <li class="pb-0">OtterPage</li>
-                    <li>
-                        <a class="mx-2" href="<?= base_url($locale . '/solutions/page') ?>"><?= lang('System.pages.solutions.title') ?></a>
-                        <a class="mx-2" href="<?= base_url($locale . '/pricing/page') ?>"><?= lang('System.pages.pricing.title') ?></a>
+                    <li class="pb-0">
+                        <?= lang('System.pages.solutions.page') ?>
+                        <a class="ms-2" href="<?= base_url($locale . '/solutions/page') ?>"><?= lang('System.pages.solutions.title') ?></a>
+                        <a class="ms-2" href="<?= base_url($locale . '/pricing/page') ?>"><?= lang('System.pages.pricing.title') ?></a>
                     </li>
                 </ul>
             </div>

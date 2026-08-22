@@ -51,6 +51,11 @@ return [
             'description' => 'แนะนำให้รู้จักกับทีมผู้นำของออทเทอร์โนวา',
             'keywords'    => 'ทำความรู้จักกับทีมออทเทอร์โนวา, รู้จักกับผู้นำ, แนะนำตัว'
         ],
+        'about-us'             => [
+            'title'       => 'เกี่ยวกับเรา',
+            'description' => 'OtterNova is an online booking platform for businesses.',
+            'keywords'    => 'OtterNova platform',
+        ],
         'terms-and-conditions' => [
             'title'       => 'เงื่อนไขการใช้งาน',
             'description' => 'อ่านข้อกำหนดและเงื่อนไขการใช้งานออทเทอร์โนวา สำหรับระบบจองและจัดตารางงาน ครอบคลุมสิทธิ หน้าที่ และเงื่อนไขการใช้บริการ',

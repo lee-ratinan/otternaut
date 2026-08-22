@@ -20,23 +20,33 @@
                 <div class="team-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="300">
                     <script type="application/json" class="swiper-config">{"loop":true,"speed":700,"autoplay":{"delay":5000},"slidesPerView":1,"spaceBetween":30,"navigation":{"nextEl":".team-next","prevEl":".team-prev"},"breakpoints":{"576":{"slidesPerView":2,"spaceBetween":20},"992":{"slidesPerView":3,"spaceBetween":30},"1200":{"slidesPerView":4,"spaceBetween":30}}}</script>
                     <div class="swiper-wrapper">
-                        <?php $keys = ['nat', 'jate']; ?>
+                        <?php
+                        $keys  = ['nat', 'jate'];
+                        $links = [
+                            'nat'  => [
+                                'globe'     => 'https://lee.ratinan.com',
+                                'linkedin' => 'https://www.linkedin.com/in/ratinanlee',
+                            ],
+                            'jate' => [
+                                'globe'     => 'https://www.example.com'
+                            ]
+                        ];
+                        ?>
                         <?php foreach ($keys as $key) : ?>
                         <div class="swiper-slide">
                             <div class="team-member">
                                 <div class="member-image">
                                     <img src="<?= base_url('assets/img/leadership/' . $key . '.webp') ?>" class="img-fluid" alt="<?= lang('Leadership.' . $key . '.name') ?>" loading="lazy">
-                                    <div class="member-social d-none">
-                                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                                        <a href="#"><i class="bi bi-facebook"></i></a>
-                                        <a href="#"><i class="bi bi-instagram"></i></a>
-                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    <div class="member-social">
+                                        <?php foreach ($links[$key] as $icon => $link) : ?>
+                                            <a href="<?= $link ?>" target="_blank"><i class="bi bi-<?= $icon ?>"></i></a>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                                 <div class="member-content">
                                     <h3><?= lang('Leadership.' . $key . '.name') ?></h3>
                                     <span><?= lang('Leadership.' . $key . '.title') ?></span>
-                                    <p class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+                                    <p><?= lang('Leadership.' . $key . '.paragraph') ?></p>
                                 </div>
                             </div>
                         </div>
