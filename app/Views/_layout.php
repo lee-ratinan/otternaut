@@ -100,7 +100,7 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="<?= base_url($locale . DEV_MODE_BYPASS) ?>" class="logo d-flex align-items-center me-auto me-xl-0">
             <img src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="<?= lang('System.site-name') ?>">
-            <h1 class="sitename"><?= lang('System.site-name') ?></h1>
+            <h1 class="sitename"><img src="<?= base_url('assets/img/otternova-text-logo-white.webp') ?>" class="img-fluid" alt="OtterNova" /></h1>
         </a>
         <nav id="navmenu" class="navmenu">
             <ul>
@@ -137,7 +137,7 @@
         <div class="row gy-4">
             <div class="col-lg-3 col-md-6 footer-about">
                 <a href="<?= base_url($locale . DEV_MODE_BYPASS) ?>" class="logo d-flex align-items-center">
-                    <span class="sitename"><?= lang('System.site-name') ?></span>
+                    <span class="sitename"><img src="<?= base_url('assets/img/otternova-text-logo-white.webp') ?>" class="img-fluid" alt="<?= lang('System.site-name') ?>" /></span>
                 </a>
                 <div class="footer-contact">
                     <p><?= lang('System.slogan') ?></p>
