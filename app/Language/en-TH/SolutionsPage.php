@@ -4,13 +4,7 @@ return [
         'convenient-solutions' => 'Hassle-Free Website Solutions',
         'headline'             => 'Your Website.<br/>Fully Ready.<br/>Online Instantly.',
         'subheadline'          => 'Traditional website builders are overly complex, prone to broken layouts, expensive, and bloated with features you’ll never use. OtterNova delivers essential, high-performance features on a flexible pay-per-use plan.',
-        'cta'                  => 'Start Free',
-        'boxes'                => [
-            '1' => 'Professionally Designed',
-            '2' => 'Responsive by Default',
-            '3' => 'User-Friendly Interface',
-            '4' => 'One-Click Deployment',
-        ]
+        'cta'                  => 'Start Free'
     ],
     'features'    => [
         'badge'     => 'Establish Your Online Presence',

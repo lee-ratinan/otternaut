@@ -36,25 +36,8 @@
                 <div class="col-lg-6">
                     <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
                         <div class="row g-3">
-                            <div class="col-6">
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <span><?= lang('SolutionsMart.hero.boxes.high-performance') ?></span>
-                                </div>
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
-                                    <i class="bi bi-emoji-smile"></i>
-                                    <span><?= lang('SolutionsMart.hero.boxes.convenience') ?></span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                                    <i class="bi bi-list-check"></i>
-                                    <span><?= lang('SolutionsMart.hero.boxes.flexibility') ?></span>
-                                </div>
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
-                                    <i class="bi bi-clipboard2-data"></i>
-                                    <span><?= lang('SolutionsMart.hero.boxes.transparency') ?></span>
-                                </div>
+                            <div class="col p-5">
+                                <img src="<?= base_url('assets/img/hero/ottermart-hero.webp') ?>" alt="OtterMart Solutions" class="img-fluid">
                             </div>
                         </div>
                     </div>

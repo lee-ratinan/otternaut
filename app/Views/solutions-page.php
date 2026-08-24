@@ -22,25 +22,8 @@
                     <div class="col-lg-6">
                         <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
                             <div class="row g-3">
-                                <div class="col-6">
-                                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                                        <i class="bi bi-award"></i>
-                                        <span><?= lang('SolutionsPage.hero.boxes.1') ?></span>
-                                    </div>
-                                    <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
-                                        <i class="bi bi-phone"></i>
-                                        <span><?= lang('SolutionsPage.hero.boxes.2') ?></span>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                                        <i class="bi bi-emoji-smile"></i>
-                                        <span><?= lang('SolutionsPage.hero.boxes.3') ?></span>
-                                    </div>
-                                    <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
-                                        <i class="bi bi-hand-index"></i>
-                                        <span><?= lang('SolutionsPage.hero.boxes.4') ?></span>
-                                    </div>
+                                <div class="col p-5">
+                                    <img src="<?= base_url('assets/img/hero/otterpage-hero.webp') ?>" alt="OtterPage Solutions" class="img-fluid">
                                 </div>
                             </div>
                         </div>

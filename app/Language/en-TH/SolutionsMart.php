@@ -5,13 +5,7 @@ return [
         'headline'             => 'Your bookings. Your products. Streamlined. Finally easy.',
         'subheadline'          => 'OtterNova helps service businesses ditch the chaos and run smooth, reliable orders and schedules — without juggling chats, spreadsheets, or double-bookings ever again.',
         'cta'                  => 'Start Free',
-        'demo'                 => 'Try Our Demo Account',
-        'boxes'                => [
-            'high-performance' => 'High Performance',
-            'convenience'      => 'Convenience',
-            'flexibility'      => 'Flexibility',
-            'transparency'     => 'Transparency'
-        ]
+        'demo'                 => 'Try Our Demo Account'
     ],
     'about'     => [
         'title'      => 'About Us',
